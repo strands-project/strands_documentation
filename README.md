@@ -189,7 +189,7 @@ roslaunch topological_rviz_tools strands_rviz_topmap.launch map:=/path/to/map.ya
 If you inserted an empty map into the database, you should see something like
 the following when you launch:
 
-![Empty launch](images/00_empty_launch.png)
+![Empty launch](images/rviz_tools/00_empty_launch.png)
 
 Once you have added a new node to the map, you should delete the `temp_node`.
 For instructions on using the rviz topological map editor, see the readme

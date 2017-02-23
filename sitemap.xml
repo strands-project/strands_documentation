@@ -342,22 +342,6 @@
     
         
     <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
      <loc>/scitos_apps/</loc>
      <lastmod>2017-02-23</lastmod>
      <changefreq>daily</changefreq>
@@ -1439,12 +1423,6 @@
      <changefreq>daily</changefreq>
     </url>
         
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
     
@@ -1482,12 +1460,6 @@
     <url>
      <loc>/v4r_ros_wrappers/tutorial/</loc>
      <lastmod>2017-02-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         

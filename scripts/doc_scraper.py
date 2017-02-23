@@ -13,7 +13,12 @@ import subprocess
 import shutil
 import base64
 
-ignore_repos = ["laser_filtering", "buildfarm", "metapackages", "jenkins_tools", "scitos_common", "strands_ci", "ros_mbt", "navigation_layers", "scitos_2d_navigation", "openni_wrapper", "executive_smach", "morse", "sicks300", "mjpeg_server", "robomongo", "rosdistro", "strands_management", "robomongo"]
+ignore_repos = ["laser_filtering", "buildfarm", "metapackages", "jenkins_tools",
+                "scitos_common", "strands_ci", "ros_mbt", "navigation_layers",
+                "scitos_2d_navigation", "openni_wrapper", "executive_smach", "morse",
+                "sicks300", "mjpeg_server", "robomongo", "rosdistro", "strands_management",
+                "robomongo", "MIRASimpleClient", "navigation", "semantic_segmentation",
+                "rosbridge_suite"]
 ignore_filenames = ["authors", "changelog"]
 
 def path_to_arr(path):
@@ -90,6 +95,7 @@ if "link" in repo_rq.headers:
 # and put them in directories corresponding to the name of the repository
 FNULL = open(os.devnull, 'w')
 for repo_name in sorted(repos.keys()):
+#for repo_name in ["g4s_deployment", "rosbridge_suite", "v4r", "v4r_ros_wrappers"]:
     print("-------------------- {0} --------------------".format(repo_name))
     if repo_name in ignore_repos:
         print("ignoring repo".format(repo_name))
@@ -136,7 +142,7 @@ for repo_name in sorted(repos.keys()):
             key = split_path[0] if split_path else "index"
             if key not in readmes:
                 readmes[key] = []
-            readmes[key].append((item, split_path))
+            readmes[key].append((item, split_path, lower_fname))
 
     for subpkg in readmes.keys():
         print("processing {0}".format(subpkg))
@@ -153,16 +159,21 @@ for repo_name in sorted(repos.keys()):
 
         multiple = False
         if len(readmes[subpkg]) > 1:
-            base_path = os.path.join(base_path, subpkg)
+            # sometimes the top level may have multiple files, but we don't want
+            # to put them in a subdirectory
+            if subpkg != "index":
+                base_path = os.path.join(base_path, subpkg)
             multiple = True
 
         for readme in readmes[subpkg]:
-            # For a subpackage with a single readme, the new filename will
-            # be the name of the directory in which readme was found
             if multiple:
-                if len(readme[1]) == 1:
-                    fname = "index.md"
+                if len(readme[1]) <= 1:
+                    if readme[2] == "readme":
+                        fname = "index.md"
+                    else:
+                        fname = readme[2] + ".md"
                 else:
+                    print("path is long: {0}".format(readme[1]))
                     fname = os.path.basename(os.path.dirname(readme[0]["path"])) + ".md"
             else:
                 if len(readme[1]) == 0:

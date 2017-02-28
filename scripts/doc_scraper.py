@@ -12,13 +12,15 @@ import rospkg
 import subprocess
 import shutil
 import base64
+import sys
+import fnmatch
 
 ignore_repos = ["laser_filtering", "buildfarm", "metapackages", "jenkins_tools",
                 "scitos_common", "strands_ci", "ros_mbt", "navigation_layers",
                 "scitos_2d_navigation", "openni_wrapper", "executive_smach", "morse",
                 "sicks300", "mjpeg_server", "robomongo", "rosdistro", "strands_management",
                 "robomongo", "MIRASimpleClient", "navigation", "semantic_segmentation",
-                "rosbridge_suite"]
+                "rosbridge_suite", "g4s_deployment"]
 ignore_filenames = ["authors", "changelog"]
 
 def path_to_arr(path):
@@ -34,9 +36,39 @@ org = "strands-project"
 
 parser = argparse.ArgumentParser(description="Scrape documentation from the strands project repositories")
 parser.add_argument("--private", action="store_true", help="Include private repositories in the scrape. This requires the generation of an OAuth token for github.")
-parser.add_argument("--ignore-file", nargs=1, help="File containing the names of repos to ignore in the documentation scrape. One repo per line.")
+#parser.add_argument("--ignore-file", nargs=1, help="File containing the names of repos to ignore in the documentation scrape. One repo per line.")
+#parser.add_argument("--repos", action="append", help="Repositories for which docs should be fetched.")
+parser.add_argument("--index", action="store_true", help="Generate an index in the docs directory, populating it with links to all the toplevel readmes in each directory in the docs directory. Does not generate other docs.")
 
 args = parser.parse_args()
+
+if args.index:
+    if os.path.isfile("docs/index.md"):
+        print("docs/index.md already exists. Will not overwrite.")
+        sys.exit(0)
+
+    link_dict = {}
+    # walk over the directory tree, and look for files with index.md, which we
+    # will link to
+    for subdir, dirs, files in os.walk("docs"):
+        for file in files:
+            if fnmatch.fnmatch(file, "index.md"):
+                # take all chars after the 5th in the joined path, to remove docs/ from the string
+                split = subdir.split('/')
+                dirpath = os.path.join(*split[1:])
+                if not split[1] in link_dict:
+                    link_dict[split[1]] = []
+                link_dict[split[1]].append(("[{0}]({1})".format(dirpath, os.path.join(dirpath, file))))
+
+    with open("docs/index.md", 'w') as f:
+        for i in sorted(link_dict.keys()):
+            link_list = link_dict[i]
+            f.write("## {0}\n".format(link_list[0]))
+            for link in link_list[1:]:
+                f.write("- {0}\n".format(link))
+
+    sys.exit(0)
+
 header = ""
 
 if args.private:

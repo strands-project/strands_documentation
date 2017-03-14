@@ -14,14 +14,7 @@ import shutil
 import base64
 import sys
 import fnmatch
-
-ignore_repos = ["laser_filtering", "buildfarm", "metapackages", "jenkins_tools",
-                "scitos_common", "strands_ci", "ros_mbt", "navigation_layers",
-                "scitos_2d_navigation", "openni_wrapper", "executive_smach", "morse",
-                "sicks300", "mjpeg_server", "robomongo", "rosdistro", "strands_management",
-                "robomongo", "MIRASimpleClient", "navigation", "semantic_segmentation",
-                "rosbridge_suite", "g4s_deployment"]
-ignore_filenames = ["authors", "changelog"]
+import xml.etree.ElementTree as ET
 
 def path_to_arr(path):
     arr = []
@@ -31,18 +24,7 @@ def path_to_arr(path):
 
     return list(reversed(arr))
 
-gh_api = "https://api.github.com"
-org = "strands-project"
-
-parser = argparse.ArgumentParser(description="Scrape documentation from the strands project repositories")
-parser.add_argument("--private", action="store_true", help="Include private repositories in the scrape. This requires the generation of an OAuth token for github.")
-#parser.add_argument("--ignore-file", nargs=1, help="File containing the names of repos to ignore in the documentation scrape. One repo per line.")
-#parser.add_argument("--repos", action="append", help="Repositories for which docs should be fetched.")
-parser.add_argument("--index", action="store_true", help="Generate an index in the docs directory, populating it with links to all the toplevel readmes in each directory in the docs directory. Does not generate other docs.")
-
-args = parser.parse_args()
-
-if args.index:
+def create_index_file():
     if os.path.isfile("docs/index.md"):
         print("docs/index.md already exists. Will not overwrite.")
         sys.exit(0)
@@ -68,11 +50,7 @@ if args.index:
             for link in link_list[1:]:
                 f.write("- {0}\n".format(link))
 
-    sys.exit(0)
-
-header = ""
-
-if args.private:
+def get_oauth_header(private=False):
     # The first thing to do is get an OAuth token - we will use this in place of the
     # username and password in order to access public and private repositories in
     # the organisation. This allows for many more API requrests to be made
@@ -80,13 +58,14 @@ if args.private:
     # Check if we already have a token in the config file
     conf_file = os.path.join(os.path.expanduser("~"), ".strands_doc_oauth.tok")
     if not os.path.isfile(conf_file):
-        print("Couldn't find the token file.")
-
+        print("Couldn't find the token file. Will generate a new token.")
+        
         user = raw_input("Enter your github username: ")
         password = getpass.getpass("Enter your github password:")
 
-        auth_data = json.dumps({"scopes": ["repo"], "note": "strands_documentation scraper"})
-        auth = (requests.post(gh_api + "/authorizations", data=auth_data, auth=(user, password))).json()
+        scopes = ["repo"] if private else ["public_repo"]
+        auth_data = json.dumps({"scopes": scopes, "note": "strands_documentation scraper"})
+        auth = (requests.post("https://api.github.com/authorizations", data=auth_data, auth=(user, password))).json()
 
         # If we already got a token recently, we will receive an error message
         if "token" not in auth:
@@ -108,77 +87,117 @@ if args.private:
         print("Proceeding without auth token.")
         header = ""
 
-# get a list of all the repositories in the organisation
-repo_rq = requests.get(gh_api + "/orgs/{0}/repos?type=all".format(org), headers=header)
+    return header
 
-repos = {repo_data["name"]: repo_data for repo_data in json.loads(repo_rq.text)}
-# If there are more than 30 repos, there will be multiple pages
-if "link" in repo_rq.headers:
-    # keep getting the data until we reach the final page - we can deduce this
-    # by there not being a link to the last page, because we are on it.
-    while "last" in repo_rq.headers["link"]:
-        print(repo_rq.headers["link"])
-        # Get the URL for the next page by splitting the links up
-        next_pg = repo_rq.headers["link"].split(',')[0].split(';')[0][1:-1]
-        repo_rq = requests.get(next_pg, headers=header)
-        repos.update({repo_data["name"]: repo_data for repo_data in json.loads(repo_rq.text)})
+def get_org_repo_dict(org, header=None):
+    """get a list of all the repositories in the given organisation
+    """
 
-# This is where the bulk of the work is done. We check each repository for
-# readme files and see if it has a wiki. If we find files there, we copy them
-# and put them in directories corresponding to the name of the repository
-FNULL = open(os.devnull, 'w')
-for repo_name in sorted(repos.keys()):
-#for repo_name in ["g4s_deployment", "rosbridge_suite", "v4r", "v4r_ros_wrappers"]:
-    print("-------------------- {0} --------------------".format(repo_name))
-    if repo_name in ignore_repos:
-        print("ignoring repo".format(repo_name))
-        continue
+    print("https://api.github.com/orgs/{0}/repos?type=all".format(org))
+    repo_rq = requests.get("https://api.github.com/orgs/{0}/repos?type=all".format(org), headers=header)
+    repos = {repo_data["name"]: repo_data for repo_data in json.loads(repo_rq.text)}
+    # If there are more than 30 repos, there will be multiple pages
+    if "link" in repo_rq.headers:
+        # keep getting the data until we reach the final page - we can deduce this
+        # by there not being a link to the last page, because we are on it.
+        while "last" in repo_rq.headers["link"]:
+            print(repo_rq.headers["link"])
+            # Get the URL for the next page by splitting the links up
+            next_pg = repo_rq.headers["link"].split(',')[0].split(';')[0][1:-1]
+            repo_rq = requests.get(next_pg, headers=header)
+            repos.update({repo_data["name"]: repo_data for repo_data in json.loads(repo_rq.text)})
 
+    return repos
+
+def get_wiki(org_name, repo_name):
+    """Check if a wiki exists, and if it does, clone it to the docs/repo_name/wiki
+    """
+    # to devnull so there's no output
+    FNULL = open(os.devnull, 'w')
     # We can check if a wiki exists by calling git ls-remote. If it returns an
     # OK, then there is a wiki
-    if subprocess.call(["git", "ls-remote", "https://github.com/strands-project/{0}.wiki.git".format(repo_name)], stdout=FNULL, stderr=FNULL) == 0:
+    if subprocess.call(["git", "ls-remote", "https://github.com/{0}/{1}.wiki.git".format(org_name, repo_name)], stdout=FNULL, stderr=FNULL) == 0:
         wiki_dir = "docs/{0}/wiki".format(repo_name)
         if not os.path.isdir(wiki_dir):
             print("Wiki exists. Cloning...")
-            subprocess.call(["git", "clone", "https://github.com/strands-project/{0}.wiki.git".format(repo_name), wiki_dir])
+            subprocess.call(["git", "clone", "https://github.com/{0}/{1}.wiki.git".format(org_name, repo_name), wiki_dir])
             # delete the .git directory cloned along with the wiki
             shutil.rmtree(os.path.join(wiki_dir, ".git"))
             # rename the Home.md file to index.md so it works properly with mkdocs
             #os.rename(os.path.join(wiki_dir, "Home.md"), os.path.join(wiki_dir, "index.md"))
 
+def get_repo_files(org_name, repo_name, match_ext=[], match_filename=[], match_full=[]):
+    """Get files in the given repository which have extensions matching any in the
+    given match_ext list, or filenames (without extensions) which match any in
+    the given match_filename list. Full filenames (filename + extension) are
+    compared to entries in match_full.
+
+    A dictionary where the file path in the repository is the key, and the item
+    returned by the github api is the value will be returned.
+
+    """
+    if not match_ext and not match_filename and not match_full:
+        return {}
+    global org
     # The main readme file in the repo is easily retrieved, but just do this using the tree instead
-    #readme_rq = requests.get(gh_api + "/repos/{0}/{1}/readme".format(org, repo_name), headers=header)
+    #readme_rq = requests.get("https://api.github.com/repos/{0}/{1}/readme".format(org, repo_name), headers=header)
 
     # We also need to look at the whole repository to find the readmes for
     # subdirectories, since there are many such cases. First, get the current
     # commit sha on the default branch
-    sha_rq = requests.get(gh_api + "/repos/{0}/{1}/commits".format(org, repo_name), headers=header)
+    sha_rq = requests.get("https://api.github.com/repos/{0}/{1}/commits".format(org_name, repo_name), headers=header)
     latest_sha = json.loads(sha_rq.text)[0]["sha"]
     # Use that sha to get the commit tree
-    tree_rq = requests.get(gh_api + "/repos/{0}/{1}/git/trees/{2}?recursive=1".format(org, repo_name, latest_sha), headers=header)
+    tree_rq = requests.get("https://api.github.com/repos/{0}/{1}/git/trees/{2}?recursive=1".format(org_name, repo_name, latest_sha), headers=header)
     repo_tree = json.loads(tree_rq.text)
 
     # Look through the tree and try to find things which are likely to be readme-type files
-    print("Looking for readme files...")
+    print("Looking for files matching strings {0}".format(match_ext + match_filename + match_full))
     # We gather readmes here so we can remap any links in them, which we need to
     # do because we will change the filenames to make the documentation appear
     # in a nicer way. Gather them in a dict which will group multiple readmes in
     # the same subdirectory, which we want to handle differently.
-    readmes = {}
+    matching = {}
     for item in repo_tree["tree"]:
         lower_fname, lower_ext = os.path.splitext(os.path.basename(item["path"].lower()))
-        if lower_fname not in ignore_filenames and (lower_ext == ".md" or lower_fname == "readme"):
-            # The first directory in the path we get is a subdirectory in the
-            # repo, and we use this as the key for each readme found in that
-            # subdirectory
-            split_path = path_to_arr(os.path.dirname(item["path"]))
-            key = split_path[0] if split_path else "index"
-            if key not in readmes:
-                readmes[key] = []
-            readmes[key].append((item, split_path, lower_fname))
+        fname_matches = map(lambda x: lower_fname == x.lower(), match_filename)
+        ext_matches = map(lambda x: lower_ext == x.lower(), match_ext)
+        full_matches = map(lambda x: lower_fname + lower_ext == x.lower(), match_full)
+        if any(fname_matches) or any(ext_matches) or any(full_matches):
+            matching[item["path"]] = item
 
-    for subpkg in readmes.keys():
+    return matching
+
+def files_to_subpackages(file_dict):
+    """Converts a dict of path-item pairs received from get_repo_files to a dict
+    where files that are in the same subpackage can be found in a list under the
+    key with the subpackage name.
+
+    """
+    new_dict = {}
+    for file_path in file_dict.keys():
+        # The first directory in the path we get is a subdirectory in the
+        # repo. Populate a new dict with readmes from each subdirectory
+        # under the same key
+        split_path = path_to_arr(os.path.dirname(file_path))
+        key = split_path[0] if split_path else "index"
+        if key not in new_dict:
+            new_dict[key] = []
+        new_dict[key].append((file_path, file_dict[file_path]))
+
+    return new_dict
+
+def get_package_xml_description(xml):
+    root = ET.fromstring(xml)
+    return root.findall("description")[0].text
+
+def write_readme_files(repo_name):
+    readmes = get_repo_files(org, repo_name, match_ext=[".md"], match_filename=["readme"])
+    subpkg_readmes = files_to_subpackages(readmes)
+
+    for subpkg in subpkg_readmes.keys():
         print("processing {0}".format(subpkg))
+
         # The path we get in each item is something like
         # strands_navigation/topological_rviz_tools/readme.md. When using
         # mkdocs, this will generate the documentation in subheadings for each
@@ -187,40 +206,122 @@ for repo_name in sorted(repos.keys()):
         # strands_navigation/topological_rviz_tools.md. In the case of packages
         # with multiple readmes, we will create a separate directory for them so
         # they are in their own section.
-
         base_path = os.path.join("docs", repo_name)
 
         multiple = False
-        if len(readmes[subpkg]) > 1:
+        if len(subpkg_readmes[subpkg]) > 1:
             # sometimes the top level may have multiple files, but we don't want
             # to put them in a subdirectory
             if subpkg != "index":
                 base_path = os.path.join(base_path, subpkg)
             multiple = True
 
-        for readme in readmes[subpkg]:
+        for readme in subpkg_readmes[subpkg]:
+            # Get a filename for the new readme file based on where it was in the directory tree.
+            split_path = path_to_arr(os.path.dirname(readme[0]))
             if multiple:
-                if len(readme[1]) <= 1:
-                    if readme[2] == "readme":
+                # There is more than one file in the subpackage
+                lower_fname = os.path.splitext(os.path.basename(readme[0]))[0].lower()
+                if len(split_path) <= 1:
+                    # The file was at level 0 or 1 in the directory tree. If
+                    # it was called readme, then we rename it to index.md so
+                    # that it is used as a base page in the documentation.
+                    # Otherwise, we keep its current name in lowercase.
+                    if lower_fname == "readme":
                         fname = "index.md"
                     else:
-                        fname = readme[2] + ".md"
+                        fname = lower_fname + ".md"
                 else:
-                    print("path is long: {0}".format(readme[1]))
-                    fname = os.path.basename(os.path.dirname(readme[0]["path"])) + ".md"
+                    # The path is long, so the file was nested deeper than
+                    # level 1 in the tree. We will rename it to the name of
+                    # the directory that it was in.
+                    print("path is long: {0}".format(split_path))
+                    fname = os.path.basename(os.path.dirname(readme[1]["path"])) + ".md"
             else:
-                if len(readme[1]) == 0:
+                # There is only one file in the subpackage. If the split
+                # path length is zero, that means it was a toplevel readme,
+                # so rename it to index so it's parsed differently by the
+                # documentation code.
+                if len(split_path) == 0:
                     fname = "index.md"
                 else:
-                    fname = os.path.basename(os.path.dirname(readme[0]["path"])) + ".md"
+                    # Otherwise, rename it to the name of the directory it
+                    # was in.
+                    fname = os.path.basename(os.path.dirname(readme[1]["path"])) + ".md"
 
+            # make sure a directory exists for the files
             path = os.path.join(base_path, fname)
-            print("Saving {0} to {1}".format(readme[0]["path"], path))
+            print("Saving {0} to {1}".format(readme[1]["path"], path))
             if not os.path.isdir(os.path.dirname(path)):
                 os.makedirs(os.path.dirname(path))
 
             # Get the contents of the readme file from github and output them to a file
-            file_rq = json.loads(requests.get(readme[0]["url"], headers=header).text)
+            file_rq = json.loads(requests.get(readme[1]["url"], headers=header).text)
             # decode and output the base64 string to file
             with open(path, 'w') as f:
                 f.write(base64.b64decode(file_rq["content"]))
+
+    
+    
+if __name__ == '__main__':
+    ignore_repos = ["laser_filtering", "buildfarm", "metapackages", "jenkins_tools",
+                    "scitos_common", "strands_ci", "ros_mbt", "navigation_layers",
+                    "scitos_2d_navigation", "openni_wrapper", "executive_smach", "morse",
+                    "sicks300", "mjpeg_server", "robomongo", "rosdistro", "strands_management",
+                    "robomongo", "MIRASimpleClient", "navigation", "semantic_segmentation",
+                    "rosbridge_suite", "g4s_deployment"]
+    ignore_filenames = ["authors", "changelog"]
+    org = "strands-project"
+
+    parser = argparse.ArgumentParser(description="Scrape documentation from the strands project repositories")
+    parser.add_argument("--private", action="store_true", help="Include private repositories in the scrape. This requires the generation of an OAuth token for github.")
+    parser.add_argument("--pkgxml", action="store_true", help="Get descriptions of packages from the package.xml in each subdirectory of a repository. If set, the readme data will not be gathered.")
+    parser.add_argument("--wiki", action="store_true", help="Clone the wiki for each package, if it exists.")
+    #parser.add_argument("--ignore-file", nargs=1, help="File containing the names of repos to ignore in the documentation scrape. One repo per line.")
+    #parser.add_argument("--repos", action="append", help="Repositories for which docs should be fetched.")
+    parser.add_argument("--index", action="store_true", help="Generate an index in the docs directory, populating it with links to all the toplevel readmes in each directory in the docs directory. Does not generate other docs.")
+
+    args = parser.parse_args()
+
+    get_readmes = True if not args.pkgxml else False
+    
+    if args.index:
+        create_index_file()
+        sys.exit(0)
+
+    header = get_oauth_header(args.private)
+    repos = get_org_repo_dict(org, header)
+
+    # This is where the bulk of the work is done. We check each repository for
+    # readme files and see if it has a wiki. If we find files there, we copy them
+    # and put them in directories corresponding to the name of the repository
+    for repo_name in sorted(repos.keys()):
+    #for repo_name in ["rosbridge_suite", "v4r", "v4r_ros_wrappers", "strands_executive"]:
+        print("-------------------- {0} --------------------".format(repo_name))
+        if repo_name in ignore_repos:
+            print("ignoring repo".format(repo_name))
+            continue
+
+        if args.wiki:
+            get_wiki(org, repo_name)
+
+        if get_readmes:
+            write_readme_files(repo_name)
+
+        if get_readmes or args.pkgxml:
+            package_xml = get_repo_files(org, repo_name, match_full=["package.xml".format(repo_name)])
+            subpkg_xml = files_to_subpackages(package_xml)
+
+            base_path = os.path.join("docs", repo_name)
+            for subpkg in subpkg_xml.keys():
+                for pkg_xml in subpkg_xml[subpkg]:
+                    path = os.path.join(base_path, os.path.dirname(pkg_xml[0]), "package.xml")
+                    print("Saving {0} to {1}".format(pkg_xml[1]["path"], path))
+                    if not os.path.isdir(os.path.dirname(path)):
+                        os.makedirs(os.path.dirname(path))
+
+                    # Get the contents of the package.xml file from github and output them to a file
+                    file_rq = json.loads(requests.get(pkg_xml[1]["url"], headers=header).text)
+                    with open(path, 'w') as f:
+                        f.write(base64.b64decode(file_rq["content"]))
+

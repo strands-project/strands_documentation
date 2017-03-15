@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <name>visualise_tables</name>
+  <version>0.0.1</version>
+  <description>Publishes tables as interactive markers for RVIZ.</description>
+
+  <maintainer email="cburbridge@gmail.com">Chris Burbridge</maintainer>
+
+
+
+  <license>GPL</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_srvs</build_depend>
+  <build_depend>strands_perception_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>interactive_markers</build_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>std_srvs</run_depend>
+  <run_depend>strands_perception_msgs</run_depend>
+  <run_depend>visualization_msgs</run_depend>
+  <run_depend>interactive_makrers</run_depend>
+
+
+  <export>
+
+  </export>
+</package>

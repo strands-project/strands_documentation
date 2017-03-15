@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <name>aaf_simulation</name>
+  <version>0.0.0</version>
+  <description>The aaf_simulation package</description>
+
+  <maintainer email="jpulidofentanes@lincoln.ac.uk">Jaime Pulido Fentanes</maintainer>
+
+  <license>MIT</license>
+
+  
+  <author email="jpulidofentanes@lincoln.ac.uk">Jaime Pulido Fentanes</author>
+
+  <run_depend>strands_morse</run_depend>
+  <run_depend>strands_navigation</run_depend>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- You can specify that this package is a metapackage here: -->
+    <!-- <metapackage/> -->
+
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

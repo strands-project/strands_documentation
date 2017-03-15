@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package>
+  <name>soma_pcl_segmentation</name>
+
+  <version>2.1.0</version>
+
+  <description>The soma_pcl_segmentation package</description>
+
+  <maintainer email="L.Kunze@cs.bham.ac.uk">Lars Kunze</maintainer>
+  <maintainer email="n.a.hawes@cs.bham.ac.uk">Nick Hawes</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+  <build_depend>semantic_map_publisher</build_depend>
+  <build_depend>semantic_segmentation</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>libpcl-all-dev</build_depend>
+  <build_depend>pcl_ros</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>octomap_msgs</build_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>semantic_map_publisher</run_depend>
+  <run_depend>semantic_segmentation</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>libpcl-all</run_depend>
+  <run_depend>pcl_ros</run_depend>
+  <run_depend>octomap_msgs</run_depend>
+
+</package>

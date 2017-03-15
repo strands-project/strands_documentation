@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>sound_player_server</name>
+  <version>0.0.33</version>
+  <description>The media player for AAF, working with general mp3 folders</description>
+
+  <maintainer email="nilsbore@gmail.com">Nils Bore</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">https://github.com/strands-project/strands_deployment</url>
+
+  <author email="nilsbore@gmail.com">Nils Bore</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>pygame_managed_player</build_depend>
+  <build_depend>mongodb_media_server</build_depend>
+  <build_depend>message_generation</build_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>pygame_managed_player</run_depend>
+  <run_depend>mongodb_media_server</run_depend>
+  <run_depend>message_runtime</run_depend>
+
+  <export/>
+</package>

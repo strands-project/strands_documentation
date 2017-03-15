@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <name>strands_ui</name>
+  <version>0.0.33</version>
+  <description>The strands_ui metapackage</description>
+
+  <maintainer email="cdondrup@lincoln.ac.uk">Christian Dondrup</maintainer>
+
+  <license>MIT</license>
+
+  <url type="website">https://github.com/strands-project/strands_ui</url> 
+
+  <author email="cdondrup@lincoln.ac.uk">Christian Dondrup</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>mary_tts</run_depend>
+  <run_depend>rosbridge_server</run_depend>
+  <run_depend>strands_webserver</run_depend>
+  <run_depend>tf2_web_republisher</run_depend>
+  <run_depend>pygame_managed_player</run_depend>
+  <run_depend>music_player</run_depend>
+  <run_depend>mongodb_media_server</run_depend>
+  <run_depend>sound_player_server</run_depend>
+
+  <export>
+    <!--<metapackage/> -->
+  </export>
+</package>

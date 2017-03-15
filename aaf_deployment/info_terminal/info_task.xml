@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package>
+  <name>info_task</name>
+  <version>0.0.0</version>
+  <description>The info_task package</description>
+
+  <maintainer email="cdondrup@lincoln.ac.uk">cdondrup</maintainer>
+
+  <license>MIT</license>
+
+  <url type="github">http://github.com/strands-project/aaf_deployment</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>actionlib</build_depend>
+  <build_depend>actionlib_msgs</build_depend>
+  <build_depend>flir_pantilt_d46</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>strands_executive_msgs</build_depend>
+  <build_depend>strands_gazing</build_depend>
+  <build_depend>strands_webserver</build_depend>
+
+  <run_depend>actionlib</run_depend>
+  <run_depend>actionlib_msgs</run_depend>
+  <run_depend>flir_pantilt_d46</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>strands_executive_msgs</run_depend>
+  <run_depend>strands_gazing</run_depend>
+  <run_depend>strands_webserver</run_depend>
+
+  <export/>
+</package>

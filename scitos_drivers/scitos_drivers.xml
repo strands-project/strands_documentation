@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>scitos_drivers</name>
+  <version>0.1.9</version>
+  <description>
+	Driver for Scitos-G5 using the MIRA framework. Includes drivers for other typical Scitos Hardware, eg laser scanner.
+  </description>
+
+  <maintainer email="cburbridge@gmail.com">Chris Burbridge</maintainer>
+
+  <license>GPL</license>
+
+  <url type="website">http://github.com/strands-project/scitos_drivers</url>
+
+  <author email="cburbridge@gmail.com">Chris Burbridge</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>scitos_mira</run_depend>
+  <run_depend>sicks300</run_depend>
+  <run_depend>flir_pantilt_d46</run_depend>
+  <run_depend>scitos_bringup</run_depend>
+  <run_depend>scitos_pc_monitor</run_depend>
+
+  <export>
+		<metapackage/>
+  </export>
+</package>

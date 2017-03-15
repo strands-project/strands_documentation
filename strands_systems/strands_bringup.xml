@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package>
+    <name>strands_bringup</name>
+    <version>0.1.0</version>
+    <description>The strands_bringup package</description>
+
+    <maintainer email="pulidofentanes@gmail.com">Jaime Pulido Fentanes</maintainer>
+
+    <license>MIT</license>
+
+    <author email="pulidofentanes@gmail.com">Jaime Pulido Fentanes</author>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <run_depend>scitos_bringup</run_depend>
+    <run_depend>scitos_mira</run_depend>
+    <run_depend>scitos_drivers</run_depend>
+    <run_depend>flir_pantilt_d46</run_depend>
+    <run_depend>sicks300</run_depend>
+    <run_depend>scitos_common</run_depend>
+    <run_depend>scitos_description</run_depend>
+    <run_depend>scitos_2d_navigation</run_depend>
+    <run_depend>scitos_apps</run_depend>
+    <run_depend>strands_apps</run_depend>
+    <run_depend>strands_navigation</run_depend>
+    <run_depend>strands_ui</run_depend>
+    <run_depend>strands_hri</run_depend>
+    <run_depend>openni2_launch</run_depend>
+
+    <export>
+
+    </export>
+</package>

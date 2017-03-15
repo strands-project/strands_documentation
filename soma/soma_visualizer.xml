@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<package>
+  <name>soma_visualizer</name>
+  <version>2.1.0</version>
+  <description>soma_visualizer package</description>
+
+
+  <maintainer email="hkarao@kth.se">Hakan Karaoguz</maintainer>
+
+
+
+  <license>MIT</license>
+
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>mongodb_store</build_depend>
+  <build_depend>libpcl-all-dev</build_depend>
+  <build_depend>soma_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>pcl_ros</build_depend>
+  <build_depend>soma_map_manager</build_depend>
+  <build_depend>soma_roi_manager</build_depend>
+  <build_depend>soma_manager</build_depend>
+  <build_depend>cv_bridge</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>pcl_ros</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>libpcl-all-dev</run_depend>
+  <run_depend>mongodb_store</run_depend>
+  <run_depend>soma_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>soma_map_manager</run_depend>
+  <run_depend>soma_roi_manager</run_depend>
+   <run_depend>soma_manager</run_depend>
+   <run_depend>cv_bridge</run_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

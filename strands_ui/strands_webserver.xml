@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package>
+  <name>strands_webserver</name>
+  <version>0.0.33</version>
+  <description>A webserver which responds to ROS service calls to display content.</description>
+
+  <maintainer email="n.a.hawes@cs.bham.ac.uk">Nick Hawes</maintainer>
+  <maintainer email="c.j.c.burbridge@cs.bham.ac.uk">Chris Burbridge</maintainer> 
+
+  <license>MIT</license>
+
+  <author email="n.a.hawes@cs.bham.ac.uk">Nick Hawes</author>
+  <author email="c.j.c.burbridge@cs.bham.ac.uk">Chris Burbridge</author> 
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>actionlib</build_depend>
+  <build_depend>actionlib_msgs</build_depend>
+  <build_depend>rosbridge_server</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_srvs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>strands_webtools</build_depend>
+
+  <run_depend>actionlib</run_depend>
+  <run_depend>actionlib_msgs</run_depend>
+  <run_depend>rosbridge_server</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>std_srvs</run_depend>
+  <run_depend>strands_webtools</run_depend>
+  <run_depend>twitter_bootstrap</run_depend>
+  <run_depend>python-webpy</run_depend>
+
+
+</package>

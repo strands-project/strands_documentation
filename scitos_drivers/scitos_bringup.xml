@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>scitos_bringup</name>
+  <version>0.1.9</version>
+  <description>The scitos_bringup package</description>
+
+  <maintainer email="pulidofentanes@gmail.com">Jaime Pulido Fentanes</maintainer>
+
+  <license>MIT</license>
+
+  <author email="pulidofentanes@gmail.com">Jaime Pulido Fentanes</author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+	<run_depend>scitos_mira</run_depend>
+	<run_depend>flir_pantilt_d46</run_depend>
+	<run_depend>sicks300</run_depend>
+	<run_depend>scitos_common</run_depend>
+	<run_depend>scitos_description</run_depend>
+	<run_depend>strands_apps</run_depend>
+
+  <export>
+
+
+  </export>
+</package>

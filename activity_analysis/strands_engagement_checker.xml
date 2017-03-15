@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>strands_engagement_checker</name>
+  <version>0.0.1</version>
+  <description>The engagement_checker package</description>
+
+  <maintainer email="omari.1988@gmail.com">Mohannad Al Omari</maintainer>
+  <maintainer email="cdondrup@lincoln.ac.uk">Christian Dondrup</maintainer>
+
+  <license>MIT</license>
+
+  <url type="website">https://github.com/strands-project/activity_analysis</url> 
+
+  <author email="omari.1988@gmail.com">Mohannad Al Omari</author>
+  <author email="cdondrup@lincoln.ac.uk">Christian Dondrup</author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>bayes_people_tracker</build_depend>
+  
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>bayes_people_tracker</run_depend>
+
+  <export/>
+</package>

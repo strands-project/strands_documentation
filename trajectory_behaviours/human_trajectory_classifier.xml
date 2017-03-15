@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package>
+  <name>human_trajectory_classifier</name>
+  <version>0.0.1</version>
+  <description>A package to classify movements to human movements or non-human movement.</description>
+
+  <maintainer email="fxj345@cs.bham.ac.uk">Ferdian Jovan</maintainer>
+
+  <license>MIT</license>
+
+  <!-- <url type="website">http://wiki.ros.org/human_movement_identifier</url> -->
+
+  <author email="fxj345@cs.bham.ac.uk">Ferdian Jovan</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>human_trajectory</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>actionlib</build_depend>
+  <build_depend>actionlib_msgs</build_depend>
+
+  <run_depend>human_trajectory</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>python-pymongo</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>actionlib</run_depend>
+  <run_depend>actionlib_msgs</run_depend>
+
+  <export>
+  </export>
+</package>

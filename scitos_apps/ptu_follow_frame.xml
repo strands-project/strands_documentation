@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>ptu_follow_frame</name>
+  <version>0.1.1</version>
+  <description>
+   The ptu_follow_frame package provides a node that keeps the PTU targeted
+   at the origin of a given frame.
+  </description>
+
+  <maintainer email="cburbridge@gmail.com">Chris Burbridge</maintainer>
+  <author email="cburbridge@gmail.com">Chris Burbridge</author>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>message_generation</run_depend>
+
+  <export>
+  </export>
+</package>

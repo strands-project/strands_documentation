@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <name>strands_qsr_learned_qualitators</name>
+  <version>0.0.0</version>
+  <description>The strands_qsr_learned_qualitators package</description>
+
+  <maintainer email="cburbridge@gmail.com">chris burbridge</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>strands_qsr_msgs/</build_depend>
+  <run_depend>strands_qsr_msgs/</run_depend>
+  <build_depend>visualization_msgs/</build_depend>
+  <run_depend>visualization_msgs/</run_depend>
+  <build_depend>rospy/</build_depend>
+  <run_depend>rospy</run_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- You can specify that this package is a metapackage here: -->
+    <!-- <metapackage/> -->
+
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

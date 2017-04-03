@@ -47,13 +47,6 @@ roslaunch mongodb_store mongodb_store.launch db_path:=$DATA_DIR/my_database_dir
 You can see more information about the database system at
 https://github.com/strands-project/mongodb_store/tree/hydro-devel/mongodb_store
 
-### Using a simulation
-```sh
-roslaunch --wait topological_utils dummy_topological_navigation.launch map:=tsc2015
-```
-
-fast mode: https://github.com/strands-project/lamor15/wiki/Individual-Computer-Setup
-
 ### Metric map
 
 The metric map is a 2D map of the operating environment, where each cell of a
@@ -194,6 +187,34 @@ the following when you launch:
 Once you have added a new node to the map, you should delete the `temp_node`.
 For instructions on using the rviz topological map editor, see the readme
 [here](https://github.com/strands-project/strands_navigation/tree/indigo-devel/topological_rviz_tools).
+
+### Using a simulation
+#### Existing simulated environments
+If you want to use a simulation, you should use the `strands_morse` package. The following will bring up a simulation of the environment at the University of Birmingham:
+
+```sh
+roslaunch strands_morse bham_cs_morse.launch
+```
+
+In the directory `strands_morse/bham/maps`, you can find yaml files for the topological and metric maps.
+
+Launch the `mongodb_store` (see instructions [here](#database)), and then add the topological map to your database with
+
+```sh
+rosrun topological_utils load_yaml_map.py `rospack find strands_morse`/bham/maps/cs_lg_sim.tplg
+```
+
+Once that is done, you should be able to start the navigation system with
+
+```sh
+roslaunch strands_morse bham_cs_nav2d.launch
+```
+
+You can then view the topological map data in rviz and use it to send the robot to different nodes.
+
+fast mode: https://github.com/strands-project/lamor15/wiki/Individual-Computer-Setup
+
+#### Custom simulated environment
 
 ### Routine
 

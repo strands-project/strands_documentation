@@ -1,0 +1,11 @@
+# The keys in this dict will be used as the filenames for output markdown files.
+datasets:
+  kth_lt:
+    # url of the page where the docs for the dataset are currently hosted
+    url: https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels/readme.html
+  mht_rgbd:
+    url: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/mht_rgbd.html
+    # this page has an iframe and tables, which are stripped out by the default
+    # conversion. Use the raw conversion and they are retained.
+    pandoc_extra_args:
+      #- "--parse-raw"

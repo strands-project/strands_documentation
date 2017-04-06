@@ -1,0 +1,28 @@
+# These repositories will not be added to the documentation site
+ignore_repos:
+  - laser_filtering
+  - buildfarm
+  - metapackages
+  - jenkins_tools
+  - scitos_common
+  - strands_ci
+  - ros_mbt
+  - navigation_layers
+  - scitos_2d_navigation
+  - openni_wrapper
+  - executive_smach
+  - morse
+  - sicks300
+  - mjpeg_server
+  - robomongo
+  - rosdistro
+  - strands_management
+  - robomongo
+  - MIRASimpleClient
+  - navigation
+  - semantic_segmentation
+  - rosbridge_suite
+  - g4s_deployment
+  - strands_webtools
+  - aaf_deployment
+  - autonomous_patrolling

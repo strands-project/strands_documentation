@@ -9,3 +9,5 @@ datasets:
     # conversion. Use the raw conversion and they are retained.
     pandoc_extra_args:
       #- "--parse-raw"
+  index:
+    url: http://strands.acin.tuwien.ac.at/data.html

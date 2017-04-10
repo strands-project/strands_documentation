@@ -235,42 +235,73 @@ def get_package_xml_description(xml):
     root = ET.fromstring(xml)
     return root.findall("description")[0].text
 
+def html_to_md(dataset_name, url, pandoc_extra_args=None):
+    """Converts a url or file from html to markdown, saving any images in the html to an image directory.
+    """
+    base_link_re_str = "\[[a-zA-Z0-9\/\.\\\_\s:\-]*\]\(([a-zA-Z0-9\/\.\\_\s:\-]*)\)"
+    link_re =  re.compile(base_link_re_str)
+    image_re = re.compile("!" + base_link_re_str)
+
+    url_split = urlparse.urlparse(url)
+    orig_path = url_split.path
+    # trim the path to get the base path for the page, to replace
+    # relative paths in the html
+    trimmed_path = os.path.dirname(orig_path)
+    base_url = url.replace(orig_path, trimmed_path)
+    pandoc_args = ["--no-wrap"]
+    if pandoc_extra_args:
+        pandoc_args.extend(pandoc_extra_args)
+
+    # verify=false is dangerous as it ignores ssl certificates, but
+    # we're not doing anything which has security risks associated.
+    md_text = pypandoc.convert_text(requests.get(url, verify=False).text, "md", format="html", extra_args=pandoc_args).encode('utf-8')
+
+    # Use this to replace relative links in the webpage with absolute ones so
+    # that they can be properly accessed. We don't want to replace the whole
+    # match, just the link itself.
+    def link_replace(match):
+        link = match.group(1)
+        if link.startswith("http") or link.startswith("www"):
+            # non-relative links stay the same
+            return match.group(0)
+        else:
+            # change the link in relative links
+            return match.group(0).replace(link, "{0}/{1}".format(base_url, link))
+
+    fixed_links = link_re.sub(link_replace, md_text)
+
+    # We want to preserve images in the documentation, so we will download all
+    # the images on the page, which are markdown ![]() blocks, where links are
+    # [](). Then, we'll replace the image references to the web with ones to the
+    # images directory we save them in
+    image_base_path = os.path.abspath("datasets/images/{0}".format(dataset_name))
+    if not os.path.isdir(image_base_path):
+        os.makedirs(image_base_path)
+
+    def image_replace(match):
+        image_name = os.path.basename(urlparse.urlparse(match.group(1)).path)
+        image_outfile = os.path.join(image_base_path, image_name)
+        with open(image_outfile, 'w') as f:
+            img_resp = requests.get(match.group(1), verify=False)
+            f.write(img_resp.content)
+
+        return match.group(0).replace(match.group(1), "images/{0}/{1}".format(dataset_name, image_name))
+
+    fixed_images = image_re.sub(image_replace, fixed_links)
+
+    return fixed_images
+
 def create_dataset_docs(dataset_conf):
     """Creates dataset docs from a configuration provided, which should be found in datasets/datasets.yaml
     Will convert html pages to markdown files.
     """
-    link_re =  re.compile("\[[a-zA-Z0-9\/\.\\\_\s:\-]*\]\(([a-zA-Z0-9\/\.\\_\s:\-]*)\)")
     for dataset in datasets.keys():
-        # verify=false is dangerous as it ignores ssl certificates, but we're
-        # not doing anything which has security risks associated.
         with open("datasets/{0}.md".format(dataset), 'w') as f:
-            url = datasets[dataset]["url"]
-            url_split = urlparse.urlparse(url)
-            orig_path = url_split.path
-            # trim the path to get the base path for the page, to replace
-            # relative paths in the html
-            trimmed_path = os.path.dirname(orig_path)
-            base_url = url.replace(orig_path, trimmed_path)
-            pandoc_args = ["--no-wrap"]
+            extra_args = None
             if "pandoc_extra_args" in datasets[dataset] and datasets[dataset]["pandoc_extra_args"]:
-                pandoc_args.extend(datasets[dataset]["pandoc_extra_args"])
-                    
-            md_text = pypandoc.convert_text(requests.get(url, verify=False).text, "md", format="html", extra_args=pandoc_args)
-
-            # we don't want to replace the whole match, just the link itself
-            def link_replace(match):
-                link = match.group(1)
-                if link.startswith("http") or link.startswith("www"):
-                    # non-relative links stay the same
-                    return match.group(0)
-                else:
-                    # change the link in relative links
-                    return match.group(0).replace(link, "{0}/{1}".format(base_url, link))
-
-            fixed_links = link_re.sub(link_replace, md_text)
-
-            f.write(fixed_links)
-
+                extra_args = datasets[dataset]["pandoc_extra_args"]
+            f.write(html_to_md(dataset, datasets[dataset]["url"], extra_args))
+                
 def copy_dataset_docs():
     """copies docs from the dataset directory to the docs directory, into a dataset directory
     """
@@ -281,6 +312,16 @@ def copy_dataset_docs():
         for f in files:
             if fnmatch.fnmatch(f, "*.md"):
                 shutil.copyfile(os.path.abspath(os.path.join(subdir, f)), "docs/datasets/{0}".format(f))
+
+    for subdir, dirs, files in os.walk("datasets/images"):
+        for f in files:
+            src_path = os.path.abspath(os.path.join(subdir, f))
+            print("subdir: {0}".format(subdir))
+            dest_path = os.path.abspath(os.path.join("docs", subdir, f))
+            if not os.path.isdir(os.path.dirname(dest_path)):
+                os.makedirs(os.path.dirname(dest_path))
+            print("copying src {0} to dest {1}".format(src_path, dest_path))
+            shutil.copyfile(src_path, dest_path)
 
 def write_readme_files(repo_name):
     readmes = get_repo_files(org, repo_name, match_ext=[".md"], match_filename=["readme"])

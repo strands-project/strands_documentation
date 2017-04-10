@@ -1,7 +1,7 @@
 KTH Longterm Dataset Labels
 ---------------------------
 
-![](https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels/html/images/Robot_s.png)
+![](images/kth_lt/Robot_s.png)
 
 KTH Scitos G5 robot - Rosie
 
@@ -48,7 +48,7 @@ A parser is provided [here](https://github.com/strands-project/strands_3d_mappin
  This loads all the observations along with the labelled data from the path specified and displays each observation along with the corresponding labelled objects in a visualizer window.
 
   -------------------------------- -------------------------------- --------------------------------
-  ![](https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels/html/images/labelled1.png)   ![](https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels/html/images/labelled2.png)   ![](https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels/html/images/labelled3.png)
+  ![](images/kth_lt/labelled1.png)   ![](images/kth_lt/labelled2.png)   ![](images/kth_lt/labelled3.png)
   -------------------------------- -------------------------------- --------------------------------
 
 Observation (red) with labelled objects (RGB)

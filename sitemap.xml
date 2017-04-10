@@ -4,7 +4,23 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/packages/</loc>
+     <lastmod>2017-04-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/setup/</loc>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,25 +29,25 @@
         
     <url>
      <loc>/aaf_deployment/aaf_simulation/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/aaf_deployment/aaf_walking_group/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/aaf_deployment/expert_interventions/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/aaf_deployment/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -53,7 +69,7 @@
         
     <url>
      <loc>/activity_analysis/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -63,19 +79,19 @@
         
     <url>
      <loc>/annotation_tool_kth/annotation-tool/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/annotation_tool_kth/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/annotation_tool_kth/rgbd_grabber/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -85,7 +101,7 @@
         
     <url>
      <loc>/autonomous_patrolling/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -101,7 +117,7 @@
         
     <url>
      <loc>/data_analysis/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -111,31 +127,31 @@
         
     <url>
      <loc>/data_compression/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/data_compression/libav_image_transport/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/data_compression/libav_trunk/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/data_compression/mongodb_openni_compression/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/data_compression/rosbag_openni_compression/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -150,8 +166,30 @@
     
         
     <url>
+     <loc>/datasets/</loc>
+     <lastmod>2017-04-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/datasets/kth_lt/</loc>
+     <lastmod>2017-04-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/datasets/mht_rgbd/</loc>
+     <lastmod>2017-04-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/dh_bin_wizard/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -161,7 +199,7 @@
         
     <url>
      <loc>/edge_leg_detector/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -171,7 +209,7 @@
         
     <url>
      <loc>/elan_analyser/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -181,49 +219,49 @@
         
     <url>
      <loc>/fremen/Fremen2DGrid/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/fremen/FremenArray/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/fremen/FremenServer/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/fremen/fremengrid/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/fremen/frenap/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/fremen/froctomap/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/fremen/frongo/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/fremen/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -233,7 +271,7 @@
         
     <url>
      <loc>/github_manager/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -253,7 +291,7 @@
         
     <url>
      <loc>/lamor15/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -269,7 +307,7 @@
         
     <url>
      <loc>/lol/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -279,19 +317,19 @@
         
     <url>
      <loc>/mongodb_store/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/mongodb_store/mongodb_log/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/mongodb_store/mongodb_store/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -301,7 +339,7 @@
         
     <url>
      <loc>/planning_tutorial/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -317,7 +355,7 @@
         
     <url>
      <loc>/qrobot/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -327,7 +365,7 @@
         
     <url>
      <loc>/robblog/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -343,43 +381,43 @@
         
     <url>
      <loc>/scitos_apps/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scitos_apps/ptu_follow_frame/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scitos_apps/scitos_cmd_vel_mux/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scitos_apps/scitos_dashboard/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scitos_apps/scitos_docking/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scitos_apps/scitos_teleop/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scitos_apps/scitos_touch/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -395,25 +433,25 @@
         
     <url>
      <loc>/scitos_drivers/flir_pantilt_d46/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scitos_drivers/scitos_bringup/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scitos_drivers/scitos_mira/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scitos_drivers/scitos_pc_monitor/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -433,7 +471,7 @@
         
     <url>
      <loc>/sensortag/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -443,19 +481,19 @@
         
     <url>
      <loc>/soma/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/soma/soma_llsd/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/soma/soma_visualizer/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -471,7 +509,7 @@
         
     <url>
      <loc>/strands-docker/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -481,7 +519,7 @@
         
     <url>
      <loc>/strands-project.github.io/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -497,85 +535,85 @@
         
     <url>
      <loc>/strands_3d_mapping/calibrate_sweeps/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/cloud_merge/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/ekz-public-lib/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/learn_objects_action/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/metaroom_xml_parser/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/nbv_planning/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/object_manager/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/object_view_generator/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/semantic_map/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/semantic_map_launcher/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/semantic_map_publisher/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/semantic_map_to_2d/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_3d_mapping/strands_sweep_registration/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -609,7 +647,7 @@
         
     <url>
      <loc>/strands_analysis/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -619,61 +657,61 @@
         
     <url>
      <loc>/strands_apps/door_pass/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_apps/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_apps/marathon_reporter/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_apps/odometry_mileage/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_apps/pose_extractor/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_apps/ramp_climb/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_apps/roslaunch_axserver/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_apps/static_transform_manager/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_apps/topological_roslaunch/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_apps/watchdog_node/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -683,13 +721,13 @@
         
     <url>
      <loc>/strands_data_to_qsrlib/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_data_to_qsrlib/novelTrajectories/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -709,7 +747,7 @@
         
     <url>
      <loc>/strands_documentation/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -719,37 +757,37 @@
         
     <url>
      <loc>/strands_executive/doc/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_executive/gcal_routine/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_executive/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_executive/mdp_plan_exec/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_executive/scheduler/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_executive/task_executor/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -759,7 +797,7 @@
         
     <url>
      <loc>/strands_executive_behaviours/routine_behaviours/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -769,13 +807,13 @@
         
     <url>
      <loc>/strands_exploration/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_exploration/spatiotemporal_exploration/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -785,37 +823,37 @@
         
     <url>
      <loc>/strands_hri/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_hri/strands_gazing/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_hri/strands_hri_launch/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_hri/strands_human_aware_navigation/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_hri/strands_human_following/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_hri/strands_simple_follow_me/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -831,13 +869,13 @@
         
     <url>
      <loc>/strands_interfaces/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_interfaces/strands_admin_web_ui/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -847,7 +885,7 @@
         
     <url>
      <loc>/strands_morse/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -869,13 +907,13 @@
         
     <url>
      <loc>/strands_movebase/calibrate_chest/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_movebase/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -885,7 +923,7 @@
         
     <url>
      <loc>/strands_msgs/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -895,43 +933,43 @@
         
     <url>
      <loc>/strands_navigation/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_navigation/joy_map_saver/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_navigation/message_store_map_switcher/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_navigation/monitored_navigation/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_navigation/nav_goals_generator/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_navigation/topological_logging_manager/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_navigation/topological_rviz_tools/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -953,7 +991,7 @@
         
     <url>
      <loc>/strands_papers/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -963,79 +1001,79 @@
         
     <url>
      <loc>/strands_perception_people/bayes_people_tracker/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/bayes_people_tracker_logging/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/detector_msg_to_pose_array/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/ground_plane_estimation/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/human_trajectory/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/mdl_people_tracker/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/odometry_to_motion_matrix/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/rwth_upper_body_skeleton_random_walk/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/strands_head_orientation/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/upper_body_detector/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/vision_people_logging/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_perception_people/wheelchair_detector/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1063,7 +1101,7 @@
         
     <url>
      <loc>/strands_qsr/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1079,19 +1117,19 @@
         
     <url>
      <loc>/strands_qsr_lib/docs/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_qsr_lib/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_qsr_lib/qsr_prob_rep/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1107,13 +1145,13 @@
         
     <url>
      <loc>/strands_recovery_behaviours/backoff_behaviour/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_recovery_behaviours/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1123,25 +1161,25 @@
         
     <url>
      <loc>/strands_social/fake_camera_effects/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_social/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_social/social_card_reader/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_social/strands_tweets/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1151,13 +1189,13 @@
         
     <url>
      <loc>/strands_systems/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_systems/strands_bringup/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1173,43 +1211,43 @@
         
     <url>
      <loc>/strands_tabletop_perception/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_tabletop_perception/mv_object_classifier/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_tabletop_perception/object_classifier/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_tabletop_perception/pcd_filter/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_tabletop_perception/qsr_kb/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_tabletop_perception/table_detection/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_tabletop_perception/visualize_pcd_indices/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1219,31 +1257,31 @@
         
     <url>
      <loc>/strands_ui/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_ui/mary_tts/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_ui/mongodb_media_server/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_ui/robot_talk/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_ui/strands_webserver/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1253,67 +1291,67 @@
         
     <url>
      <loc>/strands_utils/battery_check/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_utils/driveable_floor_calib/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_utils/driveable_floor_check_console/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_utils/driveable_floor_check_qt/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_utils/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_utils/intruder_detection/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_utils/primitive_extraction/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_utils/ransac_primitives/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_utils/strands_hostname/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_utils/strands_marathon_achievements/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/strands_utils/usbreset/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1329,7 +1367,7 @@
         
     <url>
      <loc>/trajectory_behaviours/human_trajectory_classifier/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1345,7 +1383,7 @@
         
     <url>
      <loc>/twitter_bootstrap/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1355,19 +1393,19 @@
         
     <url>
      <loc>/v4r/citation/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/v4r/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/v4r/ml/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1383,37 +1421,37 @@
         
     <url>
      <loc>/v4r_ros_wrappers/contributing/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/v4r_ros_wrappers/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/v4r_ros_wrappers/multiview_object_recognizer/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/v4r_ros_wrappers/object_classifier/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/v4r_ros_wrappers/singleview_object_recognizer/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/v4r_ros_wrappers/tutorial/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -1423,7 +1461,7 @@
         
     <url>
      <loc>/viper/</loc>
-     <lastmod>2017-03-15</lastmod>
+     <lastmod>2017-04-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

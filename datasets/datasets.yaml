@@ -1,6 +1,6 @@
 # The keys in this dict will be used as the filenames for output markdown files.
 datasets:
-  kth_lt:
+  kth_lt_labels:
     # url of the page where the docs for the dataset are currently hosted
     url: https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels/readme.html
   mht_rgbd:
@@ -9,5 +9,27 @@ datasets:
     # conversion. Use the raw conversion and they are retained.
     pandoc_extra_args:
       #- "--parse-raw"
-  index:
+  index: # do not change this URL
     url: http://strands.acin.tuwien.ac.at/data.html
+  three_d_net:
+    url: https://repo.acin.tuwien.ac.at/tmp/permanent/3d-net.org
+  tuw:
+    url: https://repo.acin.tuwien.ac.at/tmp/permanent/dataset_index.php
+  lad:
+    url: https://dartportal.leeds.ac.uk/dataset/lad
+  witham_wharf:
+    url: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/wharf_rgbd.html
+  small_office:
+    url: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/greg-office.html
+  meta_rooms:
+    url: https://strands.pdc.kth.se/public/metric_sweeps_201312/readme.html
+  kth_3d:
+    url: https://strands.pdc.kth.se/public/kth-3d-total/readme.html
+  marathon:
+    url: https://strands.pdc.kth.se/public/Marathon_2014/readme.html
+  kth_lt:
+    url: https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/readme.html
+  kth_lt_moving:
+    url: https://strands.pdc.kth.se/public/KTH_labelled_moving_objects/readme.html
+  people_tracks:
+    url: https://strands.pdc.kth.se/public/TrackData/readme.html

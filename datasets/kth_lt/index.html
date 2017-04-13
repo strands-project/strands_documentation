@@ -68,6 +68,13 @@
 <li>
           
             <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../summary/">Summary</a>
+        
+    </li>
+<li>
+          
+            <li>
     <ul class="subnav">
     <li><span>Aaf deployment</span></li>
 
@@ -363,18 +370,30 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../index_new/">Index new</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kth_3d/">Kth 3d</a>
+        
+    </li>
+
+        
+            
     <li class="toctree-l1 current">
         <a class="current" href="./">Kth lt</a>
         
             <ul>
             
-                <li class="toctree-l3"><a href="#kth-longterm-dataset-labels">KTH Longterm Dataset Labels</a></li>
+                <li class="toctree-l3"><a href="#kth-longterm-dataset">KTH Longterm Dataset</a></li>
                 
                     <li><a class="toctree-l4" href="#dataset-structure">Dataset structure</a></li>
                 
                     <li><a class="toctree-l4" href="#parsing">Parsing</a></li>
-                
-                    <li><a class="toctree-l4" href="#labelling">Labelling</a></li>
                 
                     <li><a class="toctree-l4" href="#download">Download</a></li>
                 
@@ -388,7 +407,77 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kth_lt_labels/">Kth lt labels</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kth_lt_moving/">Kth lt moving</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../lad/">Lad</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../marathon/">Marathon</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../meta_rooms/">Meta rooms</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../mht_rgbd/">Mht rgbd</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../people_tracks/">People tracks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../small_office/">Small office</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../three_d_net/">Three d net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../tuw/">Tuw</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../witham_wharf/">Witham wharf</a>
         
     </li>
 
@@ -2685,12 +2774,16 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="kth-longterm-dataset-labels">KTH Longterm Dataset Labels</h2>
+                <h2 id="kth-longterm-dataset">KTH Longterm Dataset</h2>
 <p><img alt="" src="../images/kth_lt/Robot_s.png" /></p>
 <p>KTH Scitos G5 robot - Rosie</p>
-<p>This dataset contains a subset of observations from <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/readme.html">this dataset</a> - 88 observations acquired at <em>WayPoint16</em>. Each observation consists of a set of 17 RGB-D images (<a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/readme.html">originally</a> 51, however this dataset only contains the RGB-D clouds corresponding to a single height value of the PTU) obtained by moving the pan-tilt in a horizontal pattern, in increments of 20 degrees. In addition to the raw sensor data, each observation contains object annotations (masks and labels). The data is a part of the <a href="http://strands.acin.tuwien.ac.at/index.html">Strands</a> EU FP7 project.</p>
+<p>The data was collected autonomously by a Scitos G5 robot with an RGB-D camera on a pan-tilt, navigating through the KTH office environment over a period of approximately 30 days. Each observation consists of a set of 51 RGB-D images obtained by moving the pan-tilt in a pattern, in increments of 20 degrees horizontally and 25 vertically. Waypoints are visited between 80 and 100 times and a total of approximately 720 observations are collected at the eight waypoints that can be seen in the figure below. The data is a part of the <a href="http://strands.acin.tuwien.ac.at/index.html">Strands</a> EU FP7 project.</p>
+<p><img alt="" src="../images/kth_lt/map.jpg" /></p>
+<p><img alt="" src="../images/kth_lt/map_obs.jpg" /></p>
+<p>WayPoint positions on the map</p>
+<p>Observations overlayed on the 2D map</p>
 <h3 id="dataset-structure">Dataset structure</h3>
-<p>The <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels">data</a> is structured in folders as follows: <em>YYYYMMDD/patrol_run_YYY/room_ZZZ</em>, where:</p>
+<p>The <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered">data</a> is structured in folders as follows: <em>YYYYMMDD/patrol_run_YYY/room_ZZZ</em>, where:</p>
 <ul>
 <li><strong>YYYYMMDD</strong> represents the year, month &amp; day when those particular observations were acquired. Each such folder contains the patrol runs the robot collected on that specific date.</li>
 <li><strong>patrol_run_YYY</strong> represents one of the patrol runs collected by the robot.</li>
@@ -2700,48 +2793,33 @@
 <ul>
 <li><strong>room.xml</strong> - contains information relevant for the observation (described in the next section)</li>
 <li><strong>complete_cloud.pcd</strong> - the point cloud of the observation (obtained by merging the individual point clouds together)</li>
-<li><strong>intermediate_cloudXXXX.pcd</strong> - ordered point clouds, each corresponding to an RGB and depth image acquired by the camera while conducting the sweep (17 such point clouds for each observation, with <strong>XXXX</strong> going from 0000 to 0016)</li>
-<li><strong>rgb_XXXX.jpg</strong> - RGB image generated from the corresponding <strong>intermediate_cloudXXXX.pcd</strong></li>
-<li><strong>depth_XXXX.png</strong> - depth image generated from the corresponding <strong>intermediate_cloudXXXX.pcd</strong></li>
-<li><strong>rgb_XXXX_label_#.jpg</strong> - binary mask corresponding to one of the objects annotated in the image <strong>rgb_XXXX.jpg</strong></li>
-<li><strong>rgb_XXXX_label_#.pcd</strong> - point cloud generated from object mask <strong>rgb_XXXX_label_#.jpg</strong></li>
-<li><strong>rgb_XXXX_label_#.txt</strong> - object label corresponding to annotation <strong>rgb_XXXX_label_#.jpg</strong></li>
-<li><strong>rgb_XXXX_label_#.xml</strong> - xml file storing the labelled object data (created with data from <strong>rgb_XXXX_label_#.pcd</strong>, <strong>rgb_XXXX_label_#.txt</strong>)</li>
-<li><strong>rgb_XXXX_object_#.jpg</strong> - rgb mask corresponding to one of the objects annotated in the image <strong>rgb_XXXX.jpg</strong></li>
+<li><strong>intermediate_cloud*.pcd</strong> - ordered point clouds, each corresponding to an RGB and depth image acquired by the camera while conducting the sweep (51 such point clouds for each observation)</li>
 </ul>
-<p>The description of the <em>room.xml</em> file accompanying an observation can be found <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/readme.html">here</a>. \
-\
- Each object xml file (<strong>rgb_XXXX_label_#.xml</strong>) contains the following data:</p>
+<p>The <em>room.xml</em> file accompanying an observation contains the following (relevant) fields:</p>
+<p><strong>RoomLogName</strong> - identifier which associates the observation with the folder structure</p>
+<p><strong>RoomRunNumber</strong> - identifier which denotes when the observation was acquired during the patrol run (i.e. 0 - first, 1 - second, etc.)</p>
+<p><strong>RoomStringId</strong> - identifier which corresponds to the waypoint at which the observation was acquired.</p>
+<p><strong>RoomLogStartTime / RoomLogEndTime</strong> - acquisition time</p>
+<p><strong>Centroid</strong> - observation centroid in the map frame</p>
+<p><strong>RoomCompleteCloud</strong> - complete cloud filename</p>
+<p><strong>RoomIntermediateClouds</strong></p>
+<p><strong>RoomIntermediateCloud</strong> - intermediate cloud filename</p>
 <ul>
-<li><strong>label</strong> - object label</li>
-<li><strong>filename</strong> - object pcd file</li>
-<li><strong>Centroid</strong> - object centroid, in the map frame</li>
-<li><strong>LogTime</strong> - time when the object was observed</li>
+<li><strong>RoomIntermediateCloudTransform</strong> - transform from the RGB-D sensor frame to the map frame, as given by the robot odometry</li>
+<li><strong>RoomIntermediateCloudTransformRegistered</strong> - transform which corrects the pose of the intermediate clouds so that they are well registered with respect to each other</li>
 </ul>
 <h3 id="parsing">Parsing</h3>
-<p>A parser is provided <a href="https://github.com/strands-project/strands_3d_mapping/tree/hydro-devel/metaroom_xml_parser">here</a> (can be installed with <code>sudo apt-get install ros-indigo-metaroom-xml-parser</code>) which reads in the data and returns C++ data structures encapsulating the low-level data from the disk. Form more information please refer to <a href="https://github.com/strands-project/strands_3d_mapping/tree/hydro-devel/metaroom_xml_parser">the parser README</a> ( or <a href="https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/metaroom_xml_parser/include/metaroom_xml_parser/load_utilities.h">here</a> for a list of supported methods). Information about how to use the Strands package repository can be found <a href="https://github.com/strands-project-releases/strands-releases/wiki">here</a>. \
-\
- Assuming <a href="https://github.com/strands-project/strands_3d_mapping/tree/hydro-devel/metaroom_xml_parser">the parser</a> has been installed, the labelled data can be visualized with the following sample application: \
-\
- <code>rosrun metaroom_xml_parser load_labelled_data /path/to/data WayPoint16</code> \
-\
- This loads all the observations along with the labelled data from the path specified and displays each observation along with the corresponding labelled objects in a visualizer window.</p>
-<hr />
-<p><img alt="" src="../images/kth_lt/labelled1.png" />   <img alt="" src="../images/kth_lt/labelled2.png" />   <img alt="" src="../images/kth_lt/labelled3.png" /></p>
-<hr />
-<p>Observation (red) with labelled objects (RGB)</p>
-<h3 id="labelling">Labelling</h3>
-<p>For more information on the labelling tool used, please refer to <a href="https://github.com/RaresAmbrus/strands_3d_mapping/tree/metric_map_labelling/labelling">this page</a>.</p>
+<p>A parser is provided <a href="https://github.com/strands-project/strands_3d_mapping/tree/hydro-devel/metaroom_xml_parser">here</a> (can be installed with <code>sudo apt-get install ros-indigo-metaroom-xml-parser</code>) which reads in the data and returns C++ data structures encapsulating the low-level data from the disk. Form more information please refer to <a href="https://github.com/strands-project/strands_3d_mapping/tree/hydro-devel/metaroom_xml_parser">the parser README</a> ( or <a href="https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/metaroom_xml_parser/include/metaroom_xml_parser/load_utilities.h">here</a> for a list of supported methods). Information about how to use the Strands package repository can be found <a href="https://github.com/strands-project-releases/strands-releases/wiki">here</a>.</p>
 <h3 id="download">Download</h3>
-<p>This dataset is available for download in a single archive <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels.tar.gz">file</a> (\~ 15 GB). As an alternative, the individual folders and files can be obtained from <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels">here</a>, and would have to be downloaded manually.</p>
+<p>This dataset is available for download in a single archive <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered.tar.gz">file</a> (\~ 300 GB). As an alternative, the individual folders and files can be obtained from <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered">here</a>, and would have to be downloaded manually.</p>
 <hr />
 <h3 id="condition-of-use">Condition of use</h3>
-<p>If you use the dataset for your research, please cite our <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels/ambrus2015unsupervised.pdf">paper</a> that describes it:</p>
+<p>If you use the dataset for your research, please cite our <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/ambrus2015unsupervised.pdf">paper</a> that describes it:</p>
 <pre><code>    Unsupervised learning of spatial-temporal models of objects in a long-term autonomy scenario 
     Ambrus, Rares and Ekekrantz, Johan and Folkesson, John and Jensfelt, Patric
     Intelligent Robots and Systems (IROS), 2015 IEEE/RSJ International Conference on
 </code></pre>
-<p>We attached a <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels/ambrus2015unsupervised.bib">bibtex</a> record for your convenience.</p>
+<p>We attached a <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/ambrus2015unsupervised.bib">bibtex</a> record for your convenience.</p>
               
             </div>
           </div>
@@ -2749,10 +2827,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../mht_rgbd/" class="btn btn-neutral float-right" title="Mht rgbd">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../kth_lt_labels/" class="btn btn-neutral float-right" title="Kth lt labels">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../kth_3d/" class="btn btn-neutral" title="Kth 3d"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -2778,10 +2856,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../kth_3d/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../mht_rgbd/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../kth_lt_labels/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

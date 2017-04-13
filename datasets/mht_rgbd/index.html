@@ -68,6 +68,13 @@
 <li>
           
             <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../summary/">Summary</a>
+        
+    </li>
+<li>
+          
+            <li>
     <ul class="subnav">
     <li><span>Aaf deployment</span></li>
 
@@ -364,7 +371,56 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../index_new/">Index new</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kth_3d/">Kth 3d</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kth_lt/">Kth lt</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kth_lt_labels/">Kth lt labels</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kth_lt_moving/">Kth lt moving</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../lad/">Lad</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../marathon/">Marathon</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../meta_rooms/">Meta rooms</a>
         
     </li>
 
@@ -387,6 +443,41 @@
                 
             
             </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../people_tracks/">People tracks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../small_office/">Small office</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../three_d_net/">Three d net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../tuw/">Tuw</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../witham_wharf/">Witham wharf</a>
         
     </li>
 
@@ -2683,59 +2774,216 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="mht-building-rgb-d-and-laser-dataset">MHT Building RGB-D and laser dataset</h2>
+                <!DOCTYPE html>
+
+<h2 id="mht-building-rgb-d-and-laser-dataset">MHT Building RGB-D and laser dataset</h2>
 <p>The MHT building dataset was collected for purposes of testing RGB-D mapping of changing environments. The dataset consists of 2D (laser scanner) and 3D (Asus Xtion) data collected by a SCITOS-G5 mobile robot. We provide the gathered data in form of rosbags.</p>
 <hr />
 <h3 id="dataset-purpose">Dataset purpose</h3>
 <p>The intended use was to create a dataset to benchmark spatio-temporal representations of changing environments. The robot was patrolling a small office (see the video below) every 5 minutes. Each patrol started and ended at a charging station. During each patrol, the robot continuously collected its laser scans and odometric data. Moreover, it stopped at three different locations, took snapshots using its RGB-D sensor and attempted to detect people presence.</p>
 <p>\</p>
 <hr />
-<p>MHT office night collections with 3D sweeps</p>
+<p><iframe width="640" height="360" src="https://www.youtube.com/embed/_tXOevb51rc?feature=player_detailpage" frameborder="1" allowfullscreen></iframe>
+  MHT office night collections with 3D sweeps</p>
 <hr />
 <hr />
 <h3 id="dataset-structure">Dataset structure</h3>
 <p>The provided archives contain rosbags, which are zipped into separate files according to the day of the data collection and data type. Each rosbag with a 3D prefix contains a depth/color image, camera information, robot position, tf data, laser scan and person detection gathered by the robot at a location and time that is encoded in the rosbag name, which contains day, month, year, hour, minute and location id. For example, <em>3D_23-08-13-15-20_place_2.bag</em> contains data gathered at location 2 on August 23 2013 at 15:20 o'clock. Each rosbag with a 2D prefix contains AMCL position estimates, robot odometry, tf data and laser scans. Day, month, year, hour and minute are part of the bag file name.</p>
 <hr />
 <h3 id="download">Download</h3>
-<p><strong>August 2013</strong></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08.zip">2D data Aug</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08.zip">3D data Aug</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-24.zip">2D_2013-08-24</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-24.zip">3D_2013-08-24</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-25.zip">2D_2013-08-25</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-25.zip">3D_2013-08-25</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-26.zip">2D_2013-08-26</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-26.zip">3D_2013-08-26</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-27.zip">2D_2013-08-27</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-27.zip">3D_2013-08-27</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-28.zip">2D_2013-08-28</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-28.zip">3D_2013-08-28</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-29.zip">2D_2013-08-29</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-29.zip">3D_2013-08-29</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-30.zip">2D_2013-08-30</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-30.zip">3D_2013-08-30</a></p>
-<p><strong>September 2013</strong></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09.zip">2D data Sep</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09.zip">3D data Sep</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip">2D_2013-09-01</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip">3D_2013-09-01</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip">2D_2013-09-02</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-02.zip">3D_2013-09-02</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip">2D_2013-09-03</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-03.zip">3D_2013-09-03</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip">2D_2013-09-04</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-04.zip">3D_2013-09-04</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip">2D_2013-09-05</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-05.zip">3D_2013-09-05</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip">2D_2013-09-06</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-06.zip">3D_2013-09-06</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip">2D_2013-09-07</a></p>
-<p><a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-07.zip">3D_2013-09-07</a></p>
+<table border="0" align="center">
+<tr>
+<td>
+<table border="1" align="center" cellspacing="5">
+<tr>
+<td colspan="2" align="center">
+**August 2013**
+
+</td>
+</tr>
+<tr>
+<td align="center">
+[2D data Aug](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08.zip)
+
+</td>
+<td align="center">
+[3D data Aug](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-08-24](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-24.zip)
+
+</td>
+<td>
+[3D\_2013-08-24](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-24.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-08-25](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-25.zip)
+
+</td>
+<td>
+[3D\_2013-08-25](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-25.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-08-26](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-26.zip)
+
+</td>
+<td>
+[3D\_2013-08-26](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-26.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-08-27](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-27.zip)
+
+</td>
+<td>
+[3D\_2013-08-27](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-27.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-08-28](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-28.zip)
+
+</td>
+<td>
+[3D\_2013-08-28](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-28.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-08-29](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-29.zip)
+
+</td>
+<td>
+[3D\_2013-08-29](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-29.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-08-30](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-30.zip)
+
+</td>
+<td>
+[3D\_2013-08-30](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-30.zip)
+
+</td>
+</tr>
+</table>
+</td>
+<td width="30">
+</td>
+<td>
+<table border="1" align="center" cellspacing="5">
+<tr>
+<td colspan="2" align="center">
+**September 2013**
+
+</td>
+</tr>
+<tr>
+<td align="center">
+[2D data Sep](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09.zip)
+
+</td>
+<td align="center">
+[3D data Sep](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-09-01](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip)
+
+</td>
+<td>
+[3D\_2013-09-01](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-09-02](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip)
+
+</td>
+<td>
+[3D\_2013-09-02](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-02.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-09-03](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip)
+
+</td>
+<td>
+[3D\_2013-09-03](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-03.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-09-04](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip)
+
+</td>
+<td>
+[3D\_2013-09-04](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-04.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-09-05](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip)
+
+</td>
+<td>
+[3D\_2013-09-05](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-05.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-09-06](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip)
+
+</td>
+<td>
+[3D\_2013-09-06](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-06.zip)
+
+</td>
+</tr>
+<tr>
+<td align="right">
+[2D\_2013-09-07](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip)
+
+</td>
+<td>
+[3D\_2013-09-07](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-07.zip)
+
+</td>
+</tr>
+</table>
+</td>
+<tr>
+</table>
+
 <hr />
 <h3 id="conditions-of-use">Conditions of use</h3>
 <p>If you use the dataset for your research, please cite our <a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/paper.pdf">paper</a> that describes the data collection in detail. We attached a <a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/paper.bib">bibtex</a> record for your convenience.</p>
 <hr />
 <p>This dataset is part of the larger <a href="https://lcas.lincoln.ac.uk/owncloud/shared/datasets/index.html">LCAS-STRANDS long-term dataset collection</a>.</p>
+</p>
               
             </div>
           </div>
@@ -2743,10 +2991,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../dh_bin_wizard/" class="btn btn-neutral float-right" title="Home">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../people_tracks/" class="btn btn-neutral float-right" title="People tracks">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../kth_lt/" class="btn btn-neutral" title="Kth lt"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../meta_rooms/" class="btn btn-neutral" title="Meta rooms"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -2772,10 +3020,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../kth_lt/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../meta_rooms/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../dh_bin_wizard/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../people_tracks/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

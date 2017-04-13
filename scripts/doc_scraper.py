@@ -419,6 +419,11 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
+    # Always copy the readme and setup into docs so that it's set up as the
+    # first page and there's no 404.
+    shutil.copy2("setup.md", "docs/")
+    shutil.copy2("summary.md", 'docs/index.md')
+
     if args.datasets:
         datasets = {}
         with open("datasets/datasets.yaml") as f:
@@ -504,7 +509,3 @@ if __name__ == '__main__':
                     file_rq = json.loads(requests.get(pkg_xml[1]["url"], headers=header).text)
                     with open(path, 'w') as f:
                         f.write(base64.b64decode(file_rq["content"]))
-
-    # Copy the readme and setup into docs so that it's set up as the first page
-    shutil.copy2("setup.md", "docs/")
-    shutil.copy2("summary.md", 'docs/index.md')

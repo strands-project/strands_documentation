@@ -8,17 +8,17 @@ datasets:
     # this page has an iframe and tables, which are stripped out by the default
     # conversion. Use the raw conversion and they are retained.
     pandoc_extra_args:
-      #- "--parse-raw"
+      - "--parse-raw"
   index: # do not change this URL
     url: http://strands.acin.tuwien.ac.at/data.html
   three_d_net:
     url: https://repo.acin.tuwien.ac.at/tmp/permanent/3d-net.org
   tuw:
     url: https://repo.acin.tuwien.ac.at/tmp/permanent/dataset_index.php
-  lad:
-    url: https://dartportal.leeds.ac.uk/dataset/lad
   witham_wharf:
     url: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/wharf_rgbd.html
+    pandoc_extra_args:
+      - "--parse-raw"
   small_office:
     url: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/greg-office.html
   meta_rooms:

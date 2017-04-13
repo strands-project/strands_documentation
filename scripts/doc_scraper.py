@@ -4,6 +4,7 @@
 # puts them into directories by repository
 
 import requests
+import errno
 import getpass
 import os
 import json
@@ -19,6 +20,8 @@ import pypandoc
 import urlparse
 import re
 import xml.etree.ElementTree as ET
+
+os.environ.setdefault('PYPANDOC_PANDOC', '/usr/bin/pandoc')
 
 def path_to_arr(path):
     arr = []
@@ -238,6 +241,7 @@ def get_package_xml_description(xml):
 def html_to_md(dataset_name, url, pandoc_extra_args=None):
     """Converts a url or file from html to markdown, saving any images in the html to an image directory.
     """
+    print("Processing dataset {0} with url {1}".format(dataset_name, url))
     base_link_re_str = "\[[a-zA-Z0-9\/\.\\\_\s:\-]*\]\(([a-zA-Z0-9\/\.\\_\s:\-]*)\)"
     link_re =  re.compile(base_link_re_str)
     image_re = re.compile("!" + base_link_re_str)
@@ -289,6 +293,14 @@ def html_to_md(dataset_name, url, pandoc_extra_args=None):
 
     fixed_images = image_re.sub(image_replace, fixed_links)
 
+    try:
+        # remove the directory if it's empty
+        os.rmdir(image_base_path)
+        print("There weren't any images on the page.")
+    except OSError as ex:
+        if ex.errno == errno.ENOTEMPTY:
+            pass # this means there were images downloaded
+
     return fixed_images
 
 def create_dataset_docs(dataset_conf):
@@ -305,6 +317,7 @@ def create_dataset_docs(dataset_conf):
 def copy_dataset_docs():
     """copies docs from the dataset directory to the docs directory, into a dataset directory
     """
+    print("Copying dataset data to docs directory...")
     if not os.path.isdir("docs/datasets"):
         os.makedirs("docs/datasets")
 
@@ -316,11 +329,9 @@ def copy_dataset_docs():
     for subdir, dirs, files in os.walk("datasets/images"):
         for f in files:
             src_path = os.path.abspath(os.path.join(subdir, f))
-            print("subdir: {0}".format(subdir))
             dest_path = os.path.abspath(os.path.join("docs", subdir, f))
             if not os.path.isdir(os.path.dirname(dest_path)):
                 os.makedirs(os.path.dirname(dest_path))
-            print("copying src {0} to dest {1}".format(src_path, dest_path))
             shutil.copyfile(src_path, dest_path)
 
 def write_readme_files(repo_name):
@@ -398,37 +409,36 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description="Scrape documentation from the strands project repositories. This script should be run from the top level directory of strands_documentation.")
     parser.add_argument("--private", action="store_true", help="Include private repositories in the scrape. This requires the generation of an OAuth token for github.")
-    parser.add_argument("--pkgxml", action="store_true", help="Get descriptions of packages from the package.xml in each subdirectory of a repository. If set, the readme data will not be gathered.")
+    parser.add_argument("--pkgxml", action="store_true", help="Get descriptions of packages from the package.xml in each subdirectory of a repository. If set, the readme data will not be gathered. The files created by this are used by the package-index switch when generating the markdown file with descriptions of all packages")
     parser.add_argument("--nowiki", action="store_true", help="Skip cloning wikis for each package.")
     #parser.add_argument("--ignore-file", nargs=1, help="File containing the names of repos to ignore in the documentation scrape. One repo per line.")
     #parser.add_argument("--repos", action="append", help="Repositories for which docs should be fetched.")
-    parser.add_argument("--package-index", action="store_true", help="Generate a readme in the docs directory, populating it with links to all the toplevel readmes in each directory in the docs directory. Basically a list of packages along with a description scraped from the package xml. Does not generate other docs.")
+    parser.add_argument("--package-index", action="store_true", help="Run after generating docs. Generate a readme in the docs directory, populating it with links to all the toplevel readmes in each directory in the docs directory. Basically a list of packages along with a description scraped from the package xml. Does not generate other docs.")
     parser.add_argument("--conf", default="./conf/conf.yaml", help="Config file to use for this docs generation. Can specify repositories to ignore.")
+    parser.add_argument("--datasets", action="store_true", help="Generate markdown files for datasets specified in datasets/datasets.yaml. Files will be saved in the datasets directory and copied to the docs directory.")
 
     args = parser.parse_args()
+
+    if args.datasets:
+        datasets = {}
+        with open("datasets/datasets.yaml") as f:
+            datasets = yaml.safe_load(f.read())["datasets"]
+
+        create_dataset_docs(datasets)
+        copy_dataset_docs()
+        sys.exit(0)
+
+    if args.package_index:
+        create_package_file()
+        sys.exit(0)
 
     ignore_repos = []
     with open(args.conf, 'r') as f:
         ignore_repos = yaml.safe_load(f.read())["ignore_repos"]
 
-    datasets = {}
-    with open("datasets/datasets.yaml") as f:
-        datasets = yaml.safe_load(f.read())["datasets"]
-
-
-    create_dataset_docs(datasets)
-    copy_dataset_docs()
-
-    sys.exit(0)
-
-    get_readmes = True if not args.pkgxml else False
-    
-    if args.package_index:
-        create_package_file()
-        sys.exit(0)
-
     header = get_oauth_header(args.private)
     repos = get_org_repo_dict(org, header)
+    get_readmes = True if not args.pkgxml else False
 
     # This is where the bulk of the work is done. We check each repository for
     # readme files and see if it has a wiki. If we find files there, we copy them
@@ -440,12 +450,16 @@ if __name__ == '__main__':
             print("ignoring repo".format(repo_name))
             continue
 
+        # Clone the wiki repo for this repo into the docs subdirectory for the repo
         if not args.nowiki:
             get_wiki(org, repo_name)
 
+        # Find readme (or markdown) files in the repository and write them to
+        # the subdirectory, preserving some of the directory structure of the repo.
         if get_readmes:
             write_readme_files(repo_name)
 
+        # Run this if we're generating readmes, or if the user requested package xml generation. Will generate a markdown 
         if get_readmes or args.pkgxml:
             package_xml = get_repo_files(org, repo_name, match_full=["package.xml".format(repo_name)])
             subpkg_xml = files_to_subpackages(package_xml)
@@ -492,5 +506,5 @@ if __name__ == '__main__':
                         f.write(base64.b64decode(file_rq["content"]))
 
     # Copy the readme and setup into docs so that it's set up as the first page
-    shutil.copy2("README.md", "docs/index.md")
-    shutil.copy2("setup.md", "docs/setup.md")
+    shutil.copy2("setup.md", "docs/")
+    shutil.copy2("summary.md", 'docs/index.md')

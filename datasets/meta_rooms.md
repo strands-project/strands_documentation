@@ -1,23 +1,29 @@
-KTH Longterm Dataset
---------------------
+KTH Meta-rooms dataset
+----------------------
 
-![](images/kth_lt/Robot_s.png)
+![](images/meta_rooms/Robot_s.png)
+
+![](images/meta_rooms/Map.png)
 
 KTH Scitos G5 robot - Rosie
 
-The data was collected autonomously by a Scitos G5 robot with an RGB-D camera on a pan-tilt, navigating through the KTH office environment over a period of approximately 30 days. Each observation consists of a set of 51 RGB-D images obtained by moving the pan-tilt in a pattern, in increments of 20 degrees horizontally and 25 vertically. Waypoints are visited between 80 and 100 times and a total of approximately 720 observations are collected at the eight waypoints that can be seen in the figure below. The data is a part of the [Strands](http://strands.acin.tuwien.ac.at/index.html) EU FP7 project.
+2D Map with waypoints
 
-![](images/kth_lt/map.jpg)
+The data was collected autonomously by a Scitos G5 robot with an RGB-D camera on a pan-tilt, navigating through the KTH office environment over a period of 7 days. Three waypoints have been defined on the 2D map, and each one is visited once per day. Each observation consists of a set of 28 RGB-D images obtained by moving the pan-tilt in a pattern, in increments of 60 degrees horizontally and 30 degrees vertically. The data is a part of the [Strands](http://strands.acin.tuwien.ac.at/index.html) EU FP7 project.
 
-![](images/kth_lt/map_obs.jpg)
+![](images/meta_rooms/instance1_s.png)
 
-WayPoint positions on the map
+![](images/meta_rooms/instance2_s.png)
 
-Observations overlayed on the 2D map
+![](images/meta_rooms/instance3_s.png)
+
+![](images/meta_rooms/instance4_s.png)
+
+Observations acquired by the robot
 
 ### Dataset structure
 
-The [data](https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered) is structured in folders as follows: *YYYYMMDD/patrol\_run\_YYY/room\_ZZZ*, where:
+The [data](https://strands.pdc.kth.se/public/metric_sweeps_201312) is structured in folders as follows: *YYYYMMDD/patrol\_run\_YYY/room\_ZZZ*, where:
 
 -   **YYYYMMDD** represents the year, month & day when those particular observations were acquired. Each such folder contains the patrol runs the robot collected on that specific date.
 -   **patrol\_run\_YYY** represents one of the patrol runs collected by the robot.
@@ -27,7 +33,7 @@ Each folder of the type *YYYMMDD/patrol\_run\_YYY/room\_ZZZ* contains the follow
 
 -   **room.xml** - contains information relevant for the observation (described in the next section)
 -   **complete\_cloud.pcd** - the point cloud of the observation (obtained by merging the individual point clouds together)
--   **intermediate\_cloud\*.pcd** - ordered point clouds, each corresponding to an RGB and depth image acquired by the camera while conducting the sweep (51 such point clouds for each observation)
+-   **intermediate\_cloud\*.pcd** - ordered point clouds, each corresponding to an RGB and depth image acquired by the camera while conducting the sweep (28 such point clouds for each observation)
 
 The *room.xml* file accompanying an observation contains the following (relevant) fields:
 
@@ -48,7 +54,6 @@ The *room.xml* file accompanying an observation contains the following (relevant
 **RoomIntermediateCloud** - intermediate cloud filename
 
 -   **RoomIntermediateCloudTransform** - transform from the RGB-D sensor frame to the map frame, as given by the robot odometry
--   **RoomIntermediateCloudTransformRegistered** - transform which corrects the pose of the intermediate clouds so that they are well registered with respect to each other
 
 ### Parsing
 
@@ -56,19 +61,19 @@ A parser is provided [here](https://github.com/strands-project/strands_3d_mappin
 
 ### Download
 
-This dataset is available for download in a single archive [file](https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered.tar.gz) (\~ 300 GB). As an alternative, the individual folders and files can be obtained from [here](https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered), and would have to be downloaded manually.
+This dataset is available for download in a single archive [file](https://strands.pdc.kth.se/public/metric_sweeps_201312.tar.gz) (\~ 12 GB). As an alternative, the individual folders and files can be obtained from [here](https://strands.pdc.kth.se/public/metric_sweeps_201312), and would have to be downloaded manually.
 
 * * * * *
 
 ### Condition of use
 
-If you use the dataset for your research, please cite our [paper](https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/ambrus2015unsupervised.pdf) that describes it:
+If you use the dataset for your research, please cite our [paper](https://strands.pdc.kth.se/public/metric_sweeps_201312/ambrus2014metaroom.pdf) that describes it:
 
         
-        Unsupervised learning of spatial-temporal models of objects in a long-term autonomy scenario 
-        Ambrus, Rares and Ekekrantz, Johan and Folkesson, John and Jensfelt, Patric
-        Intelligent Robots and Systems (IROS), 2015 IEEE/RSJ International Conference on
+        Meta-rooms: Building and maintaining long term spatial models in a dynamic world
+        Ambrus, Rares and Bore, Nils and Folkesson, John and Jensfelt, Patric
+        Intelligent Robots and Systems (IROS), 2014 IEEE/RSJ International Conference on
         
         
 
-We attached a [bibtex](https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/ambrus2015unsupervised.bib) record for your convenience.
+We attached a [bibtex](https://strands.pdc.kth.se/public/metric_sweeps_201312/ambrus2014metaroom.bib) record for your convenience.

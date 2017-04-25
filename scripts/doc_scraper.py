@@ -258,7 +258,12 @@ def html_to_md(dataset_name, url, pandoc_extra_args=None):
 
     # verify=false is dangerous as it ignores ssl certificates, but
     # we're not doing anything which has security risks associated.
-    md_text = pypandoc.convert_text(requests.get(url, verify=False).text, "md", format="html", extra_args=pandoc_args).encode('utf-8')
+    response = requests.get(url, verify=False)
+    if response.status_code == 200:
+        md_text = pypandoc.convert_text(response.text, "md", format="html", extra_args=pandoc_args).encode('utf-8')
+    else:
+        print("Response code was not 200, something is probably wrong with this website.")
+        return "Could not retrieve this page."
 
     # Use this to replace relative links in the webpage with absolute ones so
     # that they can be properly accessed. We don't want to replace the whole

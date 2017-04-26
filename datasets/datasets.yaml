@@ -33,3 +33,11 @@ datasets:
     url: https://strands.pdc.kth.se/public/KTH_labelled_moving_objects/readme.html
   people_tracks:
     url: https://strands.pdc.kth.se/public/TrackData/readme.html
+  care_home:
+    url: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/aaf.html
+  object_presence:
+    url: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/presence.html
+  person_activity:
+    url: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/activity.html
+  auto_benchmark:
+    url: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/automated.html

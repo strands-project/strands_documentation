@@ -10,7 +10,7 @@ When using this database, please cite: \
 
 ![](images/three_d_net/classification.jpg)
 
--   ### Cat10: Basic object classes
+### Cat10: Basic object classes
 
     The basic dataset consists of common, simple, geometrically distinguishable but partially similar objects.
 
@@ -18,7 +18,7 @@ When using this database, please cite: \
 
     [Cat10\_TestDatabase.zip (3.6 GB)](Cat10_TestDatabase.zip)
 
--   ### Cat60: Subclasses
+### Cat60: Subclasses
 
     The Cat50 model database consists of the Cat10 database with 50 additional classes. The classes in this database are still distinguishable by shape only, but also include subcategories (chair, office-chair, armchair and car, convertible, pickup, formula-car).
 
@@ -26,7 +26,7 @@ When using this database, please cite: \
 
     [Cat60\_TestDatabase.zip (3.7 GB)](Cat60_TestDatabase.zip)
 
--   ### Cat200: Color and size
+### Cat200: Color and size
 
     This database adds objects which are similar in shape but can be uniquely distinguished when using color as an additional cue. One more important aspect of objects and object classes was not used and not needed in the previous category databases: size. To successfully distinguish among our 200 categories database, the real world size of the objects becomes important.
 

@@ -26,3 +26,4 @@ ignore_repos:
   - strands_webtools
   - aaf_deployment
   - autonomous_patrolling
+  - strands_documentation

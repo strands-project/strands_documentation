@@ -3,9 +3,9 @@
 STRANDS Data Sets
 =================
 
-### Object Recognition Data Sets:
-
 **STRANDS** data sets are provided for testing and benchmarking robotics and computer visions algorithms.
+
+[Automated benchmarking data sets](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/automated.html): Automatic benchmarkning system at University of Lincoln (tkrajnik@lincoln.ac.uk)
 
 ### Object Recognition RGB-D Data Sets:
 
@@ -25,13 +25,17 @@ STRANDS Data Sets
 
 [G4S meta rooms](https://lcas.lincoln.ac.uk/owncloud/public.php?service=files&t=cee1ceb7fb49ad373288f1249b7ff48b&dir=%2FG4S_2014): RGB-D data 150 sweeps with 18 images per sweep. This data is not public. (c.j.c.burbridge@cs.bham.ac.uk)
 
-[LAD](https://dartportal.leeds.ac.uk/dataset/lad): The Leeds Activity Dataset--Breakfast (LAD--Breakfast) is currently composed of 15 annotated videos, representing five different people having breakfast or other simple meal; it is recorded within a lab setting, but is as realistic as possible (real food, eating and drinking). The videos were recorded using an ASUS Xtion PRO LIVE - RGB and Depth Sensor. The objects in the video were tracked using an OpenNI based tool created by our RACE project partner, the University of Aveiro (this data set has be co-created by RACE and STRANDS) and the ground truth provided makes reference to the objects tracked. The videos have been annotated with activities at various levels of complexity and abstraction to be selected, in order to build a hierarchy of activities. The videos were not scripted in detail: each person could choose what to eat or drink and when, and the objects he needed were on the table. The videos are quite varied in terms of duration, type and sequence of activities, number and type of visible objects. High level activities such as "preparing coffee" or "consuming meal" are composed of low level ones (e.g. "pickup kettle", "pour kettle", "putdown kettle"). (e.chinellato@leeds.ac.uk) Alternative link: [LAD Dataset](https://strands.pdc.kth.se/public/LAD/)
+### Activity Data Sets:
 
-[People tracks](https://strands.pdc.kth.se/public/TrackData/readme.html): The data was collected at the end of 2014 in University of Birmingham library. It is composed of 6251 human tracks which can be used for human motion analysis. Contact: ferdian.jovan@gmail.com
-
-[Long-term object people presence data set](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/presence.html): Several weeks of person/object presence in three different environments. Used for robot search in Krajnik et al.: Where's waldo at time t ? using spatio-temporal models for mobile robot search. In ICRA 2014. Used for life-long exploration in Santos et al.: Spatio-temporal exploration strategies for long-term autonomy of mobile robots. Robotics and Autonomous Systems, 2016.(tkrajnik@lincoln.ac.uk)
+[LAD](https://dartportal.leeds.ac.uk/dataset/lad): The Leeds Activity Dataset--Breakfast (LAD--Breakfast) is currently composed of 15 annotated videos, representing five different people having breakfast or other simple meal; it is recorded within a lab setting, but is as realistic as possible (real food, eating and drinking). The videos were recorded using an ASUS Xtion PRO LIVE - RGB and Depth Sensor. The objects in the video were tracked using an OpenNI based tool created by our RACE project partner, the University of Aveiro (this data set has be co-created by RACE and STRANDS) and the ground truth provided makes reference to the objects tracked. The videos have been annotated with activities at various levels of complexity and abstraction to be selected, in order to build a hierarchy of activities. The videos were not scripted in detail: each person could choose what to eat or drink and when, and the objects he needed were on the table. The videos are quite varied in terms of duration, type and sequence of activities, number and type of visible objects. High level activities such as "preparing coffee" or "consuming meal" are composed of low level ones (e.g. "pickup kettle", "pour kettle", "putdown kettle"). (strands@comp.leeds.ac.uk) Alternative link: [LAD Dataset](https://strands.pdc.kth.se/public/LAD/)
 
 [Long-term people activity data set](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/activity.html): Several weeks of person activity in two different environments. Described in Coppola et al.: Learning temporal context for activity recognition, In ECAI, 2015.(tkrajnik@lincoln.ac.uk)
+
+[Mobile robot observing kitchen activities data set](https://doi.org/10.5518/86):
+
+[Extended Train Robots data set](https://doi.org/10.5518/32):
+
+[Leeds Robotic Commands data set](https://doi.org/10.5518/110):
 
 ### Autonomous Long-term Learning Data Sets:
 
@@ -47,9 +51,11 @@ STRANDS Data Sets
 
 ### People Data Sets:
 
-[Long-term robot navigation data set](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/aaf.html): Data from a mobile robot that served as an info-terminal, assistant-therapist and bellboy in a care home in Vienna for more than 120 days, covering over 100km. (tkrajnik@lincoln.ac.uk)
+[People tracks](https://strands.pdc.kth.se/public/TrackData/readme.html): The data was collected at University of Birmingham library. It is composed of human tracks which can be used for human motion analysis. Contact: ferdian.jovan@gmail.com
 
-[Automated benchmarking data sets](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/automated.html): Under Construction (tkrajnik@lincoln.ac.uk)
+[Long-term object people presence data set](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/presence.html): Several weeks of person/object presence in three different environments. Used for robot search in Krajnik et al.: Where's waldo at time t ? using spatio-temporal models for mobile robot search. In ICRA 2014. Used for life-long exploration in Santos et al.: Spatio-temporal exploration strategies for long-term autonomy of mobile robots. Robotics and Autonomous Systems, 2016.(tkrajnik@lincoln.ac.uk)
+
+[Long-term robot navigation data set](https://lcas.lincoln.ac.uk/owncloud/shared/datasets/aaf.html): Data from a mobile robot that served as an info-terminal, assistant-therapist and bellboy in a care home in Vienna for more than 120 days, covering over 100km. (tkrajnik@lincoln.ac.uk)
 
 ![STRANDS robot](images/index/Toomas_Lobby3.jpg)
 

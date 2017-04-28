@@ -30,8 +30,3 @@ With the `--datasets` flag, the scraper will go through dataset urls given in
 `datasets/datasets.yaml` and download the html pages specified there, converting
 them to markdown. Images on the pages will also be downloaded to the
 `datasets/images` directory.
-
-If you run the scraper with the `--pkgxml` flag, the `package.xml` file for each
-package will be downloaded as well. You can then run the scraper again with the
-`--package-index` flag to generate a markdown file with information about each
-package that was downloaded, based on the package xml.

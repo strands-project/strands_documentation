@@ -9,7 +9,6 @@ import getpass
 import os
 import json
 import argparse
-import rospkg
 import subprocess
 import shutil
 import base64
@@ -20,6 +19,7 @@ import pypandoc
 import urlparse
 import re
 import socket
+import functools
 import xml.etree.ElementTree as ET
 
 os.environ.setdefault('PYPANDOC_PANDOC', '/usr/bin/pandoc')
@@ -239,7 +239,7 @@ def get_package_xml_description(xml):
     root = ET.fromstring(xml)
     return root.findall("description")[0].text
 
-def html_to_md(dataset_name, url, pandoc_extra_args=None):
+def html_to_md(dataset_name, url, pandoc_extra_args=None, dataset_conf=None):
     """Converts a url or file from html to markdown, saving any images in the html to an image directory.
     """
     print("Processing dataset {0} with url {1}".format(dataset_name, url))
@@ -269,7 +269,7 @@ def html_to_md(dataset_name, url, pandoc_extra_args=None):
     # Use this to replace relative links in the webpage with absolute ones so
     # that they can be properly accessed. We don't want to replace the whole
     # match, just the link itself.
-    def link_replace(match):
+    def rel_link_replace(match):
         link = match.group(1)
         if link.startswith("http") or link.startswith("www"):
             # non-relative links stay the same
@@ -278,7 +278,25 @@ def html_to_md(dataset_name, url, pandoc_extra_args=None):
             # change the link in relative links
             return match.group(0).replace(link, "{0}/{1}".format(base_url, link))
 
-    fixed_links = link_re.sub(link_replace, md_text)
+    md_text = link_re.sub(rel_link_replace, md_text)
+
+    def url_to_md(url_dict, match):
+        link = match.group(1)
+        if link in url_dict:
+            return match.group(0).replace(link, url_dict[link])
+        else:
+            return match.group(0)
+
+    # Also want to make sure that if there is a direct link to a dataset on the
+    # page that it is converted to link to the markdown file we will generate
+    # here rather than going to somewhere else on the web. This mostly applies
+    # to the index page. Flatten the dictionary so that the key-value pairs are
+    # now the base url for the dataset page, and the dataset key (which
+    # corresponds to the markdown filename)
+    url_dict = {dataset_conf[key]["url"]: key for key in dataset_conf.keys()}
+
+    md_text = link_re.sub(functools.partial(url_to_md, url_dict), md_text)
+    
 
     # We want to preserve images in the documentation, so we will download all
     # the images on the page, which are markdown ![]() blocks, where links are
@@ -297,7 +315,7 @@ def html_to_md(dataset_name, url, pandoc_extra_args=None):
 
         return match.group(0).replace(match.group(1), "images/{0}/{1}".format(dataset_name, image_name))
 
-    fixed_images = image_re.sub(image_replace, fixed_links)
+    md_text = image_re.sub(image_replace, md_text)
 
     try:
         # remove the directory if it's empty
@@ -307,7 +325,7 @@ def html_to_md(dataset_name, url, pandoc_extra_args=None):
         if ex.errno == errno.ENOTEMPTY:
             pass # this means there were images downloaded
 
-    return fixed_images
+    return md_text
 
 def create_dataset_docs(dataset_conf):
     """Creates dataset docs from a configuration provided, which should be found in datasets/datasets.yaml
@@ -318,7 +336,7 @@ def create_dataset_docs(dataset_conf):
             extra_args = None
             if "pandoc_extra_args" in datasets[dataset] and datasets[dataset]["pandoc_extra_args"]:
                 extra_args = datasets[dataset]["pandoc_extra_args"]
-            f.write(html_to_md(dataset, datasets[dataset]["url"], extra_args))
+            f.write(html_to_md(dataset, datasets[dataset]["url"], extra_args, dataset_conf))
                 
 def copy_dataset_docs():
     """copies docs from the dataset directory to the docs directory, into a dataset directory

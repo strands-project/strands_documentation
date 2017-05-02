@@ -444,11 +444,6 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    # Always copy the readme and setup into docs so that it's set up as the
-    # first page and there's no 404.
-    shutil.copy2("setup.md", "docs/")
-    shutil.copy2("summary.md", 'docs/index.md')
-
     if args.datasets:
         datasets = {}
         with open("conf/datasets.yaml") as f:

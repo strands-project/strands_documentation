@@ -120,7 +120,7 @@ you want to use. The image below is made using the pencil tool and holding
 ctrl+shift to make straight lines. It has a scale of 35px/cm. We'll use this
 later to scale the environment to our robot.
 
-![](basic_map.png)
+![](https://raw.githubusercontent.com/strands-project/strands_documentation/master/resources/basic_map.png)
 
 You can make something like this map using blueprints for the area you are
 working in and the process below should be similar.
@@ -177,7 +177,7 @@ displayed. With the curve selected, press alt+c, which will bring up a
 conversion menu. Use "mesh from curve" option, and then save the blender file.
 
 You can find example files created from this process
-[here](https://github.com/strands-project/strands_documentation/tree/master/docs/resources).
+[here](https://github.com/strands-project/strands_documentation/tree/master/resources).
 
 ##### Creating the simulation files
 
@@ -273,6 +273,40 @@ Create a launch file which will be used to launch the simulator (`launch/basic_e
 Finally, compile the package with `catkin build basic_example`. You should then
 be able to run `roslaunch basic_example basic_example.launch`, and see a robot
 in the world.
+
+At this point, the robot will not be able to move. The following file
+(`launch/basic_example_nav.launch`) will launch the required parts of the
+strands system.
+
+```xml
+<launch>
+  <arg name="with_chest_xtion" default="false"/>
+
+  <include file="$(find strands_movebase)/launch/movebase.launch">
+      <arg name="map" value="$(find basic_example)/maps/basic_map.yaml"/>
+      <arg name="with_chest_xtion" value="$(arg with_chest_xtion)"/>
+  </include>
+</launch>
+```
+
+To use this, you'll first have to construct a pgm map. You can do this by
+colouring the image you used to create the simulation map with the correct
+colours for ROS map usage (e.g.
+[the basic map](https://raw.githubusercontent.com/strands-project/strands_documentation/master/resources/basic_map.png)).
+Alternatively, you can also use gmapping - see below for instructions. You
+should save the map to `maps/basic_map.pgm` and `maps/basic_map.yaml`, or save
+it elsewhere and point the above launch file to the correct location. If you
+make a map from the image, you will have to create a corresponding yaml file to
+describe it and give the scaling of the image and some other details. See
+[map server](http://wiki.ros.org/map_server) for details on the yaml format.
+
+If you use gmapping, you can use `rosrun teleop_twist_keyboard
+teleop_twist_keyboard.py` to control the motion of the robot. You may have to
+install this package first. You should also run rviz so that you can see the map
+being constructed and make sure you haven't missed any part of it. You can leave
+the map as it is, or trim it to remove some of the excess parts if your map is
+small. In that case you will need to change the origin of the map so that it
+corresponds with where you want your origin to be.
 
 You can find documentation for the MORSE simulator
 [here](https://www.openrobots.org/morse/doc/stable/morse.html), which gives more

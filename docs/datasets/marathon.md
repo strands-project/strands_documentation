@@ -14,7 +14,7 @@ Strands Robot Marathon 2014
 
 The dataset contains all the [data](https://strands.pdc.kth.se/public/Marathon_2014/mongodb) logged by the robots during operation, exported from the [mongodb](http://wiki.ros.org/mongodb_store) database. For information on the relevant collections please refer to the [Strands](http://strands.acin.tuwien.ac.at/index.html) project. \
 \
- Separately, data corresponding to observations acquired by the robot with the Pan-Tilt unit and the RGB-D sensor have been exported and can be found [here](https://strands.pdc.kth.se/public/Marathon_2014/metric_maps). For a description of the format as well as how to parse the data please refer to this [readme file](https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/readme.html).
+ Separately, data corresponding to observations acquired by the robot with the Pan-Tilt unit and the RGB-D sensor have been exported and can be found [here](https://strands.pdc.kth.se/public/Marathon_2014/metric_maps). For a description of the format as well as how to parse the data please refer to this [readme file](kth_lt).
 
 ### Download
 

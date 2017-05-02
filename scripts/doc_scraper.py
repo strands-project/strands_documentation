@@ -302,7 +302,7 @@ def html_to_md(dataset_name, url, pandoc_extra_args=None, dataset_conf=None):
     # the images on the page, which are markdown ![]() blocks, where links are
     # [](). Then, we'll replace the image references to the web with ones to the
     # images directory we save them in
-    image_base_path = os.path.abspath("datasets/images/{0}".format(dataset_name))
+    image_base_path = os.path.abspath("docs/datasets/images/{0}".format(dataset_name))
     if not os.path.isdir(image_base_path):
         os.makedirs(image_base_path)
 
@@ -331,8 +331,11 @@ def create_dataset_docs(dataset_conf):
     """Creates dataset docs from a configuration provided, which should be found in datasets/datasets.yaml
     Will convert html pages to markdown files.
     """
+    if not os.path.isdir("docs/datasets"):
+        os.makedirs("docs/datasets")
+
     for dataset in datasets.keys():
-        with open("datasets/{0}.md".format(dataset), 'w') as f:
+        with open("docs/datasets/{0}.md".format(dataset), 'w') as f:
             extra_args = None
             if "pandoc_extra_args" in datasets[dataset] and datasets[dataset]["pandoc_extra_args"]:
                 extra_args = datasets[dataset]["pandoc_extra_args"]
@@ -448,11 +451,11 @@ if __name__ == '__main__':
 
     if args.datasets:
         datasets = {}
-        with open("datasets/datasets.yaml") as f:
+        with open("conf/datasets.yaml") as f:
             datasets = yaml.safe_load(f.read())["datasets"]
 
         create_dataset_docs(datasets)
-        copy_dataset_docs()
+#        copy_dataset_docs()
         sys.exit(0)
 
     ignore_repos = []

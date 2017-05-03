@@ -68,13 +68,6 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../../summary/">Summary</a>
-        
-    </li>
-<li>
-          
-            <li>
     <ul class="subnav">
     <li><span>Aaf deployment</span></li>
 
@@ -2778,7 +2771,7 @@
                 <h2 id="kth-moving-objects-dataset">KTH Moving Objects Dataset</h2>
 <p><img alt="" src="../images/kth_lt_moving/Robot_s.png" /></p>
 <p>KTH Scitos G5 robot - Rosie</p>
-<p>This dataset extends <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels/readme.html">KTH Longterm Dataset Labels</a> with more locations within the same office environment at KTH. The dataset contains a subset of the labels and these objects are consistently located in different positions in multiple rooms. The label subset annotated in this dataset is {<em>chair6</em>, <em>chair1</em>, <em>water_boiler</em>, <em>backpack1</em>, <em>pillow</em>, <em>trash_bin</em>, <em>backpack3</em>, <em>chair2</em>, <em>hanger_jacket</em>, <em>backpack2</em>}. Each observation consists of a set of 17 RGB-D images obtained by moving the pan-tilt in a horizontal pattern, in increments of 20 degrees. In addition to the raw sensor data, each observation contains object annotations (masks and labels). The data is a part of the <a href="http://strands.acin.tuwien.ac.at/index.html">Strands</a> EU FP7 project.</p>
+<p>This dataset extends <a href="../kth_lt_labels">KTH Longterm Dataset Labels</a> with more locations within the same office environment at KTH. The dataset contains a subset of the labels and these objects are consistently located in different positions in multiple rooms. The label subset annotated in this dataset is {<em>chair6</em>, <em>chair1</em>, <em>water_boiler</em>, <em>backpack1</em>, <em>pillow</em>, <em>trash_bin</em>, <em>backpack3</em>, <em>chair2</em>, <em>hanger_jacket</em>, <em>backpack2</em>}. Each observation consists of a set of 17 RGB-D images obtained by moving the pan-tilt in a horizontal pattern, in increments of 20 degrees. In addition to the raw sensor data, each observation contains object annotations (masks and labels). The data is a part of the <a href="http://strands.acin.tuwien.ac.at/index.html">Strands</a> EU FP7 project.</p>
 <h3 id="dataset-structure">Dataset structure</h3>
 <p>The <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels">data</a> is structured in folders as follows: <em>YYYYMMDD/patrol_run_YYY/room_ZZZ</em>, where:</p>
 <ul>
@@ -2800,7 +2793,7 @@
 <li><strong>rgb_XXXX_label_#.xml</strong> - xml file storing the labelled object data (created with data from <strong>rgb_XXXX_label_#.pcd</strong>, <strong>rgb_XXXX_label_#.txt</strong>)</li>
 <li><strong>rgb_XXXX_object_#.jpg</strong> - rgb mask corresponding to one of the objects annotated in the image <strong>rgb_XXXX.jpg</strong></li>
 </ul>
-<p>The description of the <em>room.xml</em> file accompanying an observation can be found <a href="https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/readme.html">here</a>. \
+<p>The description of the <em>room.xml</em> file accompanying an observation can be found <a href="../kth_lt">here</a>. \
 \
  Each object xml file (<strong>rgb_XXXX_label_#.xml</strong>) contains the following data:</p>
 <ul>

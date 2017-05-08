@@ -438,7 +438,7 @@ if __name__ == '__main__':
     parser.add_argument("--private", action="store_true", help="Include private repositories in the scrape. This requires the generation of an OAuth token for github.")
     # parser.add_argument("--pkgxml", action="store_true", help="Get descriptions of packages from the package.xml in each subdirectory of a repository. If set, the readme data will not be gathered. The files created by this are used by the package-index switch when generating the markdown file with descriptions of all packages")
     parser.add_argument("--nowiki", action="store_true", help="Skip cloning wikis for each package.")
-    # parser.add_argument("--package-index", action="store_true", help="Run after generating docs. Generate a readme in the docs directory, populating it with links to all the toplevel readmes in each directory in the docs directory. Basically a list of packages along with a description scraped from the package xml. Does not generate other docs.")
+    parser.add_argument("--package-index", action="store_true", help="Run after generating docs. Generate a readme in the docs directory, populating it with links to all the toplevel readmes in each directory in the docs directory. Basically a list of packages along with a description scraped from the package xml. Does not generate other docs.")
     parser.add_argument("--conf", default="./conf/conf.yaml", help="Config file to use for this docs generation. Can specify repositories to ignore.")
     parser.add_argument("--datasets", action="store_true", help="Generate markdown files for datasets specified in datasets/datasets.yaml. Files will be saved in the datasets directory and copied to the docs directory.")
 
@@ -450,7 +450,10 @@ if __name__ == '__main__':
             datasets = yaml.safe_load(f.read())["datasets"]
 
         create_dataset_docs(datasets)
-#        copy_dataset_docs()
+        sys.exit(0)
+
+    if args.package_index:
+        create_package_file()
         sys.exit(0)
 
     ignore_repos = []
@@ -465,7 +468,6 @@ if __name__ == '__main__':
     # readme files and see if it has a wiki. If we find files there, we copy them
     # and put them in directories corresponding to the name of the repository
     for repo_name in sorted(repos.keys()):
-    #for repo_name in ["rosbridge_suite", "v4r", "v4r_ros_wrappers", "strands_executive", "aaf_deployment"]:
         print("-------------------- {0} --------------------".format(repo_name))
         if repo_name in ignore_repos:
             print("ignoring repo".format(repo_name))

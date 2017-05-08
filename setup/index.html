@@ -2765,15 +2765,16 @@ STRANDS packages. It is assumed that you have a system that is running Ubuntu
 <h2 id="ros-and-package-setup">ROS and package setup</h2>
 <h3 id="installing-ros">Installing ROS</h3>
 <p>The first step is to follow the instructions found at
-http://wiki.ros.org/indigo/Installation/Ubuntu. The full install of ROS with the
-package <code>ros-indigo-desktop-full</code> should contain all the packages that are required.</p>
+<a href="http://wiki.ros.org/indigo/Installation/Ubuntu">http://wiki.ros.org/indigo/Installation/Ubuntu</a>.
+The full install of ROS with the package <code>ros-indigo-desktop-full</code> should
+contain all the packages that are required.</p>
 <h3 id="installing-strands-packages">Installing STRANDS packages</h3>
 <p>To install the strands packages, you should follow the instructions at
-https://github.com/strands-project-releases/strands-releases/wiki.</p>
+<a href="https://github.com/strands-project-releases/strands-releases/wiki">https://github.com/strands-project-releases/strands-releases/wiki</a>.</p>
 <h3 id="example-system">Example system</h3>
 <p>Before setting up your own system, you might like to see what a system might
 look like. Instructions for setting up an example system can be found at
-https://github.com/strands-project-releases/strands-releases/wiki/Example-STRANDS-System</p>
+<a href="https://github.com/strands-project-releases/strands-releases/wiki/Example-STRANDS-System">https://github.com/strands-project-releases/strands-releases/wiki/Example-STRANDS-System</a></p>
 <h2 id="custom-system-setup">Custom system setup</h2>
 <h3 id="database">Database</h3>
 <p>While the system is running, it will store data in a mongodb database so that
@@ -2791,7 +2792,7 @@ roslaunch mongodb_store mongodb_store.launch db_path:=$DATA_DIR/my_database_dir
 </code></pre>
 
 <p>You can see more information about the database system at
-https://github.com/strands-project/mongodb_store/tree/hydro-devel/mongodb_store</p>
+<a href="https://github.com/strands-project/mongodb_store/tree/hydro-devel/mongodb_store">https://github.com/strands-project/mongodb_store/tree/hydro-devel/mongodb_store</a></p>
 <h3 id="using-a-simulation">Using a simulation</h3>
 <p>You can use a simulated environment in order to test the system, either with
 existing simulated environments, or you can set things up to simulate the
@@ -2840,9 +2841,9 @@ tool in rviz.</p>
 use. A simple environment is easy to construct. You'll need to have GIMP,
 inkscape and blender installed to create it.</p>
 <p>If you want to skip the details, you can find the files created by this section
-<a href="https://github.com/strands-project/strands_morse">here</a>. You will still have to
-add the topological map to your mongo database with <code>rosrun topological_utils
-load_yaml_map.py maps/basic_map.tpl</code>.</p>
+<a href="https://github.com/strands-project/strands_morse/tree/indigo-devel/basic_example">here</a>.
+You will still have to add the topological maps to your mongo database with
+<code>rosrun topological_utils load_yaml_map.py maps/basic_map.tpl</code>.</p>
 <h5 id="png-map">PNG map</h5>
 <p>The first step is to use GIMP to create an image of the walls in the map that
 you want to use. The image below is made using the pencil tool and holding
@@ -2987,11 +2988,12 @@ strands system.</p>
   &lt;arg name=&quot;max_bumper_recoveries&quot; default=&quot;.inf&quot;/&gt;
   &lt;arg name=&quot;wait_reset_bumper_duration&quot; default=&quot;0.0&quot;/&gt;
   &lt;arg name=&quot;topological_navigation_retries&quot; default=&quot;3&quot;/&gt;
-  &lt;arg name=&quot;map_name&quot; default=&quot;basic_map&quot;/&gt;
+  &lt;arg name=&quot;topological_map_name&quot; default=&quot;basic_map&quot;/&gt;
+  &lt;arg name=&quot;map&quot; default=&quot;$(find strands_morse)/basic_example/maps/basic_map.yaml&quot;/&gt;
 
   &lt;!-- 2D Navigation --&gt;
   &lt;include file=&quot;$(find strands_movebase)/launch/movebase.launch&quot;&gt;
-      &lt;arg name=&quot;map&quot; value=&quot;$(find basic_example)/maps/basic_map_gmapping.yaml&quot;/&gt;
+      &lt;arg name=&quot;map&quot; value=&quot;$(arg map)&quot;/&gt;
       &lt;arg name=&quot;with_chest_xtion&quot; value=&quot;$(arg with_chest_xtion)&quot;/&gt;
   &lt;/include&gt;
 
@@ -3000,14 +3002,24 @@ strands system.</p>
     &lt;rosparam param=&quot;/monitored_navigation/recover_states/recover_bumper&quot; subst_value=&quot;True&quot;&gt;[True, $(arg max_bumper_recoveries)]&lt;/rosparam&gt;
   &lt;/node&gt;
 
-  &lt;node pkg=&quot;topological_navigation&quot; type=&quot;map_manager.py&quot; name=&quot;topological_map_manager&quot; args=&quot;$(arg map_name)&quot; respawn=&quot;true&quot;/&gt;
+  &lt;node pkg=&quot;topological_navigation&quot; type=&quot;map_manager.py&quot; name=&quot;topological_map_manager&quot; args=&quot;$(arg topological_map_name)&quot; respawn=&quot;true&quot;/&gt;
   &lt;node pkg=&quot;topological_navigation&quot; name=&quot;topological_localisation&quot; type=&quot;localisation.py&quot; output=&quot;screen&quot; respawn=&quot;true&quot;/&gt;
-  &lt;node pkg=&quot;topological_navigation&quot; type=&quot;visualise_map.py&quot; name=&quot;visualise_map&quot; args=&quot;$(arg map_name)&quot; respawn=&quot;true&quot;/&gt;
+  &lt;node pkg=&quot;topological_navigation&quot; type=&quot;visualise_map.py&quot; name=&quot;visualise_map&quot; args=&quot;$(arg topological_map_name)&quot; respawn=&quot;true&quot;/&gt;
 
   &lt;node pkg=&quot;topological_navigation&quot; name=&quot;topological_navigation&quot; type=&quot;navigation.py&quot; output=&quot;screen&quot; respawn=&quot;true&quot;&gt;
     &lt;param name=&quot;retries&quot; type=&quot;int&quot; value=&quot;$(arg topological_navigation_retries)&quot;/&gt;
   &lt;/node&gt;
 
+  &lt;node pkg=&quot;tf&quot; type=&quot;static_transform_publisher&quot; name=&quot;env_broadcaster&quot; 
+        args=&quot;0 0 0 0 0 0 /odom /map 200&quot;&gt;
+  &lt;/node&gt;
+&lt;/launch&gt;
+</code></pre>
+
+<p>You can also use the following launch file (<code>launch/basic_example_rviz.launch</code>)
+to launch an rviz instance with various interactive markers set up.</p>
+<pre><code class="xml">&lt;launch&gt;
+  &lt;node pkg=&quot;rviz&quot; type=&quot;rviz&quot; name=&quot;rviz&quot; args=&quot;-d $(find strands_morse)/basic_example/default.rviz&quot;/&gt;
 &lt;/launch&gt;
 </code></pre>
 
@@ -3149,8 +3161,146 @@ result in internal inconsistencies, so it is not recommended.</p>
 <p>Once you have added a new node to the map, you should delete the <code>temp_node</code>.
 For instructions on using the rviz topological map editor, see the readme
 <a href="https://github.com/strands-project/strands_navigation/tree/indigo-devel/topological_rviz_tools">here</a>.</p>
-<h3 id="routine">Routine</h3>
 <h3 id="launching-the-core-nodes">Launching the core nodes</h3>
+<p>In order to run the system, core nodes need to run. In general, this is the
+navigation, executive and database. You will also need to ensure that there are
+nodes providing odometry data and laser scans from your robot setup on the
+<code>/odom</code> and <code>/scan</code> topics. You should also ensure that you have battery data
+being published on the <code>/battery_status</code> topic using the Scitos message format:</p>
+<pre><code>std_msgs/Header header
+  uint32 seq
+  time stamp
+  string frame_id
+float32 voltage
+float32 current
+int8 lifePercent
+int16 lifeTime
+bool charging
+bool powerSupplyPresent
+float32[] cellVoltage
+</code></pre>
+
+<p>If you wish to use your own battery message, you will need to change some things
+in the routine classes in <code>strands_executive_behaviours</code>. You will need to
+modify
+<a href="https://github.com/strands-project/strands_executive_behaviours/blob/hydro-devel/routine_behaviours/cfg/RoutineParameters.cfg">this file</a>
+in order to set things up for your required voltages.</p>
+<p>We'll assume here that the system is a scitos A5 robot.</p>
+<p>The first thing to start is <code>roscore</code> as usual. We prefer to start roscore
+independently of other launch files so that they can be restarted if necessary
+without breaking the system.</p>
+<p>After that, the robot drivers should be started</p>
+<pre><code class="sh">roslaunch --wait strands_bringup strands_robot.launch with_mux:=false with_magnetic_barrier:=false
+</code></pre>
+
+<p>Then, the database.</p>
+<pre><code class="sh">roslaunch --wait strands_bringup strands_core.launch db_path:=$DB_PATH
+</code></pre>
+
+<p>The navigation requires the UI to be started before it is fully initialised.</p>
+<pre><code class="sh">HOST_IP=$EXTERNAL_UI_IP roslaunch --wait strands_bringup strands_ui.launch
+</code></pre>
+
+<p>The <code>EXTERNAL_UI_IP</code> is the IP at which the interface will be displayed. You can
+choose localhost, but you should specify the IP that the machine is assigned.
+You can check this with <code>ifconfig</code>. You should then open a browser and access
+<code>EXTERNAL_UI_IP:8090</code>. For example, if you have the IP 10.0.11.161, then you
+would access 10.0.11.161:8090.</p>
+<p>Basic navigation is launched with</p>
+<pre><code class="sh">roslaunch --wait strands_bringup strands_navigation.launch positionUpdate:=false map:=$NAV_MAP with_no_go_map:=$WITH_NO_GO no_go_map:=$NOGO_MAP topological_map:=$TOP_MAP
+</code></pre>
+
+<p><code>NAV_MAP</code> is the map to use for navigation, and should point to a yaml file,
+such as that created by the <code>map_saver</code>.</p>
+<p><code>NO_GO_MAP</code> is a map that is used to specify nogo areas. It should point to a
+yaml map. This can be used to draw lines in open space which the robot will not
+cross, which can be useful for doorways or other areas which the robot should
+not enter.</p>
+<p><code>TOP_MAP</code> is the name of the topological map corresponding to the navigation
+map. This name should exist in the database that has been loaded above.</p>
+<p>Finally, the executive deals with tasks.</p>
+<pre><code class="sh">roslaunch --wait task_executor mdp-executor.launch interruptible_wait:=false combined_sort:=true
+</code></pre>
+
+<h4 id="routine">Routine</h4>
+<p>The routine allows tasks to be scheduled on a regular basis. A task can be
+pretty much anything you define. You can schedule tasks to be performed within a
+specific time window each day. The routine also defines when the robot is
+active. You can specify when the robot should be active and when it should
+remain on the charging station for the day.</p>
+<p>While you can set up your own routine in a python script, it is also possible to
+do it using the <code>automated_routine</code> package. You will need to set up a yaml file
+containing various settings for timings, actions and so on. An example with
+comments can be found
+<a href="https://github.com/strands-project/strands_executive_behaviours/tree/hydro-devel/automated_routine/conf/bham_routine.yaml">here</a>.</p>
+<p>The routine requires that other parts of the system are already running, so it
+should be launched last.</p>
+<pre><code class="sh">roslaunch --wait automated_routine automated_routine.launch routine_config:=$ROUTINE_CONFIG
+</code></pre>
+
+<p><code>ROUTINE_CONFIG</code> refers to the location of the yaml file which defines the routine.</p>
+<p>To have a task run, all you need is an action server which will perform the
+required action, and a srv message corresponding to it. The task objects created
+by the routine define parameters for the population of the srv, and which
+actionserver the populated message should be passed to in order for the task to
+be executed.</p>
+<p>To see an example of what more complex code for a custom task might look like, see <a href="https://github.com/strands-project/g4s_deployment/blob/indigo-devel/tsc_greeter/scripts/tsc_greeter_node.py">here</a>.
+You can see more about tasks <a href="../strands_executive">here</a>.</p>
+<h4 id="tmux">Tmux</h4>
+<p>During the project we have found tmux to be very useful, as it allows
+persistent terminal sessions which can be accessed remotely. Here is a short
+tmuxinator script that can be used to start off the sessions</p>
+<pre><code class="yaml"># ~/.tmuxinator/strands.yml
+
+name: strands
+root: ~/
+pre_window: source `rospack find strands_bringup`/conf/env_vars.sh
+windows:
+  - ros: roscore
+  - robot: roslaunch --wait strands_bringup strands_robot.launch with_mux:=false with_magnetic_barrier:=false
+  - core:
+      panes:
+        - HOSTNAME=$DB_MACHINE roslaunch --wait strands_bringup strands_core.launch machine:=$DB_MACHINE user:=$RUNTIME_USER db_path:=$\
+DB_PATH
+        - HOST_IP=$EXTERNAL_UI_IP $DISPLAY_SETTING roslaunch --wait strands_bringup strands_ui.launch mary_machine:=$MARY_MACHINE mary_\
+machine_user:=$RUNTIME_USER
+  - navigation: roslaunch --wait strands_bringup strands_navigation.launch positionUpdate:=false map:=$NAV_MAP with_no_go_map:=$WITH_NO\
+GO no_go_map:=$NOGO_MAP topological_map:=$TOP_MAP chest_xtion_machine:=$CHEST_CAM_MACHINE
+  - executive:
+      panes:
+        - roslaunch --wait task_executor mdp-executor.launch interruptible_wait:=false combined_sort:=true
+        - roslaunch --wait automated_routine automated_routine.launch routine_config:=$ROUTINE_CONFIG
+</code></pre>
+
+<p>It can also be found
+<a href="https://github.com/strands-project/strands_systems/tree/indigo-devel/strands_bringup/conf/tmuxinator_start.yaml">here</a>.</p>
+<p>Here is the script that runs in each tmux pane before the commands are passed:</p>
+<pre><code class="sh">#!/usr/bin/env bash
+
+export EXTERNAL_UI_IP=10.0.11.161
+
+# Database path
+export DB_PATH=/data/y4_pre_dep/mongo
+# Path to yaml files specifying defaults to load when the db is started
+export DB_DEFAULTS=/data/y4_pre_dep/defaults
+
+# Topological map to use. This value should exist in the database
+export TOP_MAP=lg_march2016
+
+# Location of the map to use for navigation
+export NAV_MAP=/home/strands/tsc_y4_ws/maps/lg_march2016/cropped.yaml
+
+# Whether or not to use nogo map
+export WITH_NOGO_MAP=false
+
+# Location of the map to use to define no-go areas
+#export NOGO_MAP=
+
+export ROUTINE_CONFIG=`rospack find automated_routine`/conf/bham_routine.yml
+</code></pre>
+
+<p>The file for environment variable setup can be found
+<a href="https://github.com/strands-project/strands_systems/tree/indigo-devel/strands_bringup/conf/env_vars.sh">here</a></p>
               
             </div>
           </div>

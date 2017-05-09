@@ -3045,6 +3045,9 @@ create a topological map for the environment. Once you've created it and
 inserted it into the mongo database, you should change the default <code>map_name</code> to
 the name of the map in your database. You can find an example
 <a href="https://raw.githubusercontent.com/strands-project/strands_documentation/master/resources/basic_map.tpl">here</a>.</p>
+<p>When running the system, you may have to set the position of the robot in rviz
+to the correct location on the map, as the origin of the map there and in the
+simulation does not align.</p>
 <p>You can find documentation for the MORSE simulator
 <a href="https://www.openrobots.org/morse/doc/stable/morse.html">here</a>, which gives more
 details about what you can do in the <code>example_sim.py</code> file.</p>
@@ -3241,11 +3244,126 @@ should be launched last.</p>
 <p><code>ROUTINE_CONFIG</code> refers to the location of the yaml file which defines the routine.</p>
 <p>To have a task run, all you need is an action server which will perform the
 required action, and a srv message corresponding to it. The task objects created
-by the routine define parameters for the population of the srv, and which
-actionserver the populated message should be passed to in order for the task to
-be executed.</p>
-<p>To see an example of what more complex code for a custom task might look like, see <a href="https://github.com/strands-project/g4s_deployment/blob/indigo-devel/tsc_greeter/scripts/tsc_greeter_node.py">here</a>.
+by the routine define parameters for the population of the action object, and
+which actionserver the populated message should be passed to in order for the
+task to be executed.</p>
+<p>To see an example of what more complex code for a custom task might look like,
+see <a href="https://github.com/strands-project/g4s_deployment/blob/indigo-devel/tsc_greeter/scripts/tsc_greeter_node.py">here</a>.
 You can see more about tasks <a href="../strands_executive">here</a>.</p>
+<h5 id="example-task-in-simulation">Example task in simulation</h5>
+<p>It's also possible to run the routine in simulation. You'll need to run the
+executor first with <code>roslaunch strands_morse basic_example_executor.launch</code>. The
+routine makes use of the file
+<code>strands_morse/basic_example/conf/basic_routine.yaml</code>. If you follow the
+instructions below to create a basic test action, you can leave this as is, but
+if you'd like to do something else you can modify it however you like.</p>
+<p>Here is a small example task that you can use to test the routine. Create a
+package in your workspace with <code>catkin_create_pkg print_string rospy std_msgs
+message_generation</code>.</p>
+<p>In the scripts directory, create a <code>print_string.py</code> script and make sure it's
+executable with <code>chmod +x nav_action.py</code></p>
+<pre><code>cd print_string
+mkdir scripts
+cd scripts
+touch print_string.py
+chmod +x print_string.py
+</code></pre>
+
+<p>The script should contain the following code:</p>
+<pre><code class="python">#! /usr/bin/env python
+import rospy
+import actionlib
+from pr_str.msg import PrintMessageAction
+
+class print_string(object):
+
+    def __init__(self):
+        self.server = actionlib.SimpleActionServer('print_string_action', PrintMessageAction, self.process_request, False)
+        self.server.start()
+
+    def process_request(self, req):
+        rospy.loginfo(&quot;Hello, here's a message at waypoint {0}: {1}&quot;.format(req.waypoint, req.message))
+        self.server.set_succeeded()
+
+if __name__ == '__main__':
+    rospy.init_node('print_string_action')
+    ps = print_string()
+    rospy.loginfo(&quot;Waiting for action requests.&quot;)
+    rospy.spin()
+</code></pre>
+
+<p>Tasks will be created by the routine which will send the robot to the waypoints
+requested in the routine definition, and then a string will be printed wherever
+you run this script. The <code>PrintMessage</code> service is defined as follows:</p>
+<pre><code>string waypoint
+string message
+----
+----
+bool result
+</code></pre>
+
+<p>You should create an <code>action</code> directory in the package and create a file
+<code>PrintMessage.action</code> with the above contents.</p>
+<p>You'll also need to populate the <code>CMakeLists.txt</code> and <code>package.xml</code> files like
+this:</p>
+<pre><code>cmake_minimum_required(VERSION 2.8.3)
+project(pr_str)
+
+find_package(catkin REQUIRED COMPONENTS
+  rospy
+  std_msgs
+  message_generation
+  actionlib_msgs
+  actionlib
+)
+
+add_action_files(
+  DIRECTORY action
+  FILES
+  PrintMessage.action
+)
+
+generate_messages(
+  DEPENDENCIES
+  std_msgs  # Or other packages containing msgs
+  actionlib_msgs
+)
+
+catkin_package()
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
+</code></pre>
+
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;package&gt;
+  &lt;name&gt;pr_str&lt;/name&gt;
+  &lt;version&gt;0.0.0&lt;/version&gt;
+  &lt;description&gt;The print_string package&lt;/description&gt;
+
+  &lt;maintainer email=&quot;me@mail.net&quot;&gt;me&lt;/maintainer&gt;
+
+  &lt;license&gt;TODO&lt;/license&gt;
+
+  &lt;buildtool_depend&gt;catkin&lt;/buildtool_depend&gt;
+  &lt;build_depend&gt;actionlib&lt;/build_depend&gt;
+  &lt;build_depend&gt;actionlib_msgs&lt;/build_depend&gt;
+  &lt;build_depend&gt;rospy&lt;/build_depend&gt;
+  &lt;build_depend&gt;message_generation&lt;/build_depend&gt;
+  &lt;run_depend&gt;rospy&lt;/run_depend&gt;
+  &lt;run_depend&gt;message_runtime&lt;/run_depend&gt;
+  &lt;run_depend&gt;actionlib&lt;/run_depend&gt;
+  &lt;run_depend&gt;actionlib_msgs&lt;/run_depend&gt;
+&lt;/package&gt;
+</code></pre>
+
+<p>Compile the package with <code>catkin build print_string</code>, and then run the script
+with <code>rosrun print_string print_string.py</code></p>
+<p>Finally, launch the routine with <code>roslaunch strands_morse
+basic_example_routine.launch</code>. You should see activity in the executor window
+and in the routine. You can monitor tasks currently in the routine with <code>rosrun
+task_executor schedule_status.py</code>.</p>
 <h4 id="tmux">Tmux</h4>
 <p>During the project we have found tmux to be very useful, as it allows
 persistent terminal sessions which can be accessed remotely. Here is a short

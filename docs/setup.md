@@ -354,6 +354,10 @@ inserted it into the mongo database, you should change the default `map_name` to
 the name of the map in your database. You can find an example
 [here](https://raw.githubusercontent.com/strands-project/strands_documentation/master/resources/basic_map.tpl).
 
+When running the system, you may have to set the position of the robot in rviz
+to the correct location on the map, as the origin of the map there and in the
+simulation does not align.
+
 You can find documentation for the MORSE simulator
 [here](https://www.openrobots.org/morse/doc/stable/morse.html), which gives more
 details about what you can do in the `example_sim.py` file.
@@ -608,13 +612,143 @@ roslaunch --wait automated_routine automated_routine.launch routine_config:=$ROU
 
 To have a task run, all you need is an action server which will perform the
 required action, and a srv message corresponding to it. The task objects created
-by the routine define parameters for the population of the srv, and which
-actionserver the populated message should be passed to in order for the task to
-be executed.
+by the routine define parameters for the population of the action object, and
+which actionserver the populated message should be passed to in order for the
+task to be executed.
 
-To see an example of what more complex code for a custom task might look like, see [here](
+To see an example of what more complex code for a custom task might look like,
+see [here](
 https://github.com/strands-project/g4s_deployment/blob/indigo-devel/tsc_greeter/scripts/tsc_greeter_node.py).
 You can see more about tasks [here](strands_executive).
+
+##### Example task in simulation
+
+It's also possible to run the routine in simulation. You'll need to run the
+executor first with `roslaunch strands_morse basic_example_executor.launch`. The
+routine makes use of the file
+`strands_morse/basic_example/conf/basic_routine.yaml`. If you follow the
+instructions below to create a basic test action, you can leave this as is, but
+if you'd like to do something else you can modify it however you like.
+
+Here is a small example task that you can use to test the routine. Create a
+package in your workspace with `catkin_create_pkg print_string rospy std_msgs
+message_generation`.
+
+In the scripts directory, create a `print_string.py` script and make sure it's
+executable with `chmod +x nav_action.py`
+
+```
+cd print_string
+mkdir scripts
+cd scripts
+touch print_string.py
+chmod +x print_string.py
+```
+
+The script should contain the following code:
+
+```python
+#! /usr/bin/env python
+import rospy
+import actionlib
+from pr_str.msg import PrintMessageAction
+
+class print_string(object):
+    
+    def __init__(self):
+        self.server = actionlib.SimpleActionServer('print_string_action', PrintMessageAction, self.process_request, False)
+        self.server.start()
+
+    def process_request(self, req):
+        rospy.loginfo("Hello, here's a message at waypoint {0}: {1}".format(req.waypoint, req.message))
+        self.server.set_succeeded()
+
+if __name__ == '__main__':
+    rospy.init_node('print_string_action')
+    ps = print_string()
+    rospy.loginfo("Waiting for action requests.")
+    rospy.spin()
+```
+
+Tasks will be created by the routine which will send the robot to the waypoints
+requested in the routine definition, and then a string will be printed wherever
+you run this script. The `PrintMessage` service is defined as follows:
+
+```
+string waypoint
+string message
+----
+----
+bool result
+```
+
+You should create an `action` directory in the package and create a file
+`PrintMessage.action` with the above contents.
+
+You'll also need to populate the `CMakeLists.txt` and `package.xml` files like
+this:
+
+```
+cmake_minimum_required(VERSION 2.8.3)
+project(pr_str)
+
+find_package(catkin REQUIRED COMPONENTS
+  rospy
+  std_msgs
+  message_generation
+  actionlib_msgs
+  actionlib
+)
+
+add_action_files(
+  DIRECTORY action
+  FILES
+  PrintMessage.action
+)
+
+generate_messages(
+  DEPENDENCIES
+  std_msgs  # Or other packages containing msgs
+  actionlib_msgs
+)
+
+catkin_package()
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
+```
+
+```xml
+<?xml version="1.0"?>
+<package>
+  <name>pr_str</name>
+  <version>0.0.0</version>
+  <description>The print_string package</description>
+
+  <maintainer email="me@mail.net">me</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>actionlib</build_depend>
+  <build_depend>actionlib_msgs</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>message_generation</build_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>actionlib</run_depend>
+  <run_depend>actionlib_msgs</run_depend>
+</package>
+```
+
+Compile the package with `catkin build print_string`, and then run the script
+with `rosrun print_string print_string.py`
+
+Finally, launch the routine with `roslaunch strands_morse
+basic_example_routine.launch`. You should see activity in the executor window
+and in the routine. You can monitor tasks currently in the routine with `rosrun
+task_executor schedule_status.py`.
 
 #### Tmux
 

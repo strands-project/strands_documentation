@@ -462,7 +462,8 @@ if __name__ == '__main__':
 
     header = get_oauth_header(args.private)
     repos = get_org_repo_dict(org, header)
-    get_readmes = True if not args.pkgxml else False
+    # get_readmes = False if args.pkgxml else True
+    get_readmes = True
 
     # This is where the bulk of the work is done. We check each repository for
     # readme files and see if it has a wiki. If we find files there, we copy them

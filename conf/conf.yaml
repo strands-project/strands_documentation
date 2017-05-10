@@ -40,4 +40,5 @@ ignore_repos:
  -  navigation
  -  lol
  -  strands_documentation
- 
+ -  activity_analysis
+ -  viper

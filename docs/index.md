@@ -1,90 +1,46 @@
-# STRANDS Project
 
-This is the main documentation for the Spatio-Temporal Representation and
-Activities for Cognitive Control in Long-Term Scenarios (STRANDS) project.
+![The STRANDS Project Logo](images/strands-full-logo.png)
 
-## Introduction
+This site contains the documentation for the software and data produced by the [EU STRANDS Project](http://strands-project.eu). For more information on the scientific aims of the project, please see our [IEEE RAM overview article](https://arxiv.org/abs/1604.04384) or [the STRANDS Project website](http://strands-project.eu).
 
-STRANDS will produce intelligent mobile robots that are able to run for months
-in dynamic human environments. We will provide robots with the longevity and
-behavioural robustness necessary to make them truly useful assistants in a wide
-range of domains. Such long-lived robots will be able to learn from a wider
-range of experiences than has previously been possible, creating a whole new
-generation of autonomous systems able to extract and exploit the structure in
-their worlds.
 
-Our approach is based on understanding 3D space and how it changes over time,
-from milliseconds to months. We will develop novel approaches to extract
-spatio-temporal structure from sensor data gathered during months of autonomous
-operation. Extracted structure will include reoccurring 3D shapes, objects,
-people, and models of activity. We will also develop control mechanisms which
-exploit these structures to yield adaptive behaviour in highly demanding,
-realworld security and care scenarios.
+The project created autonomous mobile robots which were successfully deployed for long periods in real user environments. In the process of this we created a great deal of open source software for AI and robotics applications. This software is all available via [the STRANDS GitHub organisation][https://github.com/strands-project]. This site provides a single location where the documentation from across that organisation can be viewed. It is also the main location for software tutorials and guides for creating systems, and provides an entry point into using our software for new users. 
 
-STRANDS aims to enable a robot to achieve robust and intelligent behaviour in
-human environments through adaptation to, and the exploitation of, long-term
-experience. Our approach is based on understanding 3D space and how it changes
-over time, from milliseconds to months. We will develop novel approaches to
-extract quantitative and qualitative spatio-temporal structure from sensor data
-gathered during months of autonomous operation. Extracted structure will include
-reoccurring geometric primitives, objects, people, and models of activity. We
-will also develop control mechanisms which exploit these structures to yield
-adaptive behaviour in highly demanding, real-world security and care scenarios.
+Please note that a large amount of this site is automatically generated from our code and package documentation, so the structure is currently not perfect. Our scripts for automatically generating this site are available [here](https://github.com/strands-project/strands_documentation).
 
-The spatio-temporal dynamics presented by such scenarios (e.g. humans moving,
-furniture changing position, objects (re-)appearing) are largely treated as
-anomalous readings by state-of-the-art robots. Errors introduced by these
-readings accumulate over the lifetime of such systems, preventing many of them
-from running for more than a few hours. By autonomously modelling
-spatio-temporal dynamics, our robots will be able run for significantly longer
-than current systems (at least 120 days by the end of the project). Long
-runtimes provide previously unattainable opportunities for a robot to learn
-about its world. Our systems will take these opportunities, advancing long-term
-mapping, life-long learning about objects, person tracking, human activity
-recognition and self-motivated behaviour generation.
+# Getting Started
 
-We will integrate our advances into complete cognitive systems to be deployed
-and evaluated at two end-user sites. The tasks these systems will perform are
-impossible without long-term adaptation to spatio-temporal dynamics, yet they
-are tasks demanded by early adopters of cognitive robots. We will measure our
-progress by benchmarking these systems against detailed user requirements and a
-range of objective criteria including measures of system runtime and autonomous
-behaviour.
+If you wish to understand or reuse the full STRANDS system, you should follow [the STRANDS system tutorial](setup.md). After completing this tutorial, you will have a computer which has ROS and STRANDS packages installed, and can run a simulation which uses some of the core STRANDS subsystems.
 
-## System Overview
 
-The STRANDS system is formed of many packages which provide various pieces of
-functionality, ranging from navigation to user interaction. A list of all
-packages with a brief overview of their purpose can be found
-[here](packages.md). The following sections give an overview of some of the
-packages which form the core of the system.
+# Core Subsystems
 
-### Executive
+A STRANDS system is formed of many components which provide various pieces of functionality, ranging from navigation to user interaction. A list of all packages with a brief overview of their purpose can be found [here](packages.md). The following sections give a brief overview of some of the packages which form the core of the system.
 
-The executive controls the execution of tasks requested by users or generated by
-the system itself, prioritising them using various metrics such as expected
-completion time, probability of successful completion, and so on.
+## STRANDS Navigation
 
-### Navigation
+Navigation forms the core of the movement capabilities of robots using the system. Our work provides a [monitored navigation](strands_navigation/monitored_navigation/) system which detects failures in navigation and triggers recovery behaviours, and a [topological navigation](strands_navigation/topological_navigation/) system where navigation nodes (waypoints) are linked by edges which the robot can traverse. Topological navigation underpins many of the other STRANDS capabilities.
 
-Navigation forms the core of the movement capabilities of robots using the
-system. A topological map forms the high level navigation layer, where waypoints
-are linked by edges which the robot can traverse. Over time, these edges have
-expected traversal times and other measures associated with them, which can be
-used to optimise the path the robot takes. 
+## STRANDS Executive
 
-### 3D mapping and vision
+The STRANDS executive controls the execution of tasks requested by users or generated by the system itself, prioritising them using various metrics such as expected completion time, probability of successful completion, and so on. It provides facilities for both long-term task routines, task scheduling and task planning under uncertainty. There is a [STRANDS Executive tutorial](planning_tutorial) which covers the main parts of the system and [an overview document](strands_executive).
 
-3D mapping and vision are major components of the system which make use of depth
-cameras to generate maps and object models to use for learning.
+## Person Detection and Tracking
 
-## Getting Started
+When operating in populated spaces it is crucial to be able to detect and track people. STRANDS produced an indoor [multi-person tracker](strands_perception_people/perception_people_launch/) which fuses and tracks upper body detections and leg detections. We also have produced [a wheelchair and walking aid detector](strands_perception_people/wheelchair_detector). 
 
-You can find a tutorial which will guide you through the initial setup process
-for a STRANDS system [here](setup.md). After completing this tutorial, you
-should have a computer which has ROS and STRANDS packages installed, and
-can run a simulation which uses some of the basic STRANDS components.
+## 3D Mapping and Vision
 
-## Datasets
+One of the major outputs of the project is a collection of systems for discovering and learning about objects in everyday environments. These are collected together into the STRANDS 3D Mapping collection, described [here](strands_3d_mapping).
+
+## Semantic Object Maps (SOMa)
+
+The outputs of person detection and 3D mapping are stored in our Semantic Object Map (SOMa) which captures the information the robot gathers over long durations in a central store which supports a range of visualisations and queries. This is described [here](soma).
+
+## Long-Term Data Processing (FreMEn and QSRLib)
+
+After data is collected in SOMa our systems process it using various techniques. Major outputs of STRANDS include [FreMen](fremen) which provides frequency-based modelling for the temporal dimension of spatial representations, and [QSRLib](http://qsrlib.readthedocs.io/en/latest/), a library for generating qualitative spatial relations from sensor data.
+
+# Datasets
 
 You can find the datasets generated by the project [here](datasets).

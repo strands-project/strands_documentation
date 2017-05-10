@@ -1,7 +1,5 @@
 ![STRANDS logo](images/index/STRANDS_logo.png)
 
-STRANDS Data Sets
-=================
 
 **STRANDS** data sets are provided for testing and benchmarking robotics and computer visions algorithms.
 
@@ -57,25 +55,3 @@ STRANDS Data Sets
 
 [Long-term robot navigation data set](care_home): Data from a mobile robot that served as an info-terminal, assistant-therapist and bellboy in a care home in Vienna for more than 120 days, covering over 100km. (tkrajnik@lincoln.ac.uk)
 
-![STRANDS robot](images/index/Toomas_Lobby3.jpg)
-
-\
-
-**Contact** \
- John Folksson\
- School of Computer Science and Cmmunications\
- KTH Royal Institute of Technolgy\
- SE-10044 Stockholm \
- Sweden\
- [johnf@kth.se](mailto:johnf@kth.se)\
- [http://www.csc.kth.se/\~johnf/](http://www.csc.kth.se/~johnf/)
-
-* * * * *
-
-[![](images/index/7thframeworkprogramme.jpg)](http://cordis.europa.eu/fp7/home_en.html) ![](images/index/strands2.png)
-
-This project is funded by the European Community's Seventh Framework Programme, Cognitive Systems and Robotics, project reference 600623.
-
-This Website is maintained by the [Automation and Control Institute (ACIN)](http://www.acin.tuwien.ac.at/index.php?id=1&L=1), [TU Vienna](http://www.tuwien.ac.at/tuwien_home/EN/)
-
-[Impressum](http://strands.acin.tuwien.ac.at/impressum.html)

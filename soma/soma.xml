@@ -21,7 +21,6 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
 
-  <run_depend>soma_geospatial_store</run_depend>
   <run_depend>soma_pcl_segmentation</run_depend>
   <run_depend>soma_roi_manager</run_depend>
   <run_depend>soma_manager</run_depend>

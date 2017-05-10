@@ -35,11 +35,11 @@ One of the major outputs of the project is a collection of systems for discoveri
 
 ## Semantic Object Maps (SOMa)
 
-The outputs of person detection and 3D mapping are stored in our Semantic Object Map (SOMa) which captures the information the robot gathers over long durations in a central store which supports a range of visualisations and queries. This is described [here](soma).
+The outputs of person detection and 3D mapping are stored in our Semantic Object Map (SOMa) which captures the information the robot gathers over long durations in a central store which supports a range of visualisations and queries. This is described [here](soma). SOMa is backed by our integration of [MongoDB](https://www.mongodb.org) into ROS: [MongoDB Store](mongodb_store/mongodb_store).
 
 ## Long-Term Data Processing (FreMEn and QSRLib)
 
-After data is collected in SOMa our systems process it using various techniques. Major outputs of STRANDS include [FreMen](fremen) which provides frequency-based modelling for the temporal dimension of spatial representations, and [QSRLib](http://qsrlib.readthedocs.io/en/latest/), a library for generating qualitative spatial relations from sensor data.
+After data is collected in SOMa our systems process it using various techniques. Major outputs of STRANDS include [FreMen](fremen) which provides frequency-based modelling for the temporal dimension of spatial representations, and [QSRLib](http://qsrlib.readthedocs.io/en/latest/), a library for generating qualitative spatial relations from sensor data. 
 
 # Datasets
 

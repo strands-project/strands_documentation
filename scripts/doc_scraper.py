@@ -347,7 +347,7 @@ def create_dataset_docs(dataset_conf, filetype="rst"):
             extra_args = None
             if "pandoc_extra_args" in datasets[dataset] and datasets[dataset]["pandoc_extra_args"]:
                 extra_args = datasets[dataset]["pandoc_extra_args"]
-            f.write(html_to_file(dataset, datasets[dataset]["url"], extra_args, dataset_conf))
+            f.write(html_to_file(dataset, datasets[dataset]["url"], extra_args, dataset_conf, filetype))
 
 def generate_rst_index():
     """Generate a series of TOC sections to insert into the index.rst.
@@ -445,6 +445,8 @@ if __name__ == '__main__':
     parser.add_argument("--package-index", action="store_true", help="Run after generating docs. Generate a readme in the docs directory, populating it with links to all the toplevel readmes in each directory in the docs directory. Basically a list of packages along with a description scraped from the package xml. Does not generate other docs.")
     parser.add_argument("--conf", default="./conf/conf.yaml", help="Config file to use for this docs generation. Can specify repositories to ignore. Default is strands_documentation/conf/conf.yaml directory.")
     parser.add_argument("--datasets", action="store_true", help="Generate markdown files for datasets specified in datasets/datasets.yaml. Files will be saved in the datasets directory and copied to the docs directory.")
+    parser.add_argument("--single-package", action="store", type=str, help="Use to specify a single package to update")
+    parser.add_argument("--filetype", action="store_true", default="rst", help="Specify the filetype for output. This should be a valid pandoc output format. This is used to define which format files scraped from the github repositories, or from the web in the case of datasets, are converted to when they are copied to the docs directory. Default is to output to rst, for use in readthedocs.")
 
     args = parser.parse_args()
 
@@ -453,7 +455,7 @@ if __name__ == '__main__':
         with open("conf/datasets.yaml") as f:
             datasets = yaml.safe_load(f.read())["datasets"]
 
-        create_dataset_docs(datasets)
+        create_dataset_docs(datasets, filetype=args.filetype)
         sys.exit(0)
 
     if args.package_index:
@@ -470,8 +472,8 @@ if __name__ == '__main__':
     # This is where the bulk of the work is done. We check each repository for
     # readme files and see if it has a wiki. If we find files there, we copy them
     # and put them in directories corresponding to the name of the repository
-    #for repo_name in sorted(repos.keys()):
-    for repo_name in ["strands_utils"]:
+    packages = sorted(repos.keys()) if not args.single_package else [args.single_package]
+    for repo_name in packages:
         print("-------------------- {0} --------------------".format(repo_name))
         if repo_name in ignore_repos:
             print("ignoring repo".format(repo_name))
@@ -479,11 +481,11 @@ if __name__ == '__main__':
 
         # Clone the wiki repo for this repo into the docs subdirectory for the repo
         if not args.nowiki:
-            get_wiki(org, repo_name)
+            get_wiki(org, repo_name, filetype=args.filetype)
 
         # Find readme (or markdown) files in the repository and write them to
         # the subdirectory, preserving some of the directory structure of the repo.
-        write_readme_files(repo_name)
+        write_readme_files(repo_name, filetype=args.filetype)
 
         package_xml = get_repo_files(org, repo_name, match_full=["package.xml".format(repo_name)])
         subpkg_xml = files_to_subpackages(package_xml)

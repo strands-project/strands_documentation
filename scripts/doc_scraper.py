@@ -328,7 +328,7 @@ def html_to_file(dataset_name, url, pandoc_extra_args=None, dataset_conf=None, f
     # corresponds to the markdown filename)
     url_dict = {dataset_conf[key]["url"]: key for key in dataset_conf.keys()}
     for url in url_dict.keys():
-        file_text = file_text.replace(url, "{}.rst".format(url_dict[url]))
+        file_text = file_text.replace(url, "{}.html".format(url_dict[url]))
 
     return file_text
 

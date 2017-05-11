@@ -112,7 +112,6 @@ Documentation contents
    :maxdepth: 1
    :caption: Introduction:
 
-   index
    setup
    packages
 

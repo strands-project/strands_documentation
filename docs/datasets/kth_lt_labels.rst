@@ -5,7 +5,7 @@ KTH Longterm Dataset Labels
 
 KTH Scitos G5 robot - Rosie
 
-This dataset contains a subset of observations from `this dataset <https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/readme.html>`__ - 88 observations acquired at *WayPoint16*. Each observation consists of a set of 17 RGB-D images (`originally <https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/readme.html>`__ 51, however this dataset only contains the RGB-D clouds corresponding to a single height value of the PTU) obtained by moving the pan-tilt in a horizontal pattern, in increments of 20 degrees. In addition to the raw sensor data, each observation contains object annotations (masks and labels). The data is a part of the `Strands <http://strands.acin.tuwien.ac.at/index.html>`__ EU FP7 project.
+This dataset contains a subset of observations from `this dataset <kth_lt>`__ - 88 observations acquired at *WayPoint16*. Each observation consists of a set of 17 RGB-D images (`originally <kth_lt>`__ 51, however this dataset only contains the RGB-D clouds corresponding to a single height value of the PTU) obtained by moving the pan-tilt in a horizontal pattern, in increments of 20 degrees. In addition to the raw sensor data, each observation contains object annotations (masks and labels). The data is a part of the `Strands <http://strands.acin.tuwien.ac.at/index.html>`__ EU FP7 project.
 
 Dataset structure
 ~~~~~~~~~~~~~~~~~
@@ -29,7 +29,7 @@ Each folder of the type *YYYMMDD/patrol\_run\_YYY/room\_ZZZ* contains the follow
 -  **rgb\_XXXX\_label\_#.xml** - xml file storing the labelled object data (created with data from **rgb\_XXXX\_label\_#.pcd**, **rgb\_XXXX\_label\_#.txt**)
 -  **rgb\_XXXX\_object\_#.jpg** - rgb mask corresponding to one of the objects annotated in the image **rgb\_XXXX.jpg**
 
-| The description of the *room.xml* file accompanying an observation can be found `here <https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/readme.html>`__.
+| The description of the *room.xml* file accompanying an observation can be found `here <kth_lt>`__.
 |  Each object xml file (**rgb\_XXXX\_label\_#.xml**) contains the following data:
 
 -  **label** - object label

@@ -5,7 +5,7 @@ KTH Moving Objects Dataset
 
 KTH Scitos G5 robot - Rosie
 
-This dataset extends `KTH Longterm Dataset Labels <https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels/readme.html>`__ with more locations within the same office environment at KTH. The dataset contains a subset of the labels and these objects are consistently located in different positions in multiple rooms. The label subset annotated in this dataset is {*chair6*, *chair1*, *water\_boiler*, *backpack1*, *pillow*, *trash\_bin*, *backpack3*, *chair2*, *hanger\_jacket*, *backpack2*}. Each observation consists of a set of 17 RGB-D images obtained by moving the pan-tilt in a horizontal pattern, in increments of 20 degrees. In addition to the raw sensor data, each observation contains object annotations (masks and labels). The data is a part of the `Strands <http://strands.acin.tuwien.ac.at/index.html>`__ EU FP7 project.
+This dataset extends `KTH Longterm Dataset Labels <kth_lt_labels>`__ with more locations within the same office environment at KTH. The dataset contains a subset of the labels and these objects are consistently located in different positions in multiple rooms. The label subset annotated in this dataset is {*chair6*, *chair1*, *water\_boiler*, *backpack1*, *pillow*, *trash\_bin*, *backpack3*, *chair2*, *hanger\_jacket*, *backpack2*}. Each observation consists of a set of 17 RGB-D images obtained by moving the pan-tilt in a horizontal pattern, in increments of 20 degrees. In addition to the raw sensor data, each observation contains object annotations (masks and labels). The data is a part of the `Strands <http://strands.acin.tuwien.ac.at/index.html>`__ EU FP7 project.
 
 Dataset structure
 ~~~~~~~~~~~~~~~~~
@@ -30,7 +30,7 @@ Each folder of the type *YYYMMDD/patrol\_run\_YYY/room\_ZZZ* contains the follow
 -  **rgb\_XXXX\_label\_#.xml** - xml file storing the labelled object data (created with data from **rgb\_XXXX\_label\_#.pcd**, **rgb\_XXXX\_label\_#.txt**)
 -  **rgb\_XXXX\_object\_#.jpg** - rgb mask corresponding to one of the objects annotated in the image **rgb\_XXXX.jpg**
 
-| The description of the *room.xml* file accompanying an observation can be found `here <https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/readme.html>`__.
+| The description of the *room.xml* file accompanying an observation can be found `here <kth_lt>`__.
 |  Each object xml file (**rgb\_XXXX\_label\_#.xml**) contains the following data:
 
 -  **label** - object label

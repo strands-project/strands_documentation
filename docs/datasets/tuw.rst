@@ -76,9 +76,9 @@ Ground-truth annotation (created by [1] with manual verification):
    :target: http://v4r.acin.tuwien.ac.at/
 .. |image1| image:: pictures/TULogo.gif
    :target: http://www.tuwien.ac.at/
-.. |image2| image:: https://repo.acin.tuwien.ac.at/tmp/permanent/iros2014/annotated_images/scenes/set_00004/00002.jpg
-.. |image3| image:: https://repo.acin.tuwien.ac.at/tmp/permanent/iros2014/annotated_images/gt/set_00004/00002.jpg
-.. |image4| image:: https://repo.acin.tuwien.ac.at/tmp/permanent/willow/willow_gt_images/scenes/T_13_willow_dataset/cloud_0000000005.jpg
-.. |image5| image:: https://repo.acin.tuwien.ac.at/tmp/permanent/willow/willow_gt_images/gt/T_13_willow_dataset/cloud_0000000005.jpg
-.. |image6| image:: https://repo.acin.tuwien.ac.at/tmp/permanent/willow_challenge/images_challenge/scenes/T_10/cloud_0000000002.jpg
-.. |image7| image:: https://repo.acin.tuwien.ac.at/tmp/permanent/willow_challenge/images_challenge/gt/T_10/cloud_0000000002.jpg
+.. |image2| image:: images/tuw/00002.jpg
+.. |image3| image:: images/tuw/00002.jpg
+.. |image4| image:: images/tuw/cloud_0000000005.jpg
+.. |image5| image:: images/tuw/cloud_0000000005.jpg
+.. |image6| image:: images/tuw/cloud_0000000002.jpg
+.. |image7| image:: images/tuw/cloud_0000000002.jpg

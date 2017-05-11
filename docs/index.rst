@@ -109,8 +109,32 @@ Documentation contents
 ----------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+   :caption: Introduction:
+
+   index
+   setup
+   packages
+
+.. toctree::
+   :maxdepth: 1
    :caption: Contents:
 
    datasets/index
-   strands_utils
+   datasets/marathon
+   datasets/auto_benchmark
+   datasets/care_home
+   datasets/kth_3d
+   datasets/kth_lt_labels
+   datasets/kth_lt_moving
+   datasets/kth_lt
+   datasets/marathon
+   datasets/meta_rooms
+   datasets/mht_rgbd
+   datasets/object_presence
+   datasets/people_tracks
+   datasets/person_activity
+   datasets/small_office
+   datasets/three_d_net
+   datasets/tuw
+   datasets/witham_wharf   

@@ -53,5 +53,5 @@ We attached a `bibtex <https://strands.pdc.kth.se/public/TrackData/dondrup_ICRA1
 
 For further questions regarding the dataset, you can contact Ferdian Jovan (fxj345[at]cs.bham.ac.uk).
 
-.. |image0| image:: ./STRANDS%20public%20datasets_files/bob.jpg
-.. |image1| image:: ./STRANDS%20public%20datasets_files/library_tracks.png
+.. |image0| image:: images/people_tracks/bob.jpg
+.. |image1| image:: images/people_tracks/library_tracks.png

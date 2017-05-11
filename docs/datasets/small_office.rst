@@ -36,7 +36,7 @@ If you use the dataset for your research, please cite our `paper <GREG/paper.pdf
 
 This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <index.html>`__.
 
-.. |image0| image:: GREG/greg.png
-.. |image1| image:: GREG/none.png
-.. |image2| image:: GREG/greg.png
-.. |image3| image:: GREG/none.png
+.. |image0| image:: images/small_office/greg.png
+.. |image1| image:: images/small_office/none.png
+.. |image2| image:: images/small_office/greg.png
+.. |image3| image:: images/small_office/none.png

@@ -34,5 +34,5 @@ If you use the dataset for your research, please cite our `paper <AAF_Y4/paper.p
 
 This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <index.html>`__.
 
-.. |image0| image:: AAF_Y4/y4_glitches/aaf.png
-.. |image1| image:: AAF_Y4/y4_glitches/aaf.png
+.. |image0| image:: images/care_home/aaf.png
+.. |image1| image:: images/care_home/aaf.png

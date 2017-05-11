@@ -55,7 +55,7 @@ If you use the dataset for your research, please cite our `paper <activity/paper
 
 This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <index.html>`__.
 
-.. |image0| image:: images/aruba-flat.png
-.. |image1| image:: images/aruba-scheme.jpg
-.. |image2| image:: images/witham-cam.jpg
-.. |image3| image:: images/witham-topo.png
+.. |image0| image:: images/person_activity/aruba-flat.png
+.. |image1| image:: images/person_activity/aruba-scheme.jpg
+.. |image2| image:: images/person_activity/witham-cam.jpg
+.. |image3| image:: images/person_activity/witham-topo.png

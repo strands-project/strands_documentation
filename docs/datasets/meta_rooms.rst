@@ -84,9 +84,9 @@ If you use the dataset for your research, please cite our `paper <ambrus2014meta
 
 We attached a `bibtex <ambrus2014metaroom.bib>`__ record for your convenience.
 
-.. |image0| image:: html/images/Robot_s.png
-.. |image1| image:: html/images/Map.png
-.. |image2| image:: html/images/instance1_s.png
-.. |image3| image:: html/images/instance2_s.png
-.. |image4| image:: html/images/instance3_s.png
-.. |image5| image:: html/images/instance4_s.png
+.. |image0| image:: images/meta_rooms/Robot_s.png
+.. |image1| image:: images/meta_rooms/Map.png
+.. |image2| image:: images/meta_rooms/instance1_s.png
+.. |image3| image:: images/meta_rooms/instance2_s.png
+.. |image4| image:: images/meta_rooms/instance3_s.png
+.. |image5| image:: images/meta_rooms/instance4_s.png

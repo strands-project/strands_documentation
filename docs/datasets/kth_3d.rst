@@ -34,9 +34,9 @@ If you use the dataset for your research, please cite our `paper <thippur2014.pd
 
 We attached a `bibtex <thippur2014.bib>`__ record for your convenience.
 
-.. |image0| image:: html/images/t1.jpg
-.. |image1| image:: html/images/t2.jpg
-.. |image2| image:: html/images/t3.jpg
-.. |image3| image:: html/images/t1.jpg
-.. |image4| image:: html/images/t2.jpg
-.. |image5| image:: html/images/t3.jpg
+.. |image0| image:: images/kth_3d/t1.jpg
+.. |image1| image:: images/kth_3d/t2.jpg
+.. |image2| image:: images/kth_3d/t3.jpg
+.. |image3| image:: images/kth_3d/t1.jpg
+.. |image4| image:: images/kth_3d/t2.jpg
+.. |image5| image:: images/kth_3d/t3.jpg

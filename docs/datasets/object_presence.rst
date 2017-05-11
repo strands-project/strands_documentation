@@ -61,7 +61,7 @@ If you use the dataset for your research, please cite our `paper <presence/paper
 
 This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <index.html>`__.
 
-.. |image0| image:: images/aruba-flat.png
-.. |image1| image:: images/aruba-scheme.jpg
-.. |image2| image:: images/brayford_top.png
-.. |image3| image:: images/observation.png
+.. |image0| image:: images/object_presence/aruba-flat.png
+.. |image1| image:: images/object_presence/aruba-scheme.jpg
+.. |image2| image:: images/object_presence/brayford_top.png
+.. |image3| image:: images/object_presence/observation.png

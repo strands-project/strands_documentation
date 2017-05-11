@@ -72,9 +72,9 @@ Ground-truth annotation (created by [1] with manual verification):
 |  [2] Thomas Fäulhammer, Aitor Aldoma, Michael Zillich, Markus Vincze, *"Temporal Integration of Feature Correspondences For Enhanced Recognition in Cluttered And Dynamic Environments"*, IEEE Int. Conf. on Robotics and Automation (ICRA), 2015 (`PDF <http://users.acin.tuwien.ac.at/tfaeulhammer/files/ICRA2015_FaeulhammerAldomaZillichVincze_draft.pdf>`__) (`bibtex <http://users.acin.tuwien.ac.at/tfaeulhammer/files/ICRA2015_FaeulhammerAldomaZillichVincze.txt>`__)
 |  [3] Thomas Fäulhammer, Michael Zillich, Markus Vincze, *"Multi-View Hypotheses Transfer for Enhanced Object Recognition in Clutter"*, IAPR Conference on Machine Vision Applications (MVA), 2015 (`PDF <http://users.acin.tuwien.ac.at/tfaeulhammer/files/MVA2015_FaeulhammerZillichVincze.pdf>`__) (`bibtex <http://users.acin.tuwien.ac.at/tfaeulhammer/files/MVA2015_FaeulhammerZillichVincze.txt>`__)
 
-.. |image0| image:: pictures/acinlogo.svg
+.. |image0| image:: images/tuw/acinlogo.svg
    :target: http://v4r.acin.tuwien.ac.at/
-.. |image1| image:: pictures/TULogo.gif
+.. |image1| image:: images/tuw/TULogo.gif
    :target: http://www.tuwien.ac.at/
 .. |image2| image:: images/tuw/00002.jpg
 .. |image3| image:: images/tuw/00002.jpg

@@ -79,6 +79,6 @@ If you use the dataset for your research, please cite our `paper <ambrus2015unsu
 
 We attached a `bibtex <ambrus2015unsupervised.bib>`__ record for your convenience.
 
-.. |image0| image:: html/images/Robot_s.png
-.. |image1| image:: html/images/map.jpg
-.. |image2| image:: html/images/map_obs.jpg
+.. |image0| image:: images/kth_lt/Robot_s.png
+.. |image1| image:: images/kth_lt/map.jpg
+.. |image2| image:: images/kth_lt/map_obs.jpg

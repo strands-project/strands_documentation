@@ -35,5 +35,5 @@ The 3DNet dataset is a free resource for object class recognition and 6DOF pose 
 
    `Cat200\_ModelDatabase.zip (569 MB) <Cat200_ModelDatabase.zip>`__
 
-.. |image0| image:: training.jpg
-.. |image1| image:: classification.jpg
+.. |image0| image:: images/three_d_net/permanenttraining.jpg
+.. |image1| image:: images/three_d_net/permanentclassification.jpg

@@ -24,5 +24,5 @@ Read more in our `paper <automated/paper.pdf>`__. We attached a `bibtex <automat
 
 In the future, the system will extend to all datasets in the `LCAS-STRANDS long-term dataset collection <index.html>`__.
 
-.. |image0| image:: automated/workflow.png
-.. |image1| image:: automated/workflow.png
+.. |image0| image:: images/auto_benchmark/workflow.png
+.. |image1| image:: images/auto_benchmark/workflow.png

@@ -12,7 +12,7 @@ Object Recognition RGB-D Data Sets:
 
 `TUW data sets <tuw.html>`__: Several Ground truth and annotated data sets from TUW. This data is targeted towards object instance recognition.
 
-`3DNet Dataset <three_d_net.html>`__: The 3DNet dataset is a free resource for object class recognition and 6DOF pose estimation from point cloud data. Alternative link: `3DNet Dataset <https://strands.pdc.kth.se/public/3DNet_Dataset/>`__
+`3DNet Dataset <https://repo.acin.tuwien.ac.at/tmp/permanent/3d-net.org>`__: The 3DNet dataset is a free resource for object class recognition and 6DOF pose estimation from point cloud data. Alternative link: `3DNet Dataset <https://strands.pdc.kth.se/public/3DNet_Dataset/>`__
 
 Long Term Mapping Data Sets:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

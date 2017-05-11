@@ -12,7 +12,7 @@ datasets:
   index: # do not change this URL
     url: http://strands.acin.tuwien.ac.at/data.html
   three_d_net:
-    url: https://repo.acin.tuwien.ac.at/tmp/permanent/3d-net.org
+    url: https://repo.acin.tuwien.ac.at/tmp/permanent/3d-net.org/
   tuw:
     url: https://repo.acin.tuwien.ac.at/tmp/permanent/dataset_index.php
   witham_wharf:

@@ -301,8 +301,8 @@ def html_to_file(dataset_name, url, pandoc_extra_args=None, dataset_conf=None, f
         with open(image_outfile, 'w') as f:
             img_resp = requests.get(image_link, verify=False)
             f.write(img_resp.content)
-
-        return match.group(0).replace(image_link, "images/{0}/{1}".format(dataset_name, image_name))
+            
+        return match.group(0).replace(match.group(1), "images/{0}/{1}".format(dataset_name, image_name))
 
     html_text = image_re.sub(image_replace, html_text)
 
@@ -328,7 +328,7 @@ def html_to_file(dataset_name, url, pandoc_extra_args=None, dataset_conf=None, f
     # corresponds to the markdown filename)
     url_dict = {dataset_conf[key]["url"]: key for key in dataset_conf.keys()}
     for url in url_dict.keys():
-        file_text = file_text.replace(url, url_dict[url])
+        file_text = file_text.replace(url, "{}.rst".format(url_dict[url]))
 
     return file_text
 

@@ -260,9 +260,10 @@ def html_to_file(dataset_name, url, pandoc_extra_args=None, dataset_conf=None, f
 
     """
     print("Processing dataset {0} with url {1}".format(dataset_name, url))
-    base_link_re_str = "\[[a-zA-Z0-9\/\.\\\_\s:\-]*\]\(([a-zA-Z0-9\/\.\\_\s:\-]*)\)"
-    link_re =  re.compile(base_link_re_str)
-    image_re = re.compile("!" + base_link_re_str)
+    # Should actually be using html parser...
+    link_re =  re.compile('href="(\S*)"')
+    # https://stackoverflow.com/questions/1028362/how-do-i-extract-html-img-sources-with-a-regular-expression#1028370
+    image_re = re.compile('<img[^>]+src="([^">]+)"')
 
     url_split = urlparse.urlparse(url)
     orig_path = url_split.path
@@ -270,50 +271,15 @@ def html_to_file(dataset_name, url, pandoc_extra_args=None, dataset_conf=None, f
     # relative paths in the html
     trimmed_path = os.path.dirname(orig_path)
     base_url = url.replace(orig_path, trimmed_path)
-    pandoc_args = ["--no-wrap"]
-    if pandoc_extra_args:
-        pandoc_args.extend(pandoc_extra_args)
 
     # verify=false is dangerous as it ignores ssl certificates, but
     # we're not doing anything which has security risks associated.
     response = requests.get(url, verify=False)
     if response.status_code == 200:
-        file_text = pypandoc.convert_text(response.text, filetype, format="html", extra_args=pandoc_args).encode('utf-8')
+        html_text = response.text
     else:
         print("Response code was not 200, something is probably wrong with this website.")
         return "Could not retrieve this page."
-
-    # Use this to replace relative links in the webpage with absolute ones so
-    # that they can be properly accessed. We don't want to replace the whole
-    # match, just the link itself.
-    def rel_link_replace(match):
-        link = match.group(1)
-        if link.startswith("http") or link.startswith("www"):
-            # non-relative links stay the same
-            return match.group(0)
-        else:
-            # change the link in relative links
-            return match.group(0).replace(link, "{0}/{1}".format(base_url, link))
-
-    file_text = link_re.sub(rel_link_replace, file_text)
-
-    def url_to_file(url_dict, match):
-        link = match.group(1)
-        if link in url_dict:
-            return match.group(0).replace(link, url_dict[link])
-        else:
-            return match.group(0)
-
-    # Also want to make sure that if there is a direct link to a dataset on the
-    # page that it is converted to link to the markdown file we will generate
-    # here rather than going to somewhere else on the web. This mostly applies
-    # to the index page. Flatten the dictionary so that the key-value pairs are
-    # now the base url for the dataset page, and the dataset key (which
-    # corresponds to the markdown filename)
-    url_dict = {dataset_conf[key]["url"]: key for key in dataset_conf.keys()}
-
-    file_text = link_re.sub(functools.partial(url_to_file, url_dict), file_text)
-
 
     # We want to preserve images in the documentation, so we will download all
     # the images on the page, which are markdown ![]() blocks, where links are
@@ -324,15 +290,21 @@ def html_to_file(dataset_name, url, pandoc_extra_args=None, dataset_conf=None, f
         os.makedirs(image_base_path)
 
     def image_replace(match):
-        image_name = os.path.basename(urlparse.urlparse(match.group(1)).path)
+        image_link = match.group(1)
+        # This is a relative link, so need to construct the full url
+        if not match.group(1).startswith("http") and not match.group(1).startswith("www"):
+            image_link = base_url + image_link
+        
+        image_name = os.path.basename(urlparse.urlparse(image_link).path)
         image_outfile = os.path.join(image_base_path, image_name)
+        
         with open(image_outfile, 'w') as f:
-            img_resp = requests.get(match.group(1), verify=False)
+            img_resp = requests.get(image_link, verify=False)
             f.write(img_resp.content)
 
-        return match.group(0).replace(match.group(1), "images/{0}/{1}".format(dataset_name, image_name))
+        return match.group(0).replace(image_link, "images/{0}/{1}".format(dataset_name, image_name))
 
-    file_text = image_re.sub(image_replace, file_text)
+    html_text = image_re.sub(image_replace, html_text)
 
     try:
         # remove the directory if it's empty
@@ -341,6 +313,22 @@ def html_to_file(dataset_name, url, pandoc_extra_args=None, dataset_conf=None, f
     except OSError as ex:
         if ex.errno == errno.ENOTEMPTY:
             pass # this means there were images downloaded
+
+    pandoc_args = ["--no-wrap"]
+    if pandoc_extra_args:
+        pandoc_args.extend(pandoc_extra_args)
+
+    file_text = pypandoc.convert_text(html_text, filetype, format="html", extra_args=pandoc_args).encode('utf-8')
+    
+    # Also want to make sure that if there is a direct link to a dataset on the
+    # page that it is converted to link to the markdown file we will generate
+    # here rather than going to somewhere else on the web. This mostly applies
+    # to the index page. Flatten the dictionary so that the key-value pairs are
+    # now the base url for the dataset page, and the dataset key (which
+    # corresponds to the markdown filename)
+    url_dict = {dataset_conf[key]["url"]: key for key in dataset_conf.keys()}
+    for url in url_dict.keys():
+        file_text = file_text.replace(url, url_dict[url])
 
     return file_text
 
@@ -357,6 +345,14 @@ def create_dataset_docs(dataset_conf, filetype="rst"):
             if "pandoc_extra_args" in datasets[dataset] and datasets[dataset]["pandoc_extra_args"]:
                 extra_args = datasets[dataset]["pandoc_extra_args"]
             f.write(html_to_file(dataset, datasets[dataset]["url"], extra_args, dataset_conf))
+
+def generate_rst_index():
+    """Generate a series of TOC sections to insert into the index.rst.
+    """
+    for subdir, dirs, files in os.walk("docs"):
+        for doc_file in files:
+            if fnmatch.fnmatch(doc_file, "*.rst"):
+                pass
 
 def write_readme_files(repo_name, filetype="rst"):
     # We look for markdown files, as readmes on github for the strands

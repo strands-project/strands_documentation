@@ -85,17 +85,17 @@ def create_package_file(filetype="rst"):
             # aaf_deployment/info_terminal/readme.md, and package xml is at
             # aaf_deployment/info_terminal/info_terminal/package.xml
             if link_list[0][0] in desc_dict:
-                f.write("{0}\n".format(desc_dict[link_list[0][0]]))
+                f.write("{0}\n\n".format(desc_dict[link_list[0][0]]))
             elif os.path.join(link_list[0][0], os.path.basename(link_list[0][0])) in desc_dict:
-                f.write("{0}\n".format(desc_dict[os.path.join(link_list[0][0], os.path.basename(link_list[0][0]))]))
+                f.write("{0}\n\n".format(desc_dict[os.path.join(link_list[0][0], os.path.basename(link_list[0][0]))]))
 
             # Subsequent entries are subpackages
             for link in link_list[1:]:
                 f.write("### {0}\n\n".format(link[1]))
                 if link[0] in desc_dict:
-                    f.write("{0}\n".format(desc_dict[link[0]]))
+                    f.write("{0}\n\n".format(desc_dict[link[0]]))
                 elif os.path.join(link[0], os.path.basename(link[0])) in desc_dict:
-                    f.write("{0}\n".format(desc_dict[os.path.join(link[0], os.path.basename(link[0]))]))
+                    f.write("{0}\n\n".format(desc_dict[os.path.join(link[0], os.path.basename(link[0]))]))
 
     pypandoc.convert_file(package_file, filetype, format="md", outputfile=package_file)
 
@@ -187,7 +187,7 @@ def get_wiki(org_name, repo_name, filetype="rst"):
                         print("Converting wiki file {} to {}".format(file_path, filetype))
                         pypandoc.convert_file(file_path, filetype, format="md", outputfile=new_file_path)
                         # remove the original markdown file
-                        #os.remove(file_path)
+                        os.remove(file_path)
 
 def get_repo_files(org_name, repo_name, match_ext=[], match_filename=[], match_full=[]):
     """Get files in the given repository which have extensions matching any in the
@@ -283,9 +283,8 @@ def html_to_file(dataset_name, url, pandoc_extra_args=None, dataset_conf=None, f
         return "Could not retrieve this page."
 
     # We want to preserve images in the documentation, so we will download all
-    # the images on the page, which are markdown ![]() blocks, where links are
-    # [](). Then, we'll replace the image references to the web with ones to the
-    # images directory we save them in
+    # the images on the page. Then, we'll replace the image references to the
+    # web with ones to the images directory we save them in
     image_base_path = os.path.abspath("docs/datasets/images/{0}".format(dataset_name))
     if not os.path.isdir(image_base_path):
         os.makedirs(image_base_path)
@@ -349,14 +348,71 @@ def create_dataset_docs(dataset_conf, filetype="rst"):
                 extra_args = datasets[dataset]["pandoc_extra_args"]
             f.write(html_to_file(dataset, datasets[dataset]["url"], extra_args, dataset_conf, filetype))
 
-def generate_rst_index():
+def generate_rst_index(index_config):
     """Generate a series of TOC sections to insert into the index.rst.
     """
     rst_files = []
+    rst_dirs = set()
     for subdir, dirs, files in os.walk("docs"):
         for doc_file in files:
-            if fnmatch.fnmatch(doc_file, "*.rst"):
-                rst_files.append(os.path.abspath(os.path.join(subdir, doc_file)))
+            # ignore files in the docs directory like index, packages and setup
+            if fnmatch.fnmatch(doc_file, "*.rst") and subdir != "docs":
+                # remove docs/ and .rst before appending
+                rst_files.append(os.path.join(subdir, doc_file)[5:-4])
+                rst_dirs.add(subdir)
+
+    # Base string for toctree. Use format to name the toctree
+    toctree_base = """.. toctree::
+   :maxdepth: 1
+   :caption: {}:
+    
+    """
+    
+    toc_groups = {}
+    for toc_group in index_config:
+        top_key = toc_group.keys()[0]
+        toc_groups[top_key] = {"toc_string": toctree_base.format(toc_group[top_key]["caption"]),
+                               "target_dirs": toc_group[top_key]["dirs"],
+                               "toc_files": []} # files to go in this group go here
+
+    generic_toc = toctree_base.format("Packages")
+    generic_files = []
+
+    # Go over all the rst files and put them into the correct TOC
+    for rst in sorted(rst_files):
+        # the base subdirectory of this rst file (i.e. the package it is in)
+        base_dir = rst.split("/")[0]
+        # If we don't match this rst to a group, put it in the generic group
+        matched = False
+        # Check all toc groups in the config to see if this file should be put
+        # in a group or in the generic TOC
+        for group_key in toc_groups.keys():
+            # Looks through all the directories that are in the given toc group
+            for toc_dir in toc_groups[group_key]["target_dirs"]:
+                if base_dir == toc_dir:
+                    toc_groups[group_key]["toc_files"].append(rst)
+                    matched = True
+
+        if not matched:
+            generic_files.append(rst)
+
+    base_toc = toctree_base.format("Introduction")
+    base_toc += "\tsetup\n\tpackages\n\n\n"
+
+    group_tocs = ""
+
+    # Process each group 
+    for group_key in toc_groups.keys():
+        for toc_file in toc_groups[group_key]["toc_files"]:
+            toc_groups[group_key]["toc_string"] += "\t{}\n".format(toc_file)
+
+        group_tocs += toc_groups[group_key]["toc_string"] + "\n\n"
+
+    # Populate the generic group
+    for generic_file in generic_files:
+        generic_toc += "\t{}\n".format(generic_file)
+
+    return base_toc + group_tocs + generic_toc
 
 def write_readme_files(repo_name, filetype="rst"):
     # We look for markdown files, as readmes on github for the strands
@@ -450,6 +506,10 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
+    with open(args.conf, 'r') as f:
+        config = yaml.safe_load(f.read())
+    ignore_repos = config["ignore_repos"]
+
     if args.datasets:
         datasets = {}
         with open("conf/datasets.yaml") as f:
@@ -461,10 +521,6 @@ if __name__ == '__main__':
     if args.package_index:
         create_package_file()
         sys.exit(0)
-
-    ignore_repos = []
-    with open(args.conf, 'r') as f:
-        ignore_repos = yaml.safe_load(f.read())["ignore_repos"]
 
     header = get_oauth_header(args.private)
     repos = get_org_repo_dict(org, header)
@@ -532,3 +588,20 @@ if __name__ == '__main__':
                     f.write(base64.b64decode(file_rq["content"]))
 
     create_package_file()
+
+    # Modify index.rst TOC section so that all rst files are included in the documentation
+    if args.filetype == "rst":
+        # Generate the indexes from config provided
+        rst_index = generate_rst_index(config["rst_index_config"])
+
+        with open("docs/index.rst", 'r+') as f:
+            index = f.read()
+            toc_re = re.compile("\.\. toctree::")
+            # This is where the TOC starts currently
+            toc_start = toc_re.search(index).start()
+
+            # Create a new string with the non-TOC part of the file, and add on
+            # the new TOC
+            index = index[:toc_start] + rst_index
+            f.seek(0)
+            f.write(index)

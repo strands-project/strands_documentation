@@ -397,20 +397,20 @@ def generate_rst_index(index_config):
             generic_files.append(rst)
 
     base_toc = toctree_base.format("Introduction")
-    base_toc += "\tsetup\n\tpackages\n\n\n"
+    base_toc += "setup\n\tpackages\n\n\n"
 
     group_tocs = ""
 
     # Process each group 
     for group_key in toc_groups.keys():
         for toc_file in toc_groups[group_key]["toc_files"]:
-            toc_groups[group_key]["toc_string"] += "\t{}\n".format(toc_file)
+            toc_groups[group_key]["toc_string"] += "{}\n".format(toc_file)
 
         group_tocs += toc_groups[group_key]["toc_string"] + "\n\n"
 
     # Populate the generic group
     for generic_file in generic_files:
-        generic_toc += "\t{}\n".format(generic_file)
+        generic_toc += "{}\n".format(generic_file)
 
     return base_toc + group_tocs + generic_toc
 

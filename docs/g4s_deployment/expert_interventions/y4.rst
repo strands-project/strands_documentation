@@ -1,0 +1,16 @@
+-  Date: 05/01/2017
+-  Expert name: Michal Staniaszek
+-  Comments: Following the issue with the robot driver, the laser sensor
+   which is on USB0 disappeared from the system - whether this was a
+   side effect is not certain, but it occurred after the previous
+   intervention. ``/var/log/kern.log`` shows the following
+   line:\ ``Jan  3 12:54:15 betty kernel: [1739575.923191] ftdi_sio ttyUSB0: FTDI USB Serial Device converter now disconnected from ttyUSB0``.
+   This occurrence of the FTDI board crash happened approximately 20
+   days after the previous boot of the system. This meant that it was
+   impossible for the robot to move. Since the robot was not on the
+   charging station, this resulted in all PCs shutting down once the
+   battery was drained, leaving the robot disabled. I talked to Michael
+   Chance at TSC today and got him to restart the robot, main and side
+   PCs.
+-  Major Inteventions:  - 11:00: Restarted entire system
+

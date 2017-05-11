@@ -24,9 +24,11 @@ The script will then download all repositories in the organisation, excluding
 those specified in `conf/conf.yaml`. You can use a different config by passing a
 file to the `--conf` flag, which should contain the same keys that the one in
 the `conf` directory has. Packages with a wiki page will also have those cloned
-and added to the docs directory. You can ignore wikis using the `--noiki` flag.
+and added to the docs directory. You can ignore wikis using the `--nowiki` flag.
 
 With the `--datasets` flag, the scraper will go through dataset urls given in
 `datasets/datasets.yaml` and download the html pages specified there, converting
 them to markdown. Images on the pages will also be downloaded to the
 `datasets/images` directory.
+
+Once the scraping has finished you can run `mkdocs serve` and got to http://localhost:8000 to see the generated documentation. Or `mkdocs gh-deploy` to deploy to GitHub pages.

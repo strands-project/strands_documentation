@@ -352,10 +352,11 @@ def create_dataset_docs(dataset_conf, filetype="rst"):
 def generate_rst_index():
     """Generate a series of TOC sections to insert into the index.rst.
     """
+    rst_files = []
     for subdir, dirs, files in os.walk("docs"):
         for doc_file in files:
             if fnmatch.fnmatch(doc_file, "*.rst"):
-                pass
+                rst_files.append(os.path.abspath(os.path.join(subdir, doc_file)))
 
 def write_readme_files(repo_name, filetype="rst"):
     # We look for markdown files, as readmes on github for the strands

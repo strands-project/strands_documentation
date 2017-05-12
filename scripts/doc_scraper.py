@@ -365,8 +365,8 @@ def generate_rst_index(index_config):
     toctree_base = """.. toctree::
    :maxdepth: 1
    :caption: {}:
-    
-    """
+
+"""
     
     toc_groups = {}
     for toc_group in index_config:
@@ -397,22 +397,40 @@ def generate_rst_index(index_config):
             generic_files.append(rst)
 
     base_toc = toctree_base.format("Introduction")
-    base_toc += "setup\n\tpackages\n\n\n"
+    base_toc += "   setup\n   packages\n\n\n"
 
     group_tocs = ""
 
     # Process each group 
     for group_key in toc_groups.keys():
         for toc_file in toc_groups[group_key]["toc_files"]:
-            toc_groups[group_key]["toc_string"] += "{}\n".format(toc_file)
+            toc_groups[group_key]["toc_string"] += "   {}\n".format(toc_file)
 
         group_tocs += toc_groups[group_key]["toc_string"] + "\n\n"
 
     # Populate the generic group
     for generic_file in generic_files:
-        generic_toc += "{}\n".format(generic_file)
+        generic_toc += "   {}\n".format(generic_file)
 
     return base_toc + group_tocs + generic_toc
+
+def write_rst_toc_to_index(config):
+    # Modify index.rst TOC section so that all rst files are included in the documentation
+    # Generate the indexes from config provided
+    rst_index = generate_rst_index(config["rst_index_config"])
+
+    with open("docs/index.rst", 'r+') as f:
+        index = f.read()
+        toc_re = re.compile("\.\. toctree::")
+        # This is where the TOC starts currently
+        toc_start = toc_re.search(index).start()
+
+        # Create a new string with the non-TOC part of the file, and add on
+        # the new TOC
+        index = index[:toc_start] + rst_index
+        f.seek(0)
+        f.write(index)
+
 
 def write_readme_files(repo_name, filetype="rst"):
     # We look for markdown files, as readmes on github for the strands
@@ -503,6 +521,7 @@ if __name__ == '__main__':
     parser.add_argument("--datasets", action="store_true", help="Generate markdown files for datasets specified in datasets/datasets.yaml. Files will be saved in the datasets directory and copied to the docs directory.")
     parser.add_argument("--single-package", action="store", type=str, help="Use to specify a single package to update")
     parser.add_argument("--filetype", action="store_true", default="rst", help="Specify the filetype for output. This should be a valid pandoc output format. This is used to define which format files scraped from the github repositories, or from the web in the case of datasets, are converted to when they are copied to the docs directory. Default is to output to rst, for use in readthedocs.")
+    parser.add_argument("--rst-index-toc", action="store_true", help="Regenerate the rst TOC for the docs/index.rst file")
 
     args = parser.parse_args()
 
@@ -520,6 +539,10 @@ if __name__ == '__main__':
 
     if args.package_index:
         create_package_file()
+        sys.exit(0)
+
+    if args.rst_index_toc:
+        write_rst_toc_to_index(config)
         sys.exit(0)
 
     header = get_oauth_header(args.private)
@@ -588,20 +611,5 @@ if __name__ == '__main__':
                     f.write(base64.b64decode(file_rq["content"]))
 
     create_package_file()
-
-    # Modify index.rst TOC section so that all rst files are included in the documentation
     if args.filetype == "rst":
-        # Generate the indexes from config provided
-        rst_index = generate_rst_index(config["rst_index_config"])
-
-        with open("docs/index.rst", 'r+') as f:
-            index = f.read()
-            toc_re = re.compile("\.\. toctree::")
-            # This is where the TOC starts currently
-            toc_start = toc_re.search(index).start()
-
-            # Create a new string with the non-TOC part of the file, and add on
-            # the new TOC
-            index = index[:toc_start] + rst_index
-            f.seek(0)
-            f.write(index)
+        write_rst_toc_to_index(config)

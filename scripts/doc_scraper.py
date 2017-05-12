@@ -158,7 +158,7 @@ def get_org_repo_dict(org, header=None):
 
     return repos
 
-def get_wiki(org_name, repo_name, filetype="rst"):
+def get_wiki(org_name, repo_name, filetype="rst", ignore=None):
     """Check if a wiki exists, and if it does, clone it to the docs/repo_name/wiki
     """
     # to devnull so there's no output
@@ -168,13 +168,25 @@ def get_wiki(org_name, repo_name, filetype="rst"):
     if subprocess.call(["git", "ls-remote", "https://github.com/{0}/{1}.wiki.git".format(org_name, repo_name)], stdout=FNULL, stderr=FNULL) == 0:
         wiki_dir = "docs/{0}/wiki".format(repo_name)
         # only clone if the wiki does not already exist
-        if not os.path.isdir(wiki_dir):
-            print("Wiki exists. Cloning...")
-            subprocess.call(["git", "clone", "https://github.com/{0}/{1}.wiki.git".format(org_name, repo_name), wiki_dir])
-            # delete the .git directory cloned along with the wiki
-            shutil.rmtree(os.path.join(wiki_dir, ".git"))
-            # rename the Home file to index so it works properly with mkdocs
-            #os.rename(os.path.join(wiki_dir, "Home.md"), os.path.join(wiki_dir, "index.md"))
+        if os.path.isdir(wiki_dir):
+            shutil.rmtree(wiki_dir)
+
+        print("Wiki exists. Cloning...")
+        subprocess.call(["git", "clone", "https://github.com/{0}/{1}.wiki.git".format(org_name, repo_name), wiki_dir])
+        # delete the .git directory cloned along with the wiki
+        shutil.rmtree(os.path.join(wiki_dir, ".git"))
+        # rename the Home file to index so it works properly with mkdocs
+        #os.rename(os.path.join(wiki_dir, "Home.md"), os.path.join(wiki_dir, "index.md"))
+
+        # Check the ignore list and remove any files which are in it.
+        if ignore:
+            for subdir, dirs, files in os.walk(wiki_dir):
+                # Should work for the most part... So many loops...
+                for wiki_file in files:
+                    for ignore_item in ignore:
+                        if ignore_item in os.path.join(subdir, wiki_file):
+                            print("Ignoring file {}".format(os.path.join(subdir, wiki_file)))
+                            os.remove(os.path.abspath(os.path.join(subdir, wiki_file)))
 
         # The wiki is written in markdown, so need to convert it if the filetype
         # we're supposed to be using is different.
@@ -189,7 +201,7 @@ def get_wiki(org_name, repo_name, filetype="rst"):
                         # remove the original markdown file
                         os.remove(file_path)
 
-def get_repo_files(org_name, repo_name, match_ext=[], match_filename=[], match_full=[]):
+def get_repo_files(org_name, repo_name, match_ext=[], match_filename=[], match_full=[], ignore=[]):
     """Get files in the given repository which have extensions matching any in the
     given match_ext list, or filenames (without extensions) which match any in
     the given match_filename list. Full filenames (filename + extension) are
@@ -226,8 +238,11 @@ def get_repo_files(org_name, repo_name, match_ext=[], match_filename=[], match_f
         fname_matches = map(lambda x: lower_fname == x.lower(), match_filename)
         ext_matches = map(lambda x: lower_ext == x.lower(), match_ext)
         full_matches = map(lambda x: lower_fname + lower_ext == x.lower(), match_full)
-        if any(fname_matches) or any(ext_matches) or any(full_matches):
+        ignore_matches = map(lambda x: x in item["path"], ignore)
+        if (any(fname_matches) or any(ext_matches) or any(full_matches)) and not any(ignore_matches):
             matching[item["path"]] = item
+        elif (any(fname_matches) or any(ext_matches) or any(full_matches)) and any(ignore_matches):
+            print("ignoring file {}".format(item["path"]))
 
     return matching
 
@@ -425,10 +440,10 @@ def write_rst_toc_to_index(config):
         f.write(index)
 
 
-def write_readme_files(repo_name, filetype="rst"):
+def write_readme_files(repo_name, filetype="rst", ignore=None):
     # We look for markdown files, as readmes on github for the strands
     # repositories are written in markdown
-    readmes = get_repo_files(org, repo_name, match_ext=[".md"], match_filename=["readme"])
+    readmes = get_repo_files(org, repo_name, match_ext=[".md"], match_filename=["readme"], ignore=ignore)
     subpkg_readmes = files_to_subpackages(readmes)
 
     for subpkg in subpkg_readmes.keys():
@@ -521,6 +536,15 @@ if __name__ == '__main__':
     with open(args.conf, 'r') as f:
         config = yaml.safe_load(f.read())
     ignore_repos = config["ignore_repos"]
+    ignore_files = {}
+
+    # Go through the list of ignored repos and extract the dictionaries which
+    # correspond to repositories which have files in them that should be
+    # ignored.
+    for repo in ignore_repos:
+        if type(repo) is dict:
+            repo_name = repo.keys()[0]
+            ignore_files[repo_name] = repo[repo_name]
 
     if args.datasets:
         datasets = {}
@@ -547,19 +571,23 @@ if __name__ == '__main__':
     packages = sorted(repos.keys()) if not args.single_package else [args.single_package]
     for repo_name in packages:
         print("-------------------- {0} --------------------".format(repo_name))
-        if repo_name in ignore_repos:
+        if repo_name in ignore_repos: # ignores entire repositories, since it cannot see the keys for dicts in the list
             print("ignoring repo".format(repo_name))
             continue
 
+        ignore_list = []
+        if repo_name in ignore_files:
+            ignore_list = ignore_files[repo_name]
+
         # Clone the wiki repo for this repo into the docs subdirectory for the repo
         if not args.nowiki:
-            get_wiki(org, repo_name, filetype=args.filetype)
+            get_wiki(org, repo_name, filetype=args.filetype, ignore=ignore_list)
 
         # Find readme (or markdown) files in the repository and write them to
         # the subdirectory, preserving some of the directory structure of the repo.
-        write_readme_files(repo_name, filetype=args.filetype)
+        write_readme_files(repo_name, filetype=args.filetype, ignore=ignore_list)
 
-        package_xml = get_repo_files(org, repo_name, match_full=["package.xml".format(repo_name)])
+        package_xml = get_repo_files(org, repo_name, match_full=["package.xml".format(repo_name)], ignore=ignore_list)
         subpkg_xml = files_to_subpackages(package_xml)
 
         base_path = os.path.join("docs", repo_name)

@@ -375,26 +375,23 @@ def generate_rst_index(index_config):
                                "target_dirs": toc_group[top_key]["dirs"],
                                "toc_files": []} # files to go in this group go here
 
-    generic_toc = toctree_base.format("Packages")
-    generic_files = []
+    for rst_dir in rst_dirs:
+        dirname = os.path.join(*rst_dir.split("/")[1:])
+        toc_groups[dirname] = {"toc_string": toctree_base.format(dirname.replace("_", " ").replace("/", " ")),
+                               "target_dirs": [dirname],
+                               "toc_files": []} # files to go in this group go here
 
     # Go over all the rst files and put them into the correct TOC
     for rst in sorted(rst_files):
         # the base subdirectory of this rst file (i.e. the package it is in)
         base_dir = rst.split("/")[0]
-        # If we don't match this rst to a group, put it in the generic group
-        matched = False
         # Check all toc groups in the config to see if this file should be put
         # in a group or in the generic TOC
         for group_key in toc_groups.keys():
             # Looks through all the directories that are in the given toc group
             for toc_dir in toc_groups[group_key]["target_dirs"]:
-                if base_dir == toc_dir:
+                if os.path.dirname(rst) == toc_dir:
                     toc_groups[group_key]["toc_files"].append(rst)
-                    matched = True
-
-        if not matched:
-            generic_files.append(rst)
 
     base_toc = toctree_base.format("Introduction")
     base_toc += "   setup\n   packages\n\n\n"
@@ -402,17 +399,13 @@ def generate_rst_index(index_config):
     group_tocs = ""
 
     # Process each group 
-    for group_key in toc_groups.keys():
+    for group_key in sorted(toc_groups.keys()):
         for toc_file in toc_groups[group_key]["toc_files"]:
             toc_groups[group_key]["toc_string"] += "   {}\n".format(toc_file)
 
         group_tocs += toc_groups[group_key]["toc_string"] + "\n\n"
 
-    # Populate the generic group
-    for generic_file in generic_files:
-        generic_toc += "   {}\n".format(generic_file)
-
-    return base_toc + group_tocs + generic_toc
+    return base_toc + group_tocs
 
 def write_rst_toc_to_index(config):
     # Modify index.rst TOC section so that all rst files are included in the documentation

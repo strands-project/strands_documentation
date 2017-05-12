@@ -117,15 +117,51 @@ Documentation contents
 .. toctree::
    :maxdepth: 1
    :caption: Introduction:
-      
+
    setup
    packages
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: Datasets:
-    
+   :caption: aaf deployment:
+
+   aaf_deployment/aaf_simulation
+   aaf_deployment/aaf_walking_group
+   aaf_deployment/expert_interventions
+   aaf_deployment/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: aaf deployment info terminal:
+
+   aaf_deployment/info_terminal/index
+   aaf_deployment/info_terminal/infremen
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: aaf deployment wiki:
+
+   aaf_deployment/wiki/AAF-Deployment-Feedback
+   aaf_deployment/wiki/Home
+   aaf_deployment/wiki/Topics-to-log-during-deployments
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: annotation tool kth:
+
+   annotation_tool_kth/annotation-tool
+   annotation_tool_kth/index
+   annotation_tool_kth/rgbd_grabber
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: datasets:
+
    datasets/auto_benchmark
    datasets/care_home
    datasets/index
@@ -147,20 +183,8 @@ Documentation contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Packages:
-    
-   aaf_deployment/aaf_simulation
-   aaf_deployment/aaf_walking_group
-   aaf_deployment/expert_interventions
-   aaf_deployment/index
-   aaf_deployment/info_terminal/index
-   aaf_deployment/info_terminal/infremen
-   aaf_deployment/wiki/AAF-Deployment-Feedback
-   aaf_deployment/wiki/Home
-   aaf_deployment/wiki/Topics-to-log-during-deployments
-   annotation_tool_kth/annotation-tool
-   annotation_tool_kth/index
-   annotation_tool_kth/rgbd_grabber
+   :caption: fremen:
+
    fremen/Fremen2DGrid
    fremen/FremenArray
    fremen/FremenServer
@@ -169,31 +193,115 @@ Documentation contents
    fremen/froctomap
    fremen/frongo
    fremen/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: g4s deployment:
+
+   g4s_deployment/index
+   g4s_deployment/tsc_control_ui
+   g4s_deployment/tsc_temperature_logger
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: g4s deployment docs:
+
    g4s_deployment/docs/end-user-instructions
    g4s_deployment/docs/network
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: g4s deployment expert interventions:
+
    g4s_deployment/expert_interventions/expert_interventions
    g4s_deployment/expert_interventions/y3
    g4s_deployment/expert_interventions/y4
-   g4s_deployment/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: g4s deployment tsc bringup:
+
    g4s_deployment/tsc_bringup/checklist
    g4s_deployment/tsc_bringup/index
-   g4s_deployment/tsc_control_ui
-   g4s_deployment/tsc_temperature_logger
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: g4s deployment wiki:
+
    g4s_deployment/wiki/Home
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: mongodb store:
+
    mongodb_store/index
    mongodb_store/mongodb_log
    mongodb_store/mongodb_store
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: planning tutorial:
+
+   planning_tutorial/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: planning tutorial doc:
+
    planning_tutorial/doc/exercise_1
    planning_tutorial/doc/exercise_2
    planning_tutorial/doc/exercise_3
    planning_tutorial/doc/tutorial_prep
-   planning_tutorial/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: qrobot:
+
    qrobot/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: robblog:
+
+   robblog/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: robblog data:
+
    robblog/data/2014-05-05-strands-test-post
    robblog/data/example
-   robblog/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: scitos 2d navigation:
+
    scitos_2d_navigation/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: scitos 2d navigation wiki:
+
    scitos_2d_navigation/wiki/Home
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: scitos apps:
+
    scitos_apps/index
    scitos_apps/ptu_follow_frame
    scitos_apps/scitos_cmd_vel_mux
@@ -201,35 +309,97 @@ Documentation contents
    scitos_apps/scitos_docking
    scitos_apps/scitos_teleop
    scitos_apps/scitos_touch
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: scitos apps wiki:
+
    scitos_apps/wiki/Home
    scitos_apps/wiki/Scitos-cmd_vel_mux
    scitos_apps/wiki/Scitos-teleop
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: scitos common:
+
    scitos_common/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: scitos drivers:
+
    scitos_drivers/flir_pantilt_d46
    scitos_drivers/scitos_bringup
    scitos_drivers/scitos_mira
    scitos_drivers/scitos_pc_monitor
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: scitos robot wiki:
+
    scitos_robot/wiki/Bob's-Network-Configuration
    scitos_robot/wiki/Home
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: semantic segmentation:
+
    semantic_segmentation/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: semantic segmentation src:
+
    semantic_segmentation/src/densecrf
    semantic_segmentation/src/docs
    semantic_segmentation/src/gtest-1.7.0
    semantic_segmentation/src/liblbfgs
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: sensortag:
+
    sensortag/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: soma:
+
    soma/index
    soma/soma_llsd
    soma/soma_trajectory
+   soma/soma_visualizer
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: soma soma utils:
+
    soma/soma_utils/config
    soma/soma_utils/robblog
-   soma/soma_visualizer
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands-docker:
+
    strands-docker/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands 3d mapping:
+
    strands_3d_mapping/calibrate_sweeps
    strands_3d_mapping/cloud_merge
-   strands_3d_mapping/dynamic_object_retrieval/cereal
-   strands_3d_mapping/dynamic_object_retrieval/index
-   strands_3d_mapping/dynamic_object_retrieval/k_means_tree
-   strands_3d_mapping/dynamic_object_retrieval/stopwatch
    strands_3d_mapping/ekz-public-lib
    strands_3d_mapping/index
    strands_3d_mapping/learn_objects_action
@@ -237,21 +407,55 @@ Documentation contents
    strands_3d_mapping/nbv_planning
    strands_3d_mapping/object_manager
    strands_3d_mapping/object_view_generator
+   strands_3d_mapping/semantic_map
+   strands_3d_mapping/semantic_map_launcher
+   strands_3d_mapping/semantic_map_publisher
+   strands_3d_mapping/semantic_map_to_2d
+   strands_3d_mapping/strands_sweep_registration
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands 3d mapping dynamic object retrieval:
+
+   strands_3d_mapping/dynamic_object_retrieval/cereal
+   strands_3d_mapping/dynamic_object_retrieval/index
+   strands_3d_mapping/dynamic_object_retrieval/k_means_tree
+   strands_3d_mapping/dynamic_object_retrieval/stopwatch
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands 3d mapping observation registration:
+
    strands_3d_mapping/observation_registration/additional_view_registration_server
    strands_3d_mapping/observation_registration/index
    strands_3d_mapping/observation_registration/observation_registration_launcher
    strands_3d_mapping/observation_registration/observation_registration_server
    strands_3d_mapping/observation_registration/observation_registration_services
    strands_3d_mapping/observation_registration/siftgpu
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands 3d mapping quasimodo:
+
    strands_3d_mapping/quasimodo/index
    strands_3d_mapping/quasimodo/quasimodo_retrieval
-   strands_3d_mapping/semantic_map
-   strands_3d_mapping/semantic_map_launcher
-   strands_3d_mapping/semantic_map_publisher
-   strands_3d_mapping/semantic_map_to_2d
-   strands_3d_mapping/strands_sweep_registration
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands 3d mapping wiki:
+
    strands_3d_mapping/wiki/Get-up-and-running
    strands_3d_mapping/wiki/Home
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands apps:
+
    strands_apps/door_pass
    strands_apps/index
    strands_apps/marathon_reporter
@@ -262,48 +466,132 @@ Documentation contents
    strands_apps/static_transform_manager
    strands_apps/topological_roslaunch
    strands_apps/watchdog_node
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands data to qsrlib:
+
    strands_data_to_qsrlib/index
    strands_data_to_qsrlib/novelTrajectories
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands executive:
+
    strands_executive/doc
    strands_executive/gcal_routine
    strands_executive/index
    strands_executive/mdp_plan_exec
    strands_executive/scheduler
    strands_executive/task_executor
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands executive behaviours:
+
    strands_executive_behaviours/automated_routine
    strands_executive_behaviours/routine_behaviours
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands exploration:
+
    strands_exploration/index
    strands_exploration/spatiotemporal_exploration
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands hri:
+
    strands_hri/index
    strands_hri/strands_gazing
    strands_hri/strands_hri_launch
    strands_hri/strands_human_aware_navigation
    strands_hri/strands_human_following
    strands_hri/strands_simple_follow_me
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands hri strands visualise speech:
+
    strands_hri/strands_visualise_speech/index
    strands_hri/strands_visualise_speech/pulse
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands morse:
+
+   strands_morse/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands morse bham:
+
    strands_morse/bham/architecture
    strands_morse/bham/index
    strands_morse/bham/real_TO-BE-MOVED
-   strands_morse/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands morse wiki:
+
    strands_morse/wiki/BHAM-Morse
    strands_morse/wiki/Home
    strands_morse/wiki/MORSE-on-OSX-using-Homebrew
    strands_morse/wiki/MORSE-on-Ubuntu
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands movebase:
+
    strands_movebase/calibrate_chest
    strands_movebase/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands navigation:
+
    strands_navigation/index
    strands_navigation/joy_map_saver
    strands_navigation/message_store_map_switcher
    strands_navigation/monitored_navigation
    strands_navigation/nav_goals_generator
    strands_navigation/topological_logging_manager
+   strands_navigation/topological_rviz_tools
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands navigation topological navigation:
+
    strands_navigation/topological_navigation/index
    strands_navigation/topological_navigation/tests
-   strands_navigation/topological_rviz_tools
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands navigation wiki:
+
    strands_navigation/wiki/Home
    strands_navigation/wiki/Topological-Map-Definition
    strands_navigation/wiki/Useful-Mongodb-Queries-and-Updates
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands perception people:
+
    strands_perception_people/bayes_people_tracker
    strands_perception_people/bayes_people_tracker_logging
    strands_perception_people/detector_msg_to_pose_array
@@ -312,19 +600,191 @@ Documentation contents
    strands_perception_people/index
    strands_perception_people/mdl_people_tracker
    strands_perception_people/odometry_to_motion_matrix
-   strands_perception_people/opencv_warco/libsvm
-   strands_perception_people/opencv_warco/opencv_warco
-   strands_perception_people/perception_people_launch/attic
-   strands_perception_people/perception_people_launch/index
    strands_perception_people/rwth_upper_body_skeleton_random_walk
    strands_perception_people/strands_head_orientation
    strands_perception_people/upper_body_detector
    strands_perception_people/vision_people_logging
+   strands_perception_people/wheelchair_detector
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands perception people opencv warco:
+
+   strands_perception_people/opencv_warco/libsvm
+   strands_perception_people/opencv_warco/opencv_warco
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands perception people perception people launch:
+
+   strands_perception_people/perception_people_launch/attic
+   strands_perception_people/perception_people_launch/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands perception people visual odometry:
+
    strands_perception_people/visual_odometry/fovis
    strands_perception_people/visual_odometry/fv-example-freenect
    strands_perception_people/visual_odometry/fv-example-openni
    strands_perception_people/visual_odometry/index
-   strands_perception_people/wheelchair_detector
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands qsr:
+
+   strands_qsr/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands qsr wiki:
+
+   strands_qsr/wiki/Data-sets
+   strands_qsr/wiki/Evaluation-Client
+   strands_qsr/wiki/Home
+   strands_qsr/wiki/perception
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands qsr lib:
+
+   strands_qsr_lib/docs
+   strands_qsr_lib/index
+   strands_qsr_lib/qsr_prob_rep
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands qsr lib qsr lib:
+
+   strands_qsr_lib/qsr_lib/data
+   strands_qsr_lib/qsr_lib/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands recovery behaviours:
+
+   strands_recovery_behaviours/backoff_behaviour
+   strands_recovery_behaviours/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands social:
+
+   strands_social/fake_camera_effects
+   strands_social/index
+   strands_social/social_card_reader
+   strands_social/strands_tweets
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands tabletop perception:
+
+   strands_tabletop_perception/index
+   strands_tabletop_perception/mv_object_classifier
+   strands_tabletop_perception/object_classifier
+   strands_tabletop_perception/pcd_filter
+   strands_tabletop_perception/qsr_kb
+   strands_tabletop_perception/table_detection
+   strands_tabletop_perception/visualize_pcd_indices
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands ui:
+
+   strands_ui/index
+   strands_ui/mary_tts
+   strands_ui/mongodb_media_server
+   strands_ui/robot_talk
+   strands_ui/strands_webserver
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: trajectory behaviours:
+
+   trajectory_behaviours/human_trajectory_classifier
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: trajectory behaviours relational learner:
+
+   trajectory_behaviours/relational_learner/docs
+   trajectory_behaviours/relational_learner/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: v4r:
+
+   v4r/ObjectRecognizer
+   v4r/citation
+   v4r/contributing
+   v4r/index
+   v4r/ml
+   v4r/opennurbs
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: v4r docs:
+
+   v4r/docs/imkrecognizer
+   v4r/docs/objectclassification
+   v4r/docs/objectdetection
+   v4r/docs/objectmodeling
+   v4r/docs/v4r_style_guide
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: v4r ros wrappers:
+
+   v4r_ros_wrappers/contributing
+   v4r_ros_wrappers/index
+   v4r_ros_wrappers/multiview_object_recognizer
+   v4r_ros_wrappers/object_classifier
+   v4r_ros_wrappers/object_gestalt_segmentation
+   v4r_ros_wrappers/singleview_object_recognizer
+   v4r_ros_wrappers/tutorial
+
+
+trands_perception_people/opencv_warco/opencv_warco
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands perception people perception people launch:
+
+   strands_perception_people/perception_people_launch/attic
+   strands_perception_people/perception_people_launch/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands perception people visual odometry:
+
+   strands_perception_people/visual_odometry/fovis
+   strands_perception_people/visual_odometry/fv-example-freenect
+   strands_perception_people/visual_odometry/fv-example-openni
+   strands_perception_people/visual_odometry/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands qsr:
+
    strands_qsr/index
    strands_qsr/wiki/Data-sets
    strands_qsr/wiki/Evaluation-Client
@@ -335,12 +795,59 @@ Documentation contents
    strands_qsr_lib/qsr_lib/data
    strands_qsr_lib/qsr_lib/index
    strands_qsr_lib/qsr_prob_rep
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands qsr wiki:
+
+   strands_qsr/wiki/Data-sets
+   strands_qsr/wiki/Evaluation-Client
+   strands_qsr/wiki/Home
+   strands_qsr/wiki/perception
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands qsr lib:
+
+   strands_qsr_lib/docs
+   strands_qsr_lib/index
+   strands_qsr_lib/qsr_lib/data
+   strands_qsr_lib/qsr_lib/index
+   strands_qsr_lib/qsr_prob_rep
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands qsr lib qsr lib:
+
+   strands_qsr_lib/qsr_lib/data
+   strands_qsr_lib/qsr_lib/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands recovery behaviours:
+
    strands_recovery_behaviours/backoff_behaviour
    strands_recovery_behaviours/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands social:
+
    strands_social/fake_camera_effects
    strands_social/index
    strands_social/social_card_reader
    strands_social/strands_tweets
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands tabletop perception:
+
    strands_tabletop_perception/index
    strands_tabletop_perception/mv_object_classifier
    strands_tabletop_perception/object_classifier
@@ -348,14 +855,40 @@ Documentation contents
    strands_tabletop_perception/qsr_kb
    strands_tabletop_perception/table_detection
    strands_tabletop_perception/visualize_pcd_indices
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: strands ui:
+
    strands_ui/index
    strands_ui/mary_tts
    strands_ui/mongodb_media_server
    strands_ui/robot_talk
    strands_ui/strands_webserver
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: trajectory behaviours:
+
    trajectory_behaviours/human_trajectory_classifier
    trajectory_behaviours/relational_learner/docs
    trajectory_behaviours/relational_learner/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: trajectory behaviours relational learner:
+
+   trajectory_behaviours/relational_learner/docs
+   trajectory_behaviours/relational_learner/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: v4r:
+
    v4r/ObjectRecognizer
    v4r/citation
    v4r/contributing
@@ -374,3 +907,29 @@ Documentation contents
    v4r_ros_wrappers/object_gestalt_segmentation
    v4r_ros_wrappers/singleview_object_recognizer
    v4r_ros_wrappers/tutorial
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: v4r docs:
+
+   v4r/docs/imkrecognizer
+   v4r/docs/objectclassification
+   v4r/docs/objectdetection
+   v4r/docs/objectmodeling
+   v4r/docs/v4r_style_guide
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: v4r ros wrappers:
+
+   v4r_ros_wrappers/contributing
+   v4r_ros_wrappers/index
+   v4r_ros_wrappers/multiview_object_recognizer
+   v4r_ros_wrappers/object_classifier
+   v4r_ros_wrappers/object_gestalt_segmentation
+   v4r_ros_wrappers/singleview_object_recognizer
+   v4r_ros_wrappers/tutorial
+
+

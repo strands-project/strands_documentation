@@ -416,7 +416,8 @@ def generate_rst_index(index_config):
     # Process each group 
     for group_key in sorted(toc_groups.keys()):
         for toc_file in toc_groups[group_key]["toc_files"]:
-            toc_groups[group_key]["toc_string"] += "   {} <{}>\n".format(os.path.basename(toc_file), toc_file)
+            sidebar_display = os.path.basename(toc_file).replace("_", " ").replace("-", " ").capitalize()
+            toc_groups[group_key]["toc_string"] += "   {} <{}>\n".format(sidebar_display, toc_file)
 
         group_tocs += toc_groups[group_key]["toc_string"] + "\n\n"
 

@@ -37,6 +37,8 @@ ignore_repos:
   - strands_analysis
   - edge_leg_detector
   - robomongo
+  - robblog:
+      - test-post
   - elan_analyser
   - plugin_local_planner
   - navigation_layers

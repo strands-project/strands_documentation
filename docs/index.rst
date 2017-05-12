@@ -126,108 +126,107 @@ Documentation contents
    :maxdepth: 1
    :caption: aaf deployment:
 
-   aaf_simulation <aaf_deployment/aaf_simulation>
-   aaf_walking_group <aaf_deployment/aaf_walking_group>
-   expert_interventions <aaf_deployment/expert_interventions>
-   index <aaf_deployment/index>
-   infremen <aaf_deployment/infremen>
+   Aaf simulation <aaf_deployment/aaf_simulation>
+   Aaf walking group <aaf_deployment/aaf_walking_group>
+   Index <aaf_deployment/index>
+   Infremen <aaf_deployment/infremen>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: aaf deployment info terminal:
 
-   index <aaf_deployment/info_terminal/index>
-   infremen <aaf_deployment/info_terminal/infremen>
+   Index <aaf_deployment/info_terminal/index>
+   Infremen <aaf_deployment/info_terminal/infremen>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: aaf deployment wiki:
 
-   AAF-Deployment-Feedback <aaf_deployment/wiki/AAF-Deployment-Feedback>
+   Aaf deployment feedback <aaf_deployment/wiki/AAF-Deployment-Feedback>
    Home <aaf_deployment/wiki/Home>
-   Topics-to-log-during-deployments <aaf_deployment/wiki/Topics-to-log-during-deployments>
+   Topics to log during deployments <aaf_deployment/wiki/Topics-to-log-during-deployments>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: annotation tool kth:
 
-   annotation-tool <annotation_tool_kth/annotation-tool>
-   index <annotation_tool_kth/index>
-   rgbd_grabber <annotation_tool_kth/rgbd_grabber>
+   Annotation tool <annotation_tool_kth/annotation-tool>
+   Index <annotation_tool_kth/index>
+   Rgbd grabber <annotation_tool_kth/rgbd_grabber>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: datasets:
 
-   auto_benchmark <datasets/auto_benchmark>
-   care_home <datasets/care_home>
-   index <datasets/index>
-   kth_3d <datasets/kth_3d>
-   kth_lt <datasets/kth_lt>
-   kth_lt_labels <datasets/kth_lt_labels>
-   kth_lt_moving <datasets/kth_lt_moving>
-   marathon <datasets/marathon>
-   meta_rooms <datasets/meta_rooms>
-   mht_rgbd <datasets/mht_rgbd>
-   object_presence <datasets/object_presence>
-   people_tracks <datasets/people_tracks>
-   person_activity <datasets/person_activity>
-   small_office <datasets/small_office>
-   three_d_net <datasets/three_d_net>
-   tuw <datasets/tuw>
-   witham_wharf <datasets/witham_wharf>
+   Auto benchmark <datasets/auto_benchmark>
+   Care home <datasets/care_home>
+   Index <datasets/index>
+   Kth 3d <datasets/kth_3d>
+   Kth lt <datasets/kth_lt>
+   Kth lt labels <datasets/kth_lt_labels>
+   Kth lt moving <datasets/kth_lt_moving>
+   Marathon <datasets/marathon>
+   Meta rooms <datasets/meta_rooms>
+   Mht rgbd <datasets/mht_rgbd>
+   Object presence <datasets/object_presence>
+   People tracks <datasets/people_tracks>
+   Person activity <datasets/person_activity>
+   Small office <datasets/small_office>
+   Three d net <datasets/three_d_net>
+   Tuw <datasets/tuw>
+   Witham wharf <datasets/witham_wharf>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: fremen:
 
-   Fremen2DGrid <fremen/Fremen2DGrid>
-   FremenArray <fremen/FremenArray>
-   FremenServer <fremen/FremenServer>
-   fremengrid <fremen/fremengrid>
-   frenap <fremen/frenap>
-   froctomap <fremen/froctomap>
-   frongo <fremen/frongo>
-   index <fremen/index>
+   Fremen2dgrid <fremen/Fremen2DGrid>
+   Fremenarray <fremen/FremenArray>
+   Fremenserver <fremen/FremenServer>
+   Fremengrid <fremen/fremengrid>
+   Frenap <fremen/frenap>
+   Froctomap <fremen/froctomap>
+   Frongo <fremen/frongo>
+   Index <fremen/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: g4s deployment:
 
-   index <g4s_deployment/index>
-   tsc_control_ui <g4s_deployment/tsc_control_ui>
-   tsc_temperature_logger <g4s_deployment/tsc_temperature_logger>
+   Index <g4s_deployment/index>
+   Tsc control ui <g4s_deployment/tsc_control_ui>
+   Tsc temperature logger <g4s_deployment/tsc_temperature_logger>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: g4s deployment docs:
 
-   end-user-instructions <g4s_deployment/docs/end-user-instructions>
-   network <g4s_deployment/docs/network>
+   End user instructions <g4s_deployment/docs/end-user-instructions>
+   Network <g4s_deployment/docs/network>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: g4s deployment expert interventions:
 
-   expert_interventions <g4s_deployment/expert_interventions/expert_interventions>
-   y3 <g4s_deployment/expert_interventions/y3>
-   y4 <g4s_deployment/expert_interventions/y4>
+   Expert interventions <g4s_deployment/expert_interventions/expert_interventions>
+   Y3 <g4s_deployment/expert_interventions/y3>
+   Y4 <g4s_deployment/expert_interventions/y4>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: g4s deployment tsc bringup:
 
-   checklist <g4s_deployment/tsc_bringup/checklist>
-   index <g4s_deployment/tsc_bringup/index>
+   Checklist <g4s_deployment/tsc_bringup/checklist>
+   Index <g4s_deployment/tsc_bringup/index>
 
 
 .. toctree::
@@ -241,55 +240,55 @@ Documentation contents
    :maxdepth: 1
    :caption: mongodb store:
 
-   index <mongodb_store/index>
-   mongodb_log <mongodb_store/mongodb_log>
-   mongodb_store <mongodb_store/mongodb_store>
+   Index <mongodb_store/index>
+   Mongodb log <mongodb_store/mongodb_log>
+   Mongodb store <mongodb_store/mongodb_store>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: planning tutorial:
 
-   index <planning_tutorial/index>
+   Index <planning_tutorial/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: planning tutorial doc:
 
-   exercise_1 <planning_tutorial/doc/exercise_1>
-   exercise_2 <planning_tutorial/doc/exercise_2>
-   exercise_3 <planning_tutorial/doc/exercise_3>
-   tutorial_prep <planning_tutorial/doc/tutorial_prep>
+   Exercise 1 <planning_tutorial/doc/exercise_1>
+   Exercise 2 <planning_tutorial/doc/exercise_2>
+   Exercise 3 <planning_tutorial/doc/exercise_3>
+   Tutorial prep <planning_tutorial/doc/tutorial_prep>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: qrobot:
 
-   index <qrobot/index>
+   Index <qrobot/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: robblog:
 
-   index <robblog/index>
+   Index <robblog/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: robblog data:
 
-   2014-05-05-strands-test-post <robblog/data/2014-05-05-strands-test-post>
-   example <robblog/data/example>
+   2014 05 05 strands test post <robblog/data/2014-05-05-strands-test-post>
+   Example <robblog/data/example>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: scitos 2d navigation:
 
-   index <scitos_2d_navigation/index>
+   Index <scitos_2d_navigation/index>
 
 
 .. toctree::
@@ -303,13 +302,13 @@ Documentation contents
    :maxdepth: 1
    :caption: scitos apps:
 
-   index <scitos_apps/index>
-   ptu_follow_frame <scitos_apps/ptu_follow_frame>
-   scitos_cmd_vel_mux <scitos_apps/scitos_cmd_vel_mux>
-   scitos_dashboard <scitos_apps/scitos_dashboard>
-   scitos_docking <scitos_apps/scitos_docking>
-   scitos_teleop <scitos_apps/scitos_teleop>
-   scitos_touch <scitos_apps/scitos_touch>
+   Index <scitos_apps/index>
+   Ptu follow frame <scitos_apps/ptu_follow_frame>
+   Scitos cmd vel mux <scitos_apps/scitos_cmd_vel_mux>
+   Scitos dashboard <scitos_apps/scitos_dashboard>
+   Scitos docking <scitos_apps/scitos_docking>
+   Scitos teleop <scitos_apps/scitos_teleop>
+   Scitos touch <scitos_apps/scitos_touch>
 
 
 .. toctree::
@@ -317,32 +316,32 @@ Documentation contents
    :caption: scitos apps wiki:
 
    Home <scitos_apps/wiki/Home>
-   Scitos-cmd_vel_mux <scitos_apps/wiki/Scitos-cmd_vel_mux>
-   Scitos-teleop <scitos_apps/wiki/Scitos-teleop>
+   Scitos cmd vel mux <scitos_apps/wiki/Scitos-cmd_vel_mux>
+   Scitos teleop <scitos_apps/wiki/Scitos-teleop>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: scitos common:
 
-   index <scitos_common/index>
+   Index <scitos_common/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: scitos drivers:
 
-   flir_pantilt_d46 <scitos_drivers/flir_pantilt_d46>
-   scitos_bringup <scitos_drivers/scitos_bringup>
-   scitos_mira <scitos_drivers/scitos_mira>
-   scitos_pc_monitor <scitos_drivers/scitos_pc_monitor>
+   Flir pantilt d46 <scitos_drivers/flir_pantilt_d46>
+   Scitos bringup <scitos_drivers/scitos_bringup>
+   Scitos mira <scitos_drivers/scitos_mira>
+   Scitos pc monitor <scitos_drivers/scitos_pc_monitor>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: scitos robot wiki:
 
-   Bob's-Network-Configuration <scitos_robot/wiki/Bob's-Network-Configuration>
+   Bob's network configuration <scitos_robot/wiki/Bob's-Network-Configuration>
    Home <scitos_robot/wiki/Home>
 
 
@@ -350,106 +349,106 @@ Documentation contents
    :maxdepth: 1
    :caption: semantic segmentation:
 
-   index <semantic_segmentation/index>
+   Index <semantic_segmentation/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: semantic segmentation src:
 
-   densecrf <semantic_segmentation/src/densecrf>
-   docs <semantic_segmentation/src/docs>
-   gtest-1.7.0 <semantic_segmentation/src/gtest-1.7.0>
-   liblbfgs <semantic_segmentation/src/liblbfgs>
+   Densecrf <semantic_segmentation/src/densecrf>
+   Docs <semantic_segmentation/src/docs>
+   Gtest 1.7.0 <semantic_segmentation/src/gtest-1.7.0>
+   Liblbfgs <semantic_segmentation/src/liblbfgs>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: sensortag:
 
-   index <sensortag/index>
+   Index <sensortag/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: soma:
 
-   index <soma/index>
-   soma_llsd <soma/soma_llsd>
-   soma_trajectory <soma/soma_trajectory>
-   soma_visualizer <soma/soma_visualizer>
+   Index <soma/index>
+   Soma llsd <soma/soma_llsd>
+   Soma trajectory <soma/soma_trajectory>
+   Soma visualizer <soma/soma_visualizer>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: soma soma utils:
 
-   config <soma/soma_utils/config>
-   robblog <soma/soma_utils/robblog>
+   Config <soma/soma_utils/config>
+   Robblog <soma/soma_utils/robblog>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands-docker:
 
-   index <strands-docker/index>
+   Index <strands-docker/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands 3d mapping:
 
-   calibrate_sweeps <strands_3d_mapping/calibrate_sweeps>
-   cloud_merge <strands_3d_mapping/cloud_merge>
-   ekz-public-lib <strands_3d_mapping/ekz-public-lib>
-   index <strands_3d_mapping/index>
-   learn_objects_action <strands_3d_mapping/learn_objects_action>
-   metaroom_xml_parser <strands_3d_mapping/metaroom_xml_parser>
-   nbv_planning <strands_3d_mapping/nbv_planning>
-   object_manager <strands_3d_mapping/object_manager>
-   object_view_generator <strands_3d_mapping/object_view_generator>
-   semantic_map <strands_3d_mapping/semantic_map>
-   semantic_map_launcher <strands_3d_mapping/semantic_map_launcher>
-   semantic_map_publisher <strands_3d_mapping/semantic_map_publisher>
-   semantic_map_to_2d <strands_3d_mapping/semantic_map_to_2d>
-   strands_sweep_registration <strands_3d_mapping/strands_sweep_registration>
+   Calibrate sweeps <strands_3d_mapping/calibrate_sweeps>
+   Cloud merge <strands_3d_mapping/cloud_merge>
+   Ekz public lib <strands_3d_mapping/ekz-public-lib>
+   Index <strands_3d_mapping/index>
+   Learn objects action <strands_3d_mapping/learn_objects_action>
+   Metaroom xml parser <strands_3d_mapping/metaroom_xml_parser>
+   Nbv planning <strands_3d_mapping/nbv_planning>
+   Object manager <strands_3d_mapping/object_manager>
+   Object view generator <strands_3d_mapping/object_view_generator>
+   Semantic map <strands_3d_mapping/semantic_map>
+   Semantic map launcher <strands_3d_mapping/semantic_map_launcher>
+   Semantic map publisher <strands_3d_mapping/semantic_map_publisher>
+   Semantic map to 2d <strands_3d_mapping/semantic_map_to_2d>
+   Strands sweep registration <strands_3d_mapping/strands_sweep_registration>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands 3d mapping dynamic object retrieval:
 
-   cereal <strands_3d_mapping/dynamic_object_retrieval/cereal>
-   index <strands_3d_mapping/dynamic_object_retrieval/index>
-   k_means_tree <strands_3d_mapping/dynamic_object_retrieval/k_means_tree>
-   stopwatch <strands_3d_mapping/dynamic_object_retrieval/stopwatch>
+   Cereal <strands_3d_mapping/dynamic_object_retrieval/cereal>
+   Index <strands_3d_mapping/dynamic_object_retrieval/index>
+   K means tree <strands_3d_mapping/dynamic_object_retrieval/k_means_tree>
+   Stopwatch <strands_3d_mapping/dynamic_object_retrieval/stopwatch>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands 3d mapping observation registration:
 
-   additional_view_registration_server <strands_3d_mapping/observation_registration/additional_view_registration_server>
-   index <strands_3d_mapping/observation_registration/index>
-   observation_registration_launcher <strands_3d_mapping/observation_registration/observation_registration_launcher>
-   observation_registration_server <strands_3d_mapping/observation_registration/observation_registration_server>
-   observation_registration_services <strands_3d_mapping/observation_registration/observation_registration_services>
-   siftgpu <strands_3d_mapping/observation_registration/siftgpu>
+   Additional view registration server <strands_3d_mapping/observation_registration/additional_view_registration_server>
+   Index <strands_3d_mapping/observation_registration/index>
+   Observation registration launcher <strands_3d_mapping/observation_registration/observation_registration_launcher>
+   Observation registration server <strands_3d_mapping/observation_registration/observation_registration_server>
+   Observation registration services <strands_3d_mapping/observation_registration/observation_registration_services>
+   Siftgpu <strands_3d_mapping/observation_registration/siftgpu>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands 3d mapping quasimodo:
 
-   index <strands_3d_mapping/quasimodo/index>
-   quasimodo_retrieval <strands_3d_mapping/quasimodo/quasimodo_retrieval>
+   Index <strands_3d_mapping/quasimodo/index>
+   Quasimodo retrieval <strands_3d_mapping/quasimodo/quasimodo_retrieval>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands 3d mapping wiki:
 
-   Get-up-and-running <strands_3d_mapping/wiki/Get-up-and-running>
+   Get up and running <strands_3d_mapping/wiki/Get-up-and-running>
    Home <strands_3d_mapping/wiki/Home>
 
 
@@ -457,127 +456,127 @@ Documentation contents
    :maxdepth: 1
    :caption: strands apps:
 
-   door_pass <strands_apps/door_pass>
-   index <strands_apps/index>
-   marathon_reporter <strands_apps/marathon_reporter>
-   odometry_mileage <strands_apps/odometry_mileage>
-   pose_extractor <strands_apps/pose_extractor>
-   ramp_climb <strands_apps/ramp_climb>
-   roslaunch_axserver <strands_apps/roslaunch_axserver>
-   static_transform_manager <strands_apps/static_transform_manager>
-   topological_roslaunch <strands_apps/topological_roslaunch>
-   watchdog_node <strands_apps/watchdog_node>
+   Door pass <strands_apps/door_pass>
+   Index <strands_apps/index>
+   Marathon reporter <strands_apps/marathon_reporter>
+   Odometry mileage <strands_apps/odometry_mileage>
+   Pose extractor <strands_apps/pose_extractor>
+   Ramp climb <strands_apps/ramp_climb>
+   Roslaunch axserver <strands_apps/roslaunch_axserver>
+   Static transform manager <strands_apps/static_transform_manager>
+   Topological roslaunch <strands_apps/topological_roslaunch>
+   Watchdog node <strands_apps/watchdog_node>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands data to qsrlib:
 
-   index <strands_data_to_qsrlib/index>
-   novelTrajectories <strands_data_to_qsrlib/novelTrajectories>
+   Index <strands_data_to_qsrlib/index>
+   Noveltrajectories <strands_data_to_qsrlib/novelTrajectories>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands executive:
 
-   doc <strands_executive/doc>
-   gcal_routine <strands_executive/gcal_routine>
-   index <strands_executive/index>
-   mdp_plan_exec <strands_executive/mdp_plan_exec>
-   scheduler <strands_executive/scheduler>
-   task_executor <strands_executive/task_executor>
+   Doc <strands_executive/doc>
+   Gcal routine <strands_executive/gcal_routine>
+   Index <strands_executive/index>
+   Mdp plan exec <strands_executive/mdp_plan_exec>
+   Scheduler <strands_executive/scheduler>
+   Task executor <strands_executive/task_executor>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands executive behaviours:
 
-   automated_routine <strands_executive_behaviours/automated_routine>
-   routine_behaviours <strands_executive_behaviours/routine_behaviours>
+   Automated routine <strands_executive_behaviours/automated_routine>
+   Routine behaviours <strands_executive_behaviours/routine_behaviours>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands exploration:
 
-   index <strands_exploration/index>
-   spatiotemporal_exploration <strands_exploration/spatiotemporal_exploration>
+   Index <strands_exploration/index>
+   Spatiotemporal exploration <strands_exploration/spatiotemporal_exploration>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands hri:
 
-   index <strands_hri/index>
-   strands_gazing <strands_hri/strands_gazing>
-   strands_hri_launch <strands_hri/strands_hri_launch>
-   strands_human_aware_navigation <strands_hri/strands_human_aware_navigation>
-   strands_human_following <strands_hri/strands_human_following>
-   strands_simple_follow_me <strands_hri/strands_simple_follow_me>
+   Index <strands_hri/index>
+   Strands gazing <strands_hri/strands_gazing>
+   Strands hri launch <strands_hri/strands_hri_launch>
+   Strands human aware navigation <strands_hri/strands_human_aware_navigation>
+   Strands human following <strands_hri/strands_human_following>
+   Strands simple follow me <strands_hri/strands_simple_follow_me>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands hri strands visualise speech:
 
-   index <strands_hri/strands_visualise_speech/index>
-   pulse <strands_hri/strands_visualise_speech/pulse>
+   Index <strands_hri/strands_visualise_speech/index>
+   Pulse <strands_hri/strands_visualise_speech/pulse>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands morse:
 
-   index <strands_morse/index>
+   Index <strands_morse/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands morse bham:
 
-   architecture <strands_morse/bham/architecture>
-   index <strands_morse/bham/index>
-   real_TO-BE-MOVED <strands_morse/bham/real_TO-BE-MOVED>
+   Architecture <strands_morse/bham/architecture>
+   Index <strands_morse/bham/index>
+   Real to be moved <strands_morse/bham/real_TO-BE-MOVED>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands morse wiki:
 
-   BHAM-Morse <strands_morse/wiki/BHAM-Morse>
+   Bham morse <strands_morse/wiki/BHAM-Morse>
    Home <strands_morse/wiki/Home>
-   MORSE-on-OSX-using-Homebrew <strands_morse/wiki/MORSE-on-OSX-using-Homebrew>
-   MORSE-on-Ubuntu <strands_morse/wiki/MORSE-on-Ubuntu>
+   Morse on osx using homebrew <strands_morse/wiki/MORSE-on-OSX-using-Homebrew>
+   Morse on ubuntu <strands_morse/wiki/MORSE-on-Ubuntu>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands movebase:
 
-   calibrate_chest <strands_movebase/calibrate_chest>
-   index <strands_movebase/index>
+   Calibrate chest <strands_movebase/calibrate_chest>
+   Index <strands_movebase/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands navigation:
 
-   index <strands_navigation/index>
-   joy_map_saver <strands_navigation/joy_map_saver>
-   message_store_map_switcher <strands_navigation/message_store_map_switcher>
-   monitored_navigation <strands_navigation/monitored_navigation>
-   nav_goals_generator <strands_navigation/nav_goals_generator>
-   topological_logging_manager <strands_navigation/topological_logging_manager>
-   topological_rviz_tools <strands_navigation/topological_rviz_tools>
+   Index <strands_navigation/index>
+   Joy map saver <strands_navigation/joy_map_saver>
+   Message store map switcher <strands_navigation/message_store_map_switcher>
+   Monitored navigation <strands_navigation/monitored_navigation>
+   Nav goals generator <strands_navigation/nav_goals_generator>
+   Topological logging manager <strands_navigation/topological_logging_manager>
+   Topological rviz tools <strands_navigation/topological_rviz_tools>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands navigation topological navigation:
 
-   index <strands_navigation/topological_navigation/index>
-   tests <strands_navigation/topological_navigation/tests>
+   Index <strands_navigation/topological_navigation/index>
+   Tests <strands_navigation/topological_navigation/tests>
 
 
 .. toctree::
@@ -585,179 +584,179 @@ Documentation contents
    :caption: strands navigation wiki:
 
    Home <strands_navigation/wiki/Home>
-   Topological-Map-Definition <strands_navigation/wiki/Topological-Map-Definition>
-   Useful-Mongodb-Queries-and-Updates <strands_navigation/wiki/Useful-Mongodb-Queries-and-Updates>
+   Topological map definition <strands_navigation/wiki/Topological-Map-Definition>
+   Useful mongodb queries and updates <strands_navigation/wiki/Useful-Mongodb-Queries-and-Updates>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands perception people:
 
-   bayes_people_tracker <strands_perception_people/bayes_people_tracker>
-   bayes_people_tracker_logging <strands_perception_people/bayes_people_tracker_logging>
-   detector_msg_to_pose_array <strands_perception_people/detector_msg_to_pose_array>
-   ground_plane_estimation <strands_perception_people/ground_plane_estimation>
-   human_trajectory <strands_perception_people/human_trajectory>
-   index <strands_perception_people/index>
-   mdl_people_tracker <strands_perception_people/mdl_people_tracker>
-   odometry_to_motion_matrix <strands_perception_people/odometry_to_motion_matrix>
-   rwth_upper_body_skeleton_random_walk <strands_perception_people/rwth_upper_body_skeleton_random_walk>
-   strands_head_orientation <strands_perception_people/strands_head_orientation>
-   upper_body_detector <strands_perception_people/upper_body_detector>
-   vision_people_logging <strands_perception_people/vision_people_logging>
-   wheelchair_detector <strands_perception_people/wheelchair_detector>
+   Bayes people tracker <strands_perception_people/bayes_people_tracker>
+   Bayes people tracker logging <strands_perception_people/bayes_people_tracker_logging>
+   Detector msg to pose array <strands_perception_people/detector_msg_to_pose_array>
+   Ground plane estimation <strands_perception_people/ground_plane_estimation>
+   Human trajectory <strands_perception_people/human_trajectory>
+   Index <strands_perception_people/index>
+   Mdl people tracker <strands_perception_people/mdl_people_tracker>
+   Odometry to motion matrix <strands_perception_people/odometry_to_motion_matrix>
+   Rwth upper body skeleton random walk <strands_perception_people/rwth_upper_body_skeleton_random_walk>
+   Strands head orientation <strands_perception_people/strands_head_orientation>
+   Upper body detector <strands_perception_people/upper_body_detector>
+   Vision people logging <strands_perception_people/vision_people_logging>
+   Wheelchair detector <strands_perception_people/wheelchair_detector>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands perception people opencv warco:
 
-   libsvm <strands_perception_people/opencv_warco/libsvm>
-   opencv_warco <strands_perception_people/opencv_warco/opencv_warco>
+   Libsvm <strands_perception_people/opencv_warco/libsvm>
+   Opencv warco <strands_perception_people/opencv_warco/opencv_warco>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands perception people perception people launch:
 
-   attic <strands_perception_people/perception_people_launch/attic>
-   index <strands_perception_people/perception_people_launch/index>
+   Attic <strands_perception_people/perception_people_launch/attic>
+   Index <strands_perception_people/perception_people_launch/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands perception people visual odometry:
 
-   fovis <strands_perception_people/visual_odometry/fovis>
-   fv-example-freenect <strands_perception_people/visual_odometry/fv-example-freenect>
-   fv-example-openni <strands_perception_people/visual_odometry/fv-example-openni>
-   index <strands_perception_people/visual_odometry/index>
+   Fovis <strands_perception_people/visual_odometry/fovis>
+   Fv example freenect <strands_perception_people/visual_odometry/fv-example-freenect>
+   Fv example openni <strands_perception_people/visual_odometry/fv-example-openni>
+   Index <strands_perception_people/visual_odometry/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands qsr:
 
-   index <strands_qsr/index>
+   Index <strands_qsr/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands qsr wiki:
 
-   Data-sets <strands_qsr/wiki/Data-sets>
-   Evaluation-Client <strands_qsr/wiki/Evaluation-Client>
+   Data sets <strands_qsr/wiki/Data-sets>
+   Evaluation client <strands_qsr/wiki/Evaluation-Client>
    Home <strands_qsr/wiki/Home>
-   perception <strands_qsr/wiki/perception>
+   Perception <strands_qsr/wiki/perception>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands qsr lib:
 
-   docs <strands_qsr_lib/docs>
-   index <strands_qsr_lib/index>
-   qsr_prob_rep <strands_qsr_lib/qsr_prob_rep>
+   Docs <strands_qsr_lib/docs>
+   Index <strands_qsr_lib/index>
+   Qsr prob rep <strands_qsr_lib/qsr_prob_rep>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands qsr lib qsr lib:
 
-   data <strands_qsr_lib/qsr_lib/data>
-   index <strands_qsr_lib/qsr_lib/index>
+   Data <strands_qsr_lib/qsr_lib/data>
+   Index <strands_qsr_lib/qsr_lib/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands recovery behaviours:
 
-   backoff_behaviour <strands_recovery_behaviours/backoff_behaviour>
-   index <strands_recovery_behaviours/index>
+   Backoff behaviour <strands_recovery_behaviours/backoff_behaviour>
+   Index <strands_recovery_behaviours/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands social:
 
-   fake_camera_effects <strands_social/fake_camera_effects>
-   index <strands_social/index>
-   social_card_reader <strands_social/social_card_reader>
-   strands_tweets <strands_social/strands_tweets>
+   Fake camera effects <strands_social/fake_camera_effects>
+   Index <strands_social/index>
+   Social card reader <strands_social/social_card_reader>
+   Strands tweets <strands_social/strands_tweets>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands tabletop perception:
 
-   index <strands_tabletop_perception/index>
-   mv_object_classifier <strands_tabletop_perception/mv_object_classifier>
-   object_classifier <strands_tabletop_perception/object_classifier>
-   pcd_filter <strands_tabletop_perception/pcd_filter>
-   qsr_kb <strands_tabletop_perception/qsr_kb>
-   table_detection <strands_tabletop_perception/table_detection>
-   visualize_pcd_indices <strands_tabletop_perception/visualize_pcd_indices>
+   Index <strands_tabletop_perception/index>
+   Mv object classifier <strands_tabletop_perception/mv_object_classifier>
+   Object classifier <strands_tabletop_perception/object_classifier>
+   Pcd filter <strands_tabletop_perception/pcd_filter>
+   Qsr kb <strands_tabletop_perception/qsr_kb>
+   Table detection <strands_tabletop_perception/table_detection>
+   Visualize pcd indices <strands_tabletop_perception/visualize_pcd_indices>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands ui:
 
-   index <strands_ui/index>
-   mary_tts <strands_ui/mary_tts>
-   mongodb_media_server <strands_ui/mongodb_media_server>
-   robot_talk <strands_ui/robot_talk>
-   strands_webserver <strands_ui/strands_webserver>
+   Index <strands_ui/index>
+   Mary tts <strands_ui/mary_tts>
+   Mongodb media server <strands_ui/mongodb_media_server>
+   Robot talk <strands_ui/robot_talk>
+   Strands webserver <strands_ui/strands_webserver>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: trajectory behaviours:
 
-   human_trajectory_classifier <trajectory_behaviours/human_trajectory_classifier>
+   Human trajectory classifier <trajectory_behaviours/human_trajectory_classifier>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: trajectory behaviours relational learner:
 
-   docs <trajectory_behaviours/relational_learner/docs>
-   index <trajectory_behaviours/relational_learner/index>
+   Docs <trajectory_behaviours/relational_learner/docs>
+   Index <trajectory_behaviours/relational_learner/index>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: v4r:
 
-   ObjectRecognizer <v4r/ObjectRecognizer>
-   citation <v4r/citation>
-   contributing <v4r/contributing>
-   index <v4r/index>
-   ml <v4r/ml>
-   opennurbs <v4r/opennurbs>
+   Objectrecognizer <v4r/ObjectRecognizer>
+   Citation <v4r/citation>
+   Contributing <v4r/contributing>
+   Index <v4r/index>
+   Ml <v4r/ml>
+   Opennurbs <v4r/opennurbs>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: v4r docs:
 
-   imkrecognizer <v4r/docs/imkrecognizer>
-   objectclassification <v4r/docs/objectclassification>
-   objectdetection <v4r/docs/objectdetection>
-   objectmodeling <v4r/docs/objectmodeling>
-   v4r_style_guide <v4r/docs/v4r_style_guide>
+   Imkrecognizer <v4r/docs/imkrecognizer>
+   Objectclassification <v4r/docs/objectclassification>
+   Objectdetection <v4r/docs/objectdetection>
+   Objectmodeling <v4r/docs/objectmodeling>
+   V4r style guide <v4r/docs/v4r_style_guide>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: v4r ros wrappers:
 
-   contributing <v4r_ros_wrappers/contributing>
-   index <v4r_ros_wrappers/index>
-   multiview_object_recognizer <v4r_ros_wrappers/multiview_object_recognizer>
-   object_classifier <v4r_ros_wrappers/object_classifier>
-   object_gestalt_segmentation <v4r_ros_wrappers/object_gestalt_segmentation>
-   singleview_object_recognizer <v4r_ros_wrappers/singleview_object_recognizer>
-   tutorial <v4r_ros_wrappers/tutorial>
+   Contributing <v4r_ros_wrappers/contributing>
+   Index <v4r_ros_wrappers/index>
+   Multiview object recognizer <v4r_ros_wrappers/multiview_object_recognizer>
+   Object classifier <v4r_ros_wrappers/object_classifier>
+   Object gestalt segmentation <v4r_ros_wrappers/object_gestalt_segmentation>
+   Singleview object recognizer <v4r_ros_wrappers/singleview_object_recognizer>
+   Tutorial <v4r_ros_wrappers/tutorial>
 
 

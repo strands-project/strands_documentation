@@ -416,7 +416,7 @@ def generate_rst_index(index_config):
     # Process each group 
     for group_key in sorted(toc_groups.keys()):
         for toc_file in toc_groups[group_key]["toc_files"]:
-            toc_groups[group_key]["toc_string"] += "   {}\n".format(toc_file)
+            toc_groups[group_key]["toc_string"] += "   {} <{}>\n".format(os.path.basename(toc_file), toc_file)
 
         group_tocs += toc_groups[group_key]["toc_string"] + "\n\n"
 
@@ -427,7 +427,8 @@ def write_rst_toc_to_index(config):
     # Generate the indexes from config provided
     rst_index = generate_rst_index(config["rst_index_config"])
 
-    with open("docs/index.rst", 'r+') as f:
+    index = ""
+    with open("docs/index.rst", 'r') as f:
         index = f.read()
         toc_re = re.compile("\.\. toctree::")
         # This is where the TOC starts currently
@@ -436,9 +437,9 @@ def write_rst_toc_to_index(config):
         # Create a new string with the non-TOC part of the file, and add on
         # the new TOC
         index = index[:toc_start] + rst_index
-        f.seek(0)
-        f.write(index)
 
+    with open("docs/index.rst", 'w') as f:
+        f.write(index)
 
 def write_readme_files(repo_name, filetype="rst", ignore=None):
     # We look for markdown files, as readmes on github for the strands

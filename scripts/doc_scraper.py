@@ -442,6 +442,34 @@ def write_rst_toc_to_index(config):
     with open("docs/index.rst", 'w') as f:
         f.write(index)
 
+def clean_doc_dir():
+    exclude_dirs = ["datasets", "images"]
+    exclude_prefixes = ["_"]
+
+    toremove = []
+    for item in os.listdir("docs"):
+        path = os.path.join("docs", item)
+        excluded = item in exclude_dirs
+        excluded = excluded and any(map(lambda ep: item.startswith(ep), exclude_prefixes))
+        isdir = os.path.isdir(path)
+
+        if not excluded and isdir:
+            toremove.append(path)        
+            
+    do_delete = ""
+    positive = ["y", "yes"]
+    negative = ["n", "no"]
+
+    while do_delete.lower() not in negative + positive:
+        do_delete = raw_input("Are you sure you want to delete {} directories? (y/n)".format(len(toremove)))
+
+    if do_delete in negative:
+        print("Will not delete")
+        return
+
+    for item in toremove:
+        shutil.rmtree(item)
+
 def write_readme_files(repo_name, filetype="rst", ignore=None):
     # We look for markdown files, as readmes on github for the strands
     # repositories are written in markdown
@@ -532,6 +560,7 @@ if __name__ == '__main__':
     parser.add_argument("--single-package", action="store", type=str, help="Use to specify a single package to update")
     parser.add_argument("--filetype", action="store_true", default="rst", help="Specify the filetype for output. This should be a valid pandoc output format. This is used to define which format files scraped from the github repositories, or from the web in the case of datasets, are converted to when they are copied to the docs directory. Default is to output to rst, for use in readthedocs.")
     parser.add_argument("--rst-index-toc", action="store_true", help="Regenerate the rst TOC for the docs/index.rst file")
+    parser.add_argument("--clean", action="store_true", help="Remove directories from the docs directory to give a clean slate.")
 
     args = parser.parse_args()
 
@@ -562,6 +591,10 @@ if __name__ == '__main__':
 
     if args.rst_index_toc:
         write_rst_toc_to_index(config)
+        sys.exit(0)
+
+    if args.clean:
+        clean_doc_dir()
         sys.exit(0)
 
     header = get_oauth_header(args.private)

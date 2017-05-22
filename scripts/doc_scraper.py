@@ -158,6 +158,14 @@ def get_org_repo_dict(org, header=None):
 
     return repos
 
+def add_doc_footer(orig_file_url, file_path):
+    """Add a footer to a documentation file, pointing to the original file on the
+    web
+
+    """
+    with open(file_path, 'a') as f:
+        f.write("\n\nOriginal page: {}".format(orig_file_url))
+
 def get_wiki(org_name, repo_name, filetype="rst", ignore=None):
     """Check if a wiki exists, and if it does, clone it to the docs/repo_name/wiki
     """
@@ -190,6 +198,7 @@ def get_wiki(org_name, repo_name, filetype="rst", ignore=None):
 
         # The wiki is written in markdown, so need to convert it if the filetype
         # we're supposed to be using is different.
+        wiki_base_url = "https://github.com/{}/{}/wiki".format(org_name, repo_name)
         if filetype != "md":
             for subdir, dirs, files in os.walk(wiki_dir):
                 for wiki_file in files:
@@ -198,10 +207,14 @@ def get_wiki(org_name, repo_name, filetype="rst", ignore=None):
                         new_file_path = "{}.{}".format(os.path.splitext(file_path)[0], filetype)
                         print("Converting wiki file {} to {}".format(file_path, filetype))
                         pypandoc.convert_file(file_path, filetype, format="md", outputfile=new_file_path)
+                        # End of the wiki url is just the filename without an extension
+                        url_end = "" if wiki_file == "Home.md" else "/" + os.path.splitext(wiki_file)[0]
+                        add_doc_footer(wiki_base_url + url_end,
+                                       new_file_path)
                         # remove the original markdown file
                         os.remove(file_path)
 
-def get_repo_files(org_name, repo_name, match_ext=[], match_filename=[], match_full=[], ignore=[]):
+def get_repo_files(org_name, repo_name, match_ext=[], match_filename=[], match_full=[], ignore=[], header=""):
     """Get files in the given repository which have extensions matching any in the
     given match_ext list, or filenames (without extensions) which match any in
     the given match_filename list. Full filenames (filename + extension) are
@@ -213,7 +226,6 @@ def get_repo_files(org_name, repo_name, match_ext=[], match_filename=[], match_f
     """
     if not match_ext and not match_filename and not match_full:
         return {}
-    global org
     # The main readme file in the repo is easily retrieved, but just do this using the tree instead
     #readme_rq = requests.get("https://api.github.com/repos/{0}/{1}/readme".format(org, repo_name), headers=header)
 
@@ -470,11 +482,17 @@ def clean_doc_dir():
     for item in toremove:
         shutil.rmtree(item)
 
-def write_readme_files(repo_name, filetype="rst", ignore=None):
+def write_readme_files(org_name, repo_name, filetype="rst", ignore=None, header=""):
+    """Write readme files into the docs directory under their package names
+    """
     # We look for markdown files, as readmes on github for the strands
     # repositories are written in markdown
-    readmes = get_repo_files(org, repo_name, match_ext=[".md"], match_filename=["readme"], ignore=ignore)
+    readmes = get_repo_files(org_name, repo_name, match_ext=[".md"], match_filename=["readme"], ignore=ignore, header=header)
     subpkg_readmes = files_to_subpackages(readmes)
+
+    # Get the default branch for the repo, to use later when we want to link to the original files
+    repo_rq = requests.get("https://api.github.com/repos/{0}/{1}".format(org_name, repo_name), headers=header)
+    default_branch = json.loads(repo_rq.text)["default_branch"]
 
     for subpkg in subpkg_readmes.keys():
         print("processing {0}".format(subpkg))
@@ -546,6 +564,10 @@ def write_readme_files(repo_name, filetype="rst", ignore=None):
                     f.write(pypandoc.convert_text(base64.b64decode(file_rq["content"]),
                                                   filetype,
                                                   format="md").encode('utf-8'))
+
+
+            original_url = "https://github.com/{}/{}/blob/{}/{}".format(org_name, repo_name, default_branch, readme[0])
+            add_doc_footer(original_url, path)
 
 if __name__ == '__main__':
     org = "strands-project"
@@ -620,9 +642,9 @@ if __name__ == '__main__':
 
         # Find readme (or markdown) files in the repository and write them to
         # the subdirectory, preserving some of the directory structure of the repo.
-        write_readme_files(repo_name, filetype=args.filetype, ignore=ignore_list)
+        write_readme_files(org, repo_name, filetype=args.filetype, ignore=ignore_list, header=header)
 
-        package_xml = get_repo_files(org, repo_name, match_full=["package.xml".format(repo_name)], ignore=ignore_list)
+        package_xml = get_repo_files(org, repo_name, match_full=["package.xml".format(repo_name)], ignore=ignore_list, header=header)
         subpkg_xml = files_to_subpackages(package_xml)
 
         base_path = os.path.join("docs", repo_name)

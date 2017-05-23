@@ -5,7 +5,7 @@
 # Files or directories whose names match will not be added to the documentation.
 ignore_repos:
   - aaf_deployment:
-      - expert_interventions # files containing this string will be ignored
+    - expert_interventions # files containing this string will be ignored
   - strands-project.github.io
   - MIRASimpleClient
   - autonomous_patrolling

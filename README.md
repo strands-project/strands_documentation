@@ -21,7 +21,27 @@ script to make more requests. By default only public repositories will be
 scraped, but you can also scrape private repositories using the `--private` flag.
 
 The script will then download all repositories in the organisation, excluding
-those specified in `conf/conf.yaml`. You can use a different config by passing a
+those specified in `conf/conf.yaml`. You can also exclude readme files which
+match specific strings on a per-repository basis, by adding a list below the
+repo name in the `ignore_repos` list.
+
+For example, the following would ignore the whole `strands_utils` repository
+
+```yaml
+ignore_repos:
+  - strands_utils
+```
+
+But this would only ignore files which contain the string `trash_file` or `bad_readme`
+
+```yaml
+ignore_repos:
+  - strands_utils:
+    - trash_file
+	- bad_readme
+```
+
+You can use a different config by passing a
 file to the `--conf` flag, which should contain the same keys that the one in
 the `conf` directory has. Packages with a wiki page will also have those cloned
 and added to the docs directory. You can ignore wikis using the `--nowiki` flag.

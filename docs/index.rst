@@ -118,8 +118,8 @@ Documentation contents
    :maxdepth: 1
    :caption: Introduction:
 
-   setup
    quick_setup
+   setup
    packages
 
 

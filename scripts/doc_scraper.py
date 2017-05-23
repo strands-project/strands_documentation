@@ -425,7 +425,7 @@ def generate_rst_index(index_config):
                     toc_groups[group_key]["toc_files"].append(rst)
 
     base_toc = toctree_base.format("Introduction")
-    base_toc += "   setup\n   quick_setup\n   packages\n\n\n"
+    base_toc += "   quick_setup\n   setup\n   packages\n\n\n"
 
     group_tocs = ""
 

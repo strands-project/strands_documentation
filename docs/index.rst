@@ -29,9 +29,10 @@ available
 Getting Started
 ===============
 
-If you wish to understand or reuse the full STRANDS system, you should
-follow `the STRANDS system tutorial <setup.html>`__. After completing this
-tutorial, you will have a computer which has ROS and STRANDS packages
+If you wish to understand or reuse the full STRANDS system, you should follow
+`the STRANDS system tutorial <setup.html>`__. If you want to set things up as
+fast as possible, see the `quick start instructions <quick_setup.html`__. Both
+of these will leave you with a system which has ROS and STRANDS packages
 installed, and can run a simulation which uses some of the core STRANDS
 subsystems.
 

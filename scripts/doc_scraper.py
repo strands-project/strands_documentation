@@ -369,11 +369,15 @@ def create_dataset_docs(dataset_conf, filetype="rst"):
         os.makedirs("docs/datasets")
 
     for dataset in datasets.keys():
-        with open("docs/datasets/{}.{}".format(dataset, filetype), 'w') as f:
+        dataset_file = "docs/datasets/{}.{}".format(dataset, filetype)
+        with open(dataset_file, 'w') as f:
             extra_args = None
             if "pandoc_extra_args" in datasets[dataset] and datasets[dataset]["pandoc_extra_args"]:
                 extra_args = datasets[dataset]["pandoc_extra_args"]
             f.write(html_to_file(dataset, datasets[dataset]["url"], extra_args, dataset_conf, filetype))
+
+        add_doc_footer(datasets[dataset]["url"], dataset_file)
+            
 
 def generate_rst_index(index_config):
     """Generate a series of TOC sections to insert into the index.rst.
@@ -421,7 +425,7 @@ def generate_rst_index(index_config):
                     toc_groups[group_key]["toc_files"].append(rst)
 
     base_toc = toctree_base.format("Introduction")
-    base_toc += "   setup\n   packages\n\n\n"
+    base_toc += "   setup\n   quick_setup\n   packages\n\n\n"
 
     group_tocs = ""
 

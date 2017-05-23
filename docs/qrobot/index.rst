@@ -51,3 +51,6 @@ To update to the latest version run the update script as root from the
 
     # ./scripts/update.sh
 
+
+
+Original page: https://github.com/strands-project/qrobot/blob/master/README.md

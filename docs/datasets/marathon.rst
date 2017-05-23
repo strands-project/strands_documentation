@@ -25,3 +25,6 @@ This dataset is available for download in a single archive `file <https://strand
 
 .. |image0| image:: images/marathon/strands-full-logo.png
 .. |image1| image:: images/marathon/strands-full-logo.png
+
+
+Original page: https://strands.pdc.kth.se/public/Marathon_2014/readme.html

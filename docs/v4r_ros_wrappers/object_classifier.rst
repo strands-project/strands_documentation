@@ -39,3 +39,6 @@ References:
 -  [1] W. Wohlkinger and M. Vincze\ *, *\ Ensemble of Shape Functions
    for 3D Object Classification\*
 
+
+
+Original page: https://github.com/strands-project/v4r_ros_wrappers/blob/master/object_classifier/README.md

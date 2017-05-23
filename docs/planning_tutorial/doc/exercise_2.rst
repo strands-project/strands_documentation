@@ -267,3 +267,6 @@ What happens when you combine your answer to 2b with the ability to
 change the probabilities of success on the edges of the topological map?
 Talk to one of the lecturers for help with getting this running if you
 want to try it.
+
+
+Original page: https://github.com/strands-project/planning_tutorial/blob/indigo-devel/doc/exercise_2.md

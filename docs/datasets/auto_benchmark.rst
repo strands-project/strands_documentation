@@ -26,3 +26,6 @@ In the future, the system will extend to all datasets in the `LCAS-STRANDS long-
 
 .. |image0| image:: images/auto_benchmark/workflow.png
 .. |image1| image:: images/auto_benchmark/workflow.png
+
+
+Original page: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/automated.html

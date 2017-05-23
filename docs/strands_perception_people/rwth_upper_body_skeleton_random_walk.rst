@@ -44,3 +44,6 @@ roslaunch
 
     roslaunch rwth_upper_body_skeleton_random_walk fixed.launch  [parameter_name:=value]
 
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/rwth_upper_body_skeleton_random_walk/README.md

@@ -7,3 +7,6 @@ This contains packages (nodes) for the registration of: \*
 
 These packages should be called using the services defined
 `here <observation_registration_services>`__.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/observation_registration/README.md

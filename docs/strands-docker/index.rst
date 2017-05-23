@@ -71,3 +71,6 @@ image into the official docker repository at
 https://hub.docker.com/r/strands/strands-base/
 
 .. |image0| image:: https://images.microbadger.com/badges/image/strands/strands-base.svg
+
+
+Original page: https://github.com/strands-project/strands-docker/blob/master/README.md

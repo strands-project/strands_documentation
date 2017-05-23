@@ -94,3 +94,6 @@ the following elements:
 Ctrl-click allows you to select multiple distinct elements. Shift-click
 will select elements between the previously selected element and the
 current one.
+
+
+Original page: https://github.com/strands-project/strands_navigation/blob/indigo-devel/topological_rviz_tools/README.md

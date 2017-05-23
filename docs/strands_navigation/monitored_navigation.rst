@@ -163,3 +163,6 @@ above for the yaml file:
    helper interfaces. Service definition is
    `here <../strands_navigation_msgs/srv/GetHelpers.srv>`__
 
+
+
+Original page: https://github.com/strands-project/strands_navigation/blob/indigo-devel/monitored_navigation/README.md

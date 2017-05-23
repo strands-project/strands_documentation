@@ -41,3 +41,6 @@ The offline retrieval limits the number of trajectories obtained from
 mongodb to 10000 trajectories. To work around the limitation,
 OfflineTrajectories class provides a query that can be passed to mongodb
 to obtain specific trajectories.
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/human_trajectory/README.md

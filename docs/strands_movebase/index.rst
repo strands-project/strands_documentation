@@ -37,3 +37,6 @@ the Strands solution, see
 https://github.com/strands-project/strands\_movebase/tree/hydro-devel/calibrate\_chest
 and
 https://github.com/strands-project/strands\_movebase/tree/hydro-devel/strands\_description.
+
+
+Original page: https://github.com/strands-project/strands_movebase/blob/indigo-devel/README.md

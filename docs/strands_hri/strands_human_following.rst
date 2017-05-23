@@ -93,3 +93,6 @@ Problems
 Can not catch up with human's normal pace.
 
 Can not follow when people walk towards or pass by the robot.
+
+
+Original page: https://github.com/strands-project/strands_hri/blob/hydro-devel/strands_human_following/README.md

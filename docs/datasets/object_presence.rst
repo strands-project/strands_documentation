@@ -65,3 +65,6 @@ This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <i
 .. |image1| image:: images/object_presence/aruba-scheme.jpg
 .. |image2| image:: images/object_presence/brayford_top.png
 .. |image3| image:: images/object_presence/observation.png
+
+
+Original page: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/presence.html

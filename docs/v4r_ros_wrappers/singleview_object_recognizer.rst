@@ -28,3 +28,6 @@ Object models and test scenes can be obtained from
 https://repo.acin.tuwien.ac.at/tmp/permanent/dataset\_index.php To model
 your own objects have a look at
 *http://www.acin.tuwien.ac.at/forschung/v4r/software-tools/rtm/*
+
+
+Original page: https://github.com/strands-project/v4r_ros_wrappers/blob/master/singleview_object_recognizer/ReadMe.md

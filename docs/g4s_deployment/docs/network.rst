@@ -12,3 +12,6 @@ Betty: 10.0.107.107 PC: 10.0.107.108 nick laptop: .109
 
 Linda: 10.0.107.200 Linda control: 10.0.107.201 Marc's laptop:
 10.0.107.101 UoL staff: 10.0.107.110-120
+
+
+Original page: https://github.com/strands-project/g4s_deployment/blob/indigo-devel/docs/network.md

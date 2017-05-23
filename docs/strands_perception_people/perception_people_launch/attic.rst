@@ -109,3 +109,6 @@ Running:
 
     roslaunch perception_people_launch people_tracker_standalone_with_HOG.launch [parameter_name:=value]
 
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/perception_people_launch/attic/README.md

@@ -26,3 +26,6 @@ Create a ``config.ini`` based on the following template:
 
 You can add any parameters you like in the config file, but also
 initiate them in the data\_reader config `??? <>`__.
+
+
+Original page: https://github.com/strands-project/strands_data_to_qsrlib/blob/master/src/novelTrajectories/README.md

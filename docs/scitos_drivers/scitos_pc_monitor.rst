@@ -33,3 +33,6 @@ and view the message on the dashboard on your of-board pc:
 See
 https://github.com/strands-project/scitos\_apps/tree/master/scitos\_dashboard
 for dashboard documentation.
+
+
+Original page: https://github.com/strands-project/scitos_drivers/blob/indigo-devel/scitos_pc_monitor/README.md

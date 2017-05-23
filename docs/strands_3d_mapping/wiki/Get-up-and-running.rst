@@ -18,3 +18,6 @@ octomap\_saver -f (FILENAME).bt. You can view the map file by just
 typing octovis (FILENAME).bt in the command line. There is an example 3D
 map created on the robot in octomap\_launch/example\_maps/map3d.bt that
 you can try this out with.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/wiki/Get-up-and-running

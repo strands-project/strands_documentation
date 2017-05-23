@@ -9,3 +9,6 @@ sensortag
 -  copy this address
 -  run ``rosrun sensortag sensortagRead.py COPIED_ADDRESS``
 
+
+
+Original page: https://github.com/strands-project/sensortag/blob/master/README.md

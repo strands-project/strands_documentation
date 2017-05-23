@@ -152,3 +152,6 @@ Example usage in the MORSE builder script:
        robot = Scitosa5(Scitosa5.WITH_OPENNI)
 
 
+
+
+Original page: https://github.com/strands-project/strands_morse/blob/indigo-devel/README.md

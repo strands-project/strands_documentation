@@ -90,3 +90,6 @@ Export logged dynamic clusters from mongodb
 
 The data exported is saved according to the sweeps where the clusters
 were extracted (i.e. ``YYYYMMDD/patrol_run_#/room_#/...``)
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/object_manager/README.md

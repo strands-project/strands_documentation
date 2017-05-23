@@ -13,3 +13,6 @@ the PrimeSense module. One promising such fork is here:
 https://github.com/avin2/SensorKinect
 
 PrimeSense modules: http://www.openni.org
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/visual_odometry/3rd_party/fovis/examples/fv-example-openni/README

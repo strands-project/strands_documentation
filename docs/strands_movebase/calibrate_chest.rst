@@ -41,3 +41,6 @@ something like the following, you might need a mouse to rotate:
 
    Calibration point cloud example
 Close the window to save the calibration.
+
+
+Original page: https://github.com/strands-project/strands_movebase/blob/indigo-devel/calibrate_chest/README.md

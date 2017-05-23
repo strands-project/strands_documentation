@@ -174,3 +174,6 @@ alter the expected duration (in seconds) and the success probability of
 each edge in the map. After you've made your edits, restart the node as
 before and check if the robot creates policies which respect the new
 edge information you provided.
+
+
+Original page: https://github.com/strands-project/planning_tutorial/blob/indigo-devel/doc/exercise_1.md

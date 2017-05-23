@@ -74,3 +74,6 @@ You can run the visualizer by calling
 
    marker
 
+
+
+Original page: https://github.com/strands-project/soma/blob/indigo-devel/soma_trajectory/README.md

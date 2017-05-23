@@ -49,3 +49,6 @@ look the transform will run for the updated robot position with the
 received pose from move\_base. As soon as a new pose is received the
 transformloop will use this one to calculate the transform. This still
 runs in real time but accounts for nodes that are lazy publishers.
+
+
+Original page: https://github.com/strands-project/strands_hri/blob/hydro-devel/strands_gazing/README.md

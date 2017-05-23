@@ -37,3 +37,6 @@ The 3DNet dataset is a free resource for object class recognition and 6DOF pose 
 
 .. |image0| image:: images/three_d_net/training.jpg
 .. |image1| image:: images/three_d_net/classification.jpg
+
+
+Original page: https://repo.acin.tuwien.ac.at/tmp/permanent/3d-net.org/

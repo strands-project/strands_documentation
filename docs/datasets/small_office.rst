@@ -40,3 +40,6 @@ This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <i
 .. |image1| image:: images/small_office/none.png
 .. |image2| image:: images/small_office/greg.png
 .. |image3| image:: images/small_office/none.png
+
+
+Original page: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/greg-office.html

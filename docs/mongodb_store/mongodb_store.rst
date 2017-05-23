@@ -223,3 +223,6 @@ line. This *moves* entries inserted 24 hours ago or earlier.
 **NOTE THAT this all makes ``update`` operations a bit uncertain, so
 please do not use this type of replication on collections you plan to
 use update on.**
+
+
+Original page: https://github.com/strands-project/mongodb_store/blob/hydro-devel/mongodb_store/README.md

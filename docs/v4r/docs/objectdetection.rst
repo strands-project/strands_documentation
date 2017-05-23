@@ -220,3 +220,6 @@ References
    Multi-Modal RGB-D Object Recognizer", IAPR International Conf. on
    Pattern Recognition (ICPR), Cancun, Mexico, 2016
 
+
+
+Original page: https://github.com/strands-project/v4r/blob/master/docs/ObjectDetection.md

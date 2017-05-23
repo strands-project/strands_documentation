@@ -21,3 +21,6 @@ Add a repo to the wstool-controlled ws:
 
 .. |Join the chat at https://gitter.im/strands-project/g4s\_deployment| image:: https://badges.gitter.im/Join%20Chat.svg
    :target: https://gitter.im/strands-project/g4s_deployment?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
+
+Original page: https://github.com/strands-project/g4s_deployment/blob/indigo-devel/README.md

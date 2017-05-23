@@ -64,3 +64,6 @@ Issues and solutions
 -  source the ros environment: ``source devel/setup.bash``
 -  run it: ``rosrun strands_sim simulator.sh``
 
+
+
+Original page: https://github.com/strands-project/strands_morse/wiki/MORSE-on-Ubuntu

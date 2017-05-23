@@ -124,3 +124,6 @@ site <http://www.acin.tuwien.ac.at/forschung/v4r/software-tools/rtm>`__.
 .. |image5| image:: images/object-modeling-06.jpg
 .. |image6| image:: images/object-modeling-07.jpg
 .. |image7| image:: images/object-modeling-08.jpg
+
+
+Original page: https://github.com/strands-project/v4r/blob/master/docs/ObjectModeling.md

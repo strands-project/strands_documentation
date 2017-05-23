@@ -62,3 +62,6 @@ Services are deliberately kept bare-bones, as in contrast to the main
 SOMA services that provide feature-rich query services, it is intended
 that users of the LLSD perform more complicated query tasks by using
 MongoDB queries.
+
+
+Original page: https://github.com/strands-project/soma/blob/indigo-devel/soma_llsd/README.md

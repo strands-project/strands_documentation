@@ -86,3 +86,6 @@ The test client can be started with
 This provides a simple text interface to call the service with different
 parameters. Subscribe to ``/object_view_goals`` in RViz to see the
 results.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/object_view_generator/README.md

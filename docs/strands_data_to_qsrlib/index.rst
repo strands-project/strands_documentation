@@ -87,3 +87,6 @@ About the ``local.ini``
 
 ``reader_load`` true if you want the ``reader`` to load the data from
 the files in the ``config.ini``
+
+
+Original page: https://github.com/strands-project/strands_data_to_qsrlib/blob/master/README.md

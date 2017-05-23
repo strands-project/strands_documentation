@@ -26,3 +26,6 @@ floor) is considered as table. On the contrary, the
 *object\_rgb\_segmenter* segments all objects within a distance
 *chop\_z* from the camera. The segmentation takes a bit longer in this
 case.
+
+
+Original page: https://github.com/strands-project/strands_tabletop_perception/blob/hydro-devel/object_classifier/README.md

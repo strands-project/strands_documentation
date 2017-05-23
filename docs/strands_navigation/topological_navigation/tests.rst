@@ -271,3 +271,6 @@ After the map has been loaded the obstacles will be spawned at (or
 better moved to) the respective nodes before the robot starts
 navigating. Before each test the arena is cleared to make sure that no
 obstacles linger.
+
+
+Original page: https://github.com/strands-project/strands_navigation/blob/indigo-devel/topological_navigation/tests/README.md

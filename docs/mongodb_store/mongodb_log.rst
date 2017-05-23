@@ -34,3 +34,6 @@ on how to get started on ROS [3].
 [1] http://www.fawkesrobotics.org/publications/2012/robodb-iros2012/ [2]
 http://www.fawkesrobotics.org/projects/mongodb-log/ [3]
 http://www.ros.org/wiki/mongodb\_log
+
+
+Original page: https://github.com/strands-project/mongodb_store/blob/hydro-devel/mongodb_log/README

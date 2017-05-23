@@ -109,3 +109,6 @@ Were you looking for the Haskell cereal? Go here.
 
 .. |Build Status| image:: https://travis-ci.org/USCiLab/cereal.png?branch=develop
    :target: https://travis-ci.org/USCiLab/cereal
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/dynamic_object_retrieval/k_means_tree/cereal/README.md

@@ -120,3 +120,6 @@ QT4. The repos https://github.com/nilsbore/k_means_tree,
 https://github.com/USCiLab/cereal and
 https://github.com/mp3guy/Stopwatch are included in the repo as
 subtrees.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/dynamic_object_retrieval/README.md

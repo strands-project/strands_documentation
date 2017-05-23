@@ -56,3 +56,6 @@ FOR SPEED UP! (here width is 12)
 The file categories.txt is necessary to define the label names and has a
 simple format like this: 1 floor 2 wall 3 ceiling 4 table 5 chair 6
 furniture 7 object
+
+
+Original page: https://github.com/strands-project/v4r/blob/master/modules/ml/README

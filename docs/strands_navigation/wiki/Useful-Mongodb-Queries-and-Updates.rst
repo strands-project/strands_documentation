@@ -42,3 +42,6 @@ https://jira.mongodb.org/browse/SERVER-1243)
         {multi:true}
     )
 
+
+
+Original page: https://github.com/strands-project/strands_navigation/wiki/Useful-Mongodb-Queries-and-Updates

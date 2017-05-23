@@ -36,3 +36,6 @@ database entries just run
 entries in place. Please be careful and create a copy of the
 ``people_perception`` collection in the message store before running
 this.
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/bayes_people_tracker_logging/README.md

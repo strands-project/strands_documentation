@@ -10,3 +10,6 @@ table", # OPTIONAL NAME OF THE ROI "pos\_objects" : ["projector"], #
 ALLOWED OBJECTS (IF MISSING EVERYTHING EXCEPT NEG-OBJECT ARE ALLOWED)
 "neg\_objects" : ["cup"] # NOT-ALLOWED OBJECTS (IF MISSING EVERYTHING
 EXCEPT POS-OBJECTS ARE NOT-ALLOWED) } } ###
+
+
+Original page: https://github.com/strands-project/soma/blob/indigo-devel/soma_utils/config/README.txt

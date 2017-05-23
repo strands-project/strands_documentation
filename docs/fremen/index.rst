@@ -49,3 +49,6 @@ IROS 2014. 3. T.Krajnik, J.M.Santos, B.Seemann, T.Duckett: \ `FROctomap:
 An Efficient Spatio-Temporal Environment
 Representation. <http://labe.felk.cvut.cz/~tkrajnik/papers/fremen_2014_TAROS.pdf>`__\ 
 TAROS 2014.
+
+
+Original page: https://github.com/strands-project/fremen/blob/master/README.md

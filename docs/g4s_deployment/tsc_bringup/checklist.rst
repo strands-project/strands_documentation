@@ -17,3 +17,6 @@
 -  Set up replication on control PC
 
 
+
+
+Original page: https://github.com/strands-project/g4s_deployment/blob/indigo-devel/tsc_bringup/CHECKLIST.md

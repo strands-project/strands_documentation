@@ -90,3 +90,6 @@ the lift to got to "floor".
 The controller maintains a simple queue and moves the lift in the order
 requested, and waits a minimum of 8 seconds before closing the door
 between floor visits.
+
+
+Original page: https://github.com/strands-project/strands_morse/wiki/BHAM-Morse

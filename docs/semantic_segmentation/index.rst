@@ -19,3 +19,6 @@ POST REV: \* Merge the two cmakelists files! \* Think about a cleaner
 config file handling \* Pull back other data again?
 
 DONE?: \* Fix up label set.
+
+
+Original page: https://github.com/strands-project/semantic_segmentation/blob/master/README.md

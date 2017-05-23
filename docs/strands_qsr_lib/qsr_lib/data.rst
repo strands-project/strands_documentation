@@ -44,3 +44,6 @@ Types of generated data
        rosrun qsr_lib unittests_generate_ground_truth.py -i data1 -o qsr_lib/tests/data/data1_rcc4_defaults.txt rcc4
 
 
+
+
+Original page: https://github.com/strands-project/strands_qsr_lib/blob/master/qsr_lib/tests/data/README.md

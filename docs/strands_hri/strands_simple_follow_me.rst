@@ -8,3 +8,6 @@ scitos\_2d\_nav.launch from the scitos\_2d\_navigation repository with a
 pre-recorded or empty map. After words run the
 perception\_people\_launch people\_tracker\_no\_HOG.launch and this node
 on the robot.
+
+
+Original page: https://github.com/strands-project/strands_hri/blob/hydro-devel/strands_simple_follow_me/README.md

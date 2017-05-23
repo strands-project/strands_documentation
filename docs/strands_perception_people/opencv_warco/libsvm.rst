@@ -34,3 +34,6 @@ Overall, dense-representation libsvm saves on average 39.1%, 37.1%, and
 44.8% of the execution time in parameter selection, model training and
 prediction stages, respectively. This modification is thus useful for
 dense data sets.
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/opencv_warco/src/opencv_warco/libsvm/README.dense

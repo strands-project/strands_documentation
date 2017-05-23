@@ -24,3 +24,6 @@ autossh -M 32323 strands@harek-tunnel -R32280:localhost:80
 
 sudo ln -s ``rospack find strands_webtools`` /var/www/html/webtools sudo
 ln -s ``rospack find tsc_control_ui``/www/\* /var/www/html/
+
+
+Original page: https://github.com/strands-project/g4s_deployment/blob/indigo-devel/tsc_control_ui/README.md

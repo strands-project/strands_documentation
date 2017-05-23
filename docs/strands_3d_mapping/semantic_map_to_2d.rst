@@ -21,3 +21,6 @@ ok.
 
 The map server publishes the map as a ``nav_msgs::OccupancyGrid`` on the
 topic ``/waypoint_map``.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/semantic_map_to_2d/README.md

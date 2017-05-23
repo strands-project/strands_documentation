@@ -7,3 +7,6 @@ as recorded by the ``do_sweep.py`` action server from the
 ``cloud_merge`` package, i.e. with 51 intermediate positions.
 
 Internally it uses the Ceres optimization engine.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/strands_sweep_registration/README.md

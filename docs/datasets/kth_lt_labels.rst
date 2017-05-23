@@ -86,3 +86,6 @@ We attached a `bibtex <ambrus2015unsupervised.bib>`__ record for your convenienc
 .. |image4| image:: images/kth_lt_labels/labelled1.png
 .. |image5| image:: images/kth_lt_labels/labelled2.png
 .. |image6| image:: images/kth_lt_labels/labelled3.png
+
+
+Original page: https://strands.pdc.kth.se/public/KTH_longterm_dataset_labels/readme.html

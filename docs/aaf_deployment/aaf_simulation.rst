@@ -71,3 +71,6 @@ If all previous steps are done launch simulation by running:
 
        ```
 
+
+
+Original page: https://github.com/strands-project/aaf_deployment/blob/indigo-devel/aaf_simulation/Readme.md

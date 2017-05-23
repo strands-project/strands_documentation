@@ -81,3 +81,6 @@ Contact
 .. |image4| image:: images/kth_lt_moving/labelled1.png
 .. |image5| image:: images/kth_lt_moving/labelled2.png
 .. |image6| image:: images/kth_lt_moving/labelled3.png
+
+
+Original page: https://strands.pdc.kth.se/public/KTH_labelled_moving_objects/readme.html

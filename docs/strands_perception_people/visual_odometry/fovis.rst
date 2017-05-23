@@ -58,3 +58,6 @@ more details.
 
 You should have received a copy of the GNU General Public License along
 with fovis. If not, see http://www.gnu.org/licenses/.
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/visual_odometry/3rd_party/fovis/README

@@ -50,3 +50,6 @@ to achieve this is to allow access for all users via
 ``DISPLAY=:0 sudo xhost +``. Alternatively, SIFT can be computed using
 the non-free library of OpenCV. In this case, link the v4r and
 v4r\_ros\_wrappers libraries to the right OpenCV library.
+
+
+Original page: https://github.com/strands-project/v4r_ros_wrappers/blob/master/Readme.md

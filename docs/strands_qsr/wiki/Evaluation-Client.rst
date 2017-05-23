@@ -63,3 +63,6 @@ truth labels 1. A tab separated list of perception labels 1. A tab
 separated list of relation+perception labels
 
 So, if perception is 100% then lines 3 & 4 will be the same.
+
+
+Original page: https://github.com/strands-project/strands_qsr/wiki/Evaluation-Client

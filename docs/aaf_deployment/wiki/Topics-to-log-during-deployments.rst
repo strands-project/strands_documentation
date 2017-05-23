@@ -114,3 +114,6 @@ Monitored nav:
 -  ``/monitored_navigation/stuck_on_carpet`` - Stuck on carpet state
 -  ``/monitored_navigation/pause_requested`` - Nav pause
 
+
+
+Original page: https://github.com/strands-project/aaf_deployment/wiki/Topics-to-log-during-deployments

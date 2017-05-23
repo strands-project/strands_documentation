@@ -64,3 +64,6 @@ libLBFGS is distributed under the term of the MIT license. Please refer
 to COPYING file in the distribution.
 
 :math:`Id`
+
+
+Original page: https://github.com/strands-project/semantic_segmentation/blob/master/src/backend/third-party/densecrf/external/liblbfgs/README

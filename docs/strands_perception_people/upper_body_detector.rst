@@ -47,3 +47,6 @@ roslaunch:
 
     roslaunch upper_body_detector upper_body_detector.launch [parameter_name:=value]
 
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/upper_body_detector/README.md

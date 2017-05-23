@@ -52,3 +52,6 @@ To use:
 -  Set the ``lightEBC`` parameter to the name of an EBC port you have
    attached a light to, e.g. ``Port0_12V_Enabled``.
 
+
+
+Original page: https://github.com/strands-project/scitos_apps/blob/hydro-devel/scitos_docking/README.md

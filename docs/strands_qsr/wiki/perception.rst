@@ -56,3 +56,6 @@ JSON reprentation of a dictionary, key = scene\_id, value is another
 dictionary where key is the object id in the scene and value is another
 dictionary of entries 'type' -> list of possible types for the object,
 'confidence' - list of confidences associated to the type.
+
+
+Original page: https://github.com/strands-project/strands_qsr/wiki/perception

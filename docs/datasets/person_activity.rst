@@ -59,3 +59,6 @@ This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <i
 .. |image1| image:: images/person_activity/aruba-scheme.jpg
 .. |image2| image:: images/person_activity/witham-cam.jpg
 .. |image3| image:: images/person_activity/witham-topo.png
+
+
+Original page: https://lcas.lincoln.ac.uk/owncloud/shared/datasets/activity.html

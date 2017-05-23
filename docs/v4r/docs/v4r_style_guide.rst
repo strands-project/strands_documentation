@@ -314,3 +314,6 @@ documented using Doxygen format.
 As many classes and functions in V4R depend on e.g. templated point
 clouds, allow your classes to accommodate with the various types by
 using template classes and functions.
+
+
+Original page: https://github.com/strands-project/v4r/blob/master/docs/v4r_style_guide.md

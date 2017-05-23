@@ -82,3 +82,6 @@ We attached a `bibtex <ambrus2015unsupervised.bib>`__ record for your convenienc
 .. |image0| image:: images/kth_lt/Robot_s.png
 .. |image1| image:: images/kth_lt/map.jpg
 .. |image2| image:: images/kth_lt/map_obs.jpg
+
+
+Original page: https://strands.pdc.kth.se/public/KTH_longterm_dataset_registered/readme.html

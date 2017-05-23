@@ -51,3 +51,6 @@ The parameters accepted by the launch file are:
    methods: ``convex_segmentation`` and ``meta_room``. Default:
    ``meta_room``.
 
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/semantic_map_launcher/README.md

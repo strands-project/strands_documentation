@@ -40,3 +40,6 @@ We attached a `bibtex <thippur2014.bib>`__ record for your convenience.
 .. |image3| image:: images/kth_3d/t1.jpg
 .. |image4| image:: images/kth_3d/t2.jpg
 .. |image5| image:: images/kth_3d/t3.jpg
+
+
+Original page: https://strands.pdc.kth.se/public/kth-3d-total/readme.html

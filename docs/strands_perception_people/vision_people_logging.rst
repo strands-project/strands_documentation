@@ -22,3 +22,6 @@ Run with:
 
 Parameters: \* ``log``: *Default: true* This convenience parameter
 allows to start the whole system without logging the data
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/vision_people_logging/README.md

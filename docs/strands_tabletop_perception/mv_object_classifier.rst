@@ -18,3 +18,6 @@ rosrun mv\_object\_classifier mv\_object\_classifier\_demo\_from\_file
 where data should point to the data/mv\_seq1/ folder within this package
 or any folder containing PCD files that will be used as input for the
 multi-view classifier.
+
+
+Original page: https://github.com/strands-project/strands_tabletop_perception/blob/hydro-devel/mv_object_classifier/README.md

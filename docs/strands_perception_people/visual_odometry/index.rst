@@ -57,3 +57,6 @@ statement so that it looks like:
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse -msse2 -msse3")
 
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/visual_odometry/README.md

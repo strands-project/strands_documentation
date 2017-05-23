@@ -146,3 +146,6 @@ query type and constraints. ### ROI query SOMA ROIs could be queried
 using SOMA service call ``/soma/query_rois``. The query request should
 be filled according to the spatio-temporal constraints. The results are
 returned based on the query type and constraints.
+
+
+Original page: https://github.com/strands-project/soma/blob/indigo-devel/README.md

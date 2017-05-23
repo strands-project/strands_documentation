@@ -76,3 +76,6 @@ or
 
     roslaunch ground_plane_estimation ground_plane_fixed.launch [parameter_name:=value]
 
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/ground_plane_estimation/README.md

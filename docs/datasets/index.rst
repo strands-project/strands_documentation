@@ -90,3 +90,6 @@ This Website is maintained by the `Automation and Control Institute (ACIN) <http
 .. |image2| image:: images/index/7thframeworkprogramme.jpg
    :target: http://cordis.europa.eu/fp7/home_en.html
 .. |image3| image:: images/index/strands2.png
+
+
+Original page: http://strands.acin.tuwien.ac.at/data.html

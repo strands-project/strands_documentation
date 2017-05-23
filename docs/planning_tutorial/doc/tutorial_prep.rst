@@ -123,3 +123,6 @@ quick Python tutorial (there are many online) to get comfortable with
 the language. That said, we will try our hardest to ensure that you can
 access as much of the tutorial material as possible without knowing
 Python.
+
+
+Original page: https://github.com/strands-project/planning_tutorial/blob/indigo-devel/doc/tutorial_prep.md

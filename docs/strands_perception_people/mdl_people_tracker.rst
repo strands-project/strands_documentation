@@ -59,3 +59,6 @@ or
 
     roslaunch mdl_people_tracker mdl_people_tracker.launch [parameter_name:=value]
 
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/mdl_people_tracker/README.md

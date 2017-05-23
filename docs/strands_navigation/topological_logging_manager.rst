@@ -111,3 +111,6 @@ check if they are still alive, every second. The results are published
 in a different thread because the edges and nodes are only published
 when they change. The monitores are therefore used to detect if the
 navigation died.
+
+
+Original page: https://github.com/strands-project/strands_navigation/blob/indigo-devel/topological_logging_manager/README.md

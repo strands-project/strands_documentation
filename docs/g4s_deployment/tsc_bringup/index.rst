@@ -236,3 +236,6 @@ additional views:
 
 You can also use `soma <https://github.com/strands-project/soma>`__ to
 visualize the queries over time.
+
+
+Original page: https://github.com/strands-project/g4s_deployment/blob/indigo-devel/tsc_bringup/README.md

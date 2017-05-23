@@ -136,3 +136,6 @@ If you see an error like the following
     NameError: global name 'prefix' is not defined
 
 it means that MORSE can't find Blender. Set ``MORSE_BLENDER`` as above.
+
+
+Original page: https://github.com/strands-project/strands_morse/wiki/MORSE-on-OSX-using-Homebrew

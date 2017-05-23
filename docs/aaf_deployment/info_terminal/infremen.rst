@@ -38,3 +38,6 @@ an interaction during the last **interationTimeout** seconds. The
 The **maxTaskNumber** sets how much *Info Terminal* tasks are maintained
 at the same time. Setting **maxTaskNumber** causes the *Infremen* to
 stop proposing tasks.
+
+
+Original page: https://github.com/strands-project/aaf_deployment/blob/indigo-devel/info_terminal/infremen/README.md

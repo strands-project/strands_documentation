@@ -77,3 +77,6 @@ Here is an example call:
 
     rosrun  gcal_routine gcal_routine_node.py _stand_alone_test:=true _calendar:="hanheide.net_6hgulf44ij7ctjrf2iscj0m24o@group.calendar.google.com" _pre_start_window_min:=30 _gcal_poll_wait_sec:=10 _routine_update_wait_sec:=1
 
+
+
+Original page: https://github.com/strands-project/strands_executive/blob/indigo-devel/gcal_routine/README.md

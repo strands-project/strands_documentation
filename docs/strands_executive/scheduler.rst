@@ -94,3 +94,6 @@ saved to this file.
 How many seconds to allow the scheduler to run before timing out and
 returning (still potentially returning a result). The default value is
 to not have a timeout.
+
+
+Original page: https://github.com/strands-project/strands_executive/blob/indigo-devel/scheduler/README.md

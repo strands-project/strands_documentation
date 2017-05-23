@@ -31,3 +31,6 @@ References
    the 9th International Conference on Computer Vision Systems, (2013),
    10 S.
 
+
+
+Original page: https://github.com/strands-project/v4r/blob/master/docs/IMKRecognizer.md

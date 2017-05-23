@@ -34,3 +34,6 @@ functionalities of the rumblepad and relies on the scitos\_cmd\_vel\_mux
 
 Buttons: See `Cheat
 Sheet <https://github.com/strands-project/scitos_apps/blob/master/scitos_teleop/doc/joypad-cheat-sheet.jpg>`__
+
+
+Original page: https://github.com/strands-project/scitos_apps/wiki/Scitos-teleop

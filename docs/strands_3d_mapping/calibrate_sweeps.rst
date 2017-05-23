@@ -74,3 +74,6 @@ The calibration results are saved in ``~/.ros/semanticMap``. These are:
 -  ``sweep_paramters.txt`` the sweep parameters used by the calibration
    (``-160 20 160 -30 30 30``)
 
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/calibrate_sweeps/README.md

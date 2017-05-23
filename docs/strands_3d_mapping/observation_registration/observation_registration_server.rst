@@ -32,3 +32,6 @@ results. To run execute:
 
     rosrun observation_registration_server test_observation_registration XML_1 XML_2
 
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/observation_registration/observation_registration_server/README.md

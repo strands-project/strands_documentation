@@ -37,3 +37,6 @@ If pandoc converts "\`" to "\`\`" then do two string replacements:
 1. "\`\`" to "\`"
 2. "\` " to "\` ", i.e 'backtilt+2 spaces' to 'backtilt+6 spaces'
 
+
+
+Original page: https://github.com/strands-project/strands_qsr_lib/blob/master/docs/README.md

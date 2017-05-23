@@ -150,3 +150,6 @@ Reconfigure parameters
 -  ``UserMenuEntryName3 (string)`` The name of the third sub menu entry
    in the user menu of the status display
 
+
+
+Original page: https://github.com/strands-project/scitos_drivers/blob/indigo-devel/scitos_mira/README.md

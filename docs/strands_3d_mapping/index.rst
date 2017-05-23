@@ -132,3 +132,6 @@ accessing:
 -  sweep xml files.
 
 Check out the ``metaroom_xml_parser`` package for more information.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/README.md

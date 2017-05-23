@@ -17,3 +17,6 @@ scenarios.
 
 You can find out more on our
 `website <http://strands.acin.tuwien.ac.at/>`__.
+
+
+Original page: https://github.com/strands-project/soma/blob/indigo-devel/soma_utils/content/robblog/about.md

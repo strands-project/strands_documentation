@@ -127,3 +127,6 @@ RO-MAN: The 23rd IEEE International Symposium on. IEEE, 2014.
 [3] Matthias Delafontaine. "Modelling and analysing moving objects and
 travelling subjects: Bridging theory and practice". Diss. Ghent
 University, 2011.
+
+
+Original page: https://github.com/strands-project/strands_qsr_lib/blob/master/qsr_lib/README.md

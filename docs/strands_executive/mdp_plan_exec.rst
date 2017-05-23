@@ -142,3 +142,6 @@ is a co-safe LTL formula generated taking into account the
    language <http://www.prismmodelchecker.org/manual/PropertySpecification/SyntaxAndSemantics>`__.
 
 The action server also provides the expected execution time as feedback.
+
+
+Original page: https://github.com/strands-project/strands_executive/blob/indigo-devel/mdp_plan_exec/README.md

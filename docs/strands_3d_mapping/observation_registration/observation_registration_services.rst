@@ -80,3 +80,6 @@ pass a number of ``additional_view`` (in the form of point clouds), and,
 optionally (though strongly advised), odometry poses for the additional
 views, which the optimizer will use as initial guesses for the
 additional view poses.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/observation_registration/observation_registration_services/README.md

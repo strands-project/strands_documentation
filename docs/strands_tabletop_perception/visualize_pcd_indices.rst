@@ -41,3 +41,6 @@ rosrun visualize\_pcd\_indices visualize\_pcd\_indices\_node
 One possibility to compute the indices of the point cloud above a table
 plane is to use the catkin package *pcd\_filter*
 (https://github.com/strands-project/strands\_tabletop\_perception/tree/hydro-devel/pcd\_filter).
+
+
+Original page: https://github.com/strands-project/strands_tabletop_perception/blob/hydro-devel/visualize_pcd_indices/README.md

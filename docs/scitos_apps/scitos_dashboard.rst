@@ -38,3 +38,6 @@ in free run and can be pushed; if it is red then the motor stop is
 enabled and must be reset before it can drive. \* Battery Status: This
 shows the battery state as percentage in a tooltip, and changes icon
 when plugged in. \* Robot Mileage in metres
+
+
+Original page: https://github.com/strands-project/scitos_apps/blob/hydro-devel/scitos_dashboard/README.md

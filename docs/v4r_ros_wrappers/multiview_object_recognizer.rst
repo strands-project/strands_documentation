@@ -80,3 +80,6 @@ References:
    Conference on Machine Vision Applications (MVA), 2015*]
 
 
+
+
+Original page: https://github.com/strands-project/v4r_ros_wrappers/blob/master/multiview_object_recognizer/ReadMe.md

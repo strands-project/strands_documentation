@@ -45,3 +45,6 @@ that no other user is logged in, hogging the sound resource.
 are a bit delayed. \* The publish rate had to be artificially reduced to
 4hz because it would otherwise interfer with all the hardware control
 commands.
+
+
+Original page: https://github.com/strands-project/strands_hri/blob/hydro-devel/strands_visualise_speech/README.md

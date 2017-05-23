@@ -10,3 +10,6 @@ You will need to print (no rescaling!) the *cards.pdf* file, cut out the
 cards and fold the 'operator' one. Presenting the pattern to the robot's
 camera causes it to publish the command on */socialCardReader/command*
 topic.
+
+
+Original page: https://github.com/strands-project/strands_social/blob/hydro-devel/social_card_reader/README.md

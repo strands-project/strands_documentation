@@ -29,3 +29,6 @@ And a lot of utility and helper nodes. See
 https://www.youtube.com/watch?v=zdnvhQU1YNo for a concise explanation.
 
 Please refere to the READMEs in the specific packages.
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/README.md

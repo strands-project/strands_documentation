@@ -60,3 +60,6 @@ If MARY server is only binding to IP6, you can force it to bind to IP4
 
     export _JAVA_OPTIONS="-Djava.net.preferIPv4Stack=true"
 
+
+
+Original page: https://github.com/strands-project/strands_ui/blob/hydro-devel/mary_tts/README.md

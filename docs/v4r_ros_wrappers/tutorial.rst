@@ -369,3 +369,6 @@ site <http://www.acin.tuwien.ac.at/forschung/v4r/software-tools/rtm>`__.
 .. |image6| image:: images/object-modeling-07.png
 .. |image7| image:: images/object-modeling-08.png
 .. |image8| image:: images/object-recognition-01.png
+
+
+Original page: https://github.com/strands-project/v4r_ros_wrappers/blob/master/Tutorial.md

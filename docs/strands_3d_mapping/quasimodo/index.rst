@@ -341,3 +341,6 @@ This package is contains libraries for registering, splitting, merging
 and optimizing quasimodo object models. Quasimodo object models contain
 RGBDFrames, Segmentation masks, Depthimages and relative poses between
 the data for the frames.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/quasimodo/README.md

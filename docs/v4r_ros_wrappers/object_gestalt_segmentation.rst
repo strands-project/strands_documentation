@@ -36,3 +36,6 @@ The ROS packages dependencies can be installed with the command:
     roslaunch object_gestalt_segmentation startup.launch
 
 top
+
+
+Original page: https://github.com/strands-project/v4r_ros_wrappers/blob/master/object_gestalt_segmentation/README.md

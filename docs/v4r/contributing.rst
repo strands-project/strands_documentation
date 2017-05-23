@@ -281,3 +281,6 @@ follow the instructions below.
        make -j8
 
 
+
+
+Original page: https://github.com/strands-project/v4r/blob/master/CONTRIBUTING.md

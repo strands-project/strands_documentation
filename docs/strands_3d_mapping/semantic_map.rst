@@ -88,3 +88,6 @@ Import sweeps from the disk into mongodb
 
     rosrun semantic_map add_to_mongo /path/where/to/load/data/from/
 
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/semantic_map/README.md

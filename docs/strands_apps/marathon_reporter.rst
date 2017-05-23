@@ -29,3 +29,6 @@ The team name and password supplied to you must be placed in the file
     team: "your_team_name"
     password: "your_pa33w0rd"
 
+
+
+Original page: https://github.com/strands-project/strands_apps/blob/indigo-devel/marathon_reporter/README.md

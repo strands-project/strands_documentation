@@ -9,3 +9,6 @@
 -  4.: where to save output file, for example
    "/home/strands/tsc\_ws/....", it is absolute path
 
+
+
+Original page: https://github.com/strands-project/g4s_deployment/blob/indigo-devel/tsc_temperature_logger/README.md

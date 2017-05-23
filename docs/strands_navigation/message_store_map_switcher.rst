@@ -72,3 +72,6 @@ was switched. For example,
     rosservice call /switch_map "not_cs_lg"
     result: False
 
+
+
+Original page: https://github.com/strands-project/strands_navigation/blob/indigo-devel/message_store_map_switcher/README.md

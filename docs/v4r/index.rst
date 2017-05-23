@@ -47,3 +47,6 @@ From Source
 
 .. |build status| image:: https://rgit.acin.tuwien.ac.at/root/v4r/badges/master/build.svg
    :target: https://rgit.acin.tuwien.ac.at/root/v4r/commits/master
+
+
+Original page: https://github.com/strands-project/v4r/blob/master/Readme.md

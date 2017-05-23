@@ -90,3 +90,6 @@ We attached a `bibtex <ambrus2014metaroom.bib>`__ record for your convenience.
 .. |image3| image:: images/meta_rooms/instance2_s.png
 .. |image4| image:: images/meta_rooms/instance3_s.png
 .. |image5| image:: images/meta_rooms/instance4_s.png
+
+
+Original page: https://strands.pdc.kth.se/public/metric_sweeps_201312/readme.html

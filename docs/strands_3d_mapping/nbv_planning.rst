@@ -86,3 +86,6 @@ to be bugs in relation to formulae (6) and (7), and the advantage of the
 method stated in the paper over "simple\_inf\_gain" was not so apparant
 in tests that I carried out. None the less, hopefully this package can
 be the basis for some better implementation or alternative method.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/nbv_planning/README.md

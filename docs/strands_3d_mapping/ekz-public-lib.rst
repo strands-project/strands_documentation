@@ -599,3 +599,6 @@ will be used.
 -------------------------Section 1: TODOLIST -------------------------
 Use trees to speed up word association during frame generation. Provide
 more maptypes. Give option to provide initial guess for poses in map.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/ekz-public-lib/README.txt

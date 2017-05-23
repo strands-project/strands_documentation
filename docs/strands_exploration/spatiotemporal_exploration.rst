@@ -23,3 +23,6 @@ Running
 ~~~~~~~
 
 ``roslaunch topological_exploration topological_exploration.launch``
+
+
+Original page: https://github.com/strands-project/strands_exploration/blob/indigo-devel/spatiotemporal_exploration/README.md

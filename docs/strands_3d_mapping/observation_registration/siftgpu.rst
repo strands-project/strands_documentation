@@ -62,3 +62,6 @@ University of North Carolina at Chapel Hill
    Check /doc/manual.pdf for help on the viewer.
 
 
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/observation_registration/siftgpu/README.txt

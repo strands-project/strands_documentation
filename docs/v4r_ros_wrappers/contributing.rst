@@ -50,3 +50,6 @@ Please add this to the top of each of your files.
      *
      ******************************************************************************/
 
+
+
+Original page: https://github.com/strands-project/v4r_ros_wrappers/blob/master/CONTRIBUTING.md

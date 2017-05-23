@@ -60,3 +60,6 @@ Direct Robot Control
 If you need to use the joystick to help Betty out, consult this image
 for instructions on the buttons:
 https://raw.githubusercontent.com/strands-project/scitos\_apps/master/scitos\_teleop/doc/joypad-cheat-sheet.jpg
+
+
+Original page: https://github.com/strands-project/g4s_deployment/blob/indigo-devel/docs/end-user-instructions.md

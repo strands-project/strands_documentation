@@ -119,6 +119,7 @@ Documentation contents
    :caption: Introduction:
 
    setup
+   quick_setup
    packages
 
 
@@ -273,6 +274,7 @@ Documentation contents
    :maxdepth: 1
    :caption: robblog:
 
+   Data <robblog/data>
    Index <robblog/index>
 
 
@@ -707,6 +709,13 @@ Documentation contents
    Mongodb media server <strands_ui/mongodb_media_server>
    Robot talk <strands_ui/robot_talk>
    Strands webserver <strands_ui/strands_webserver>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: thermo fisher:
+
+   Map <thermo_fisher/map>
 
 
 .. toctree::

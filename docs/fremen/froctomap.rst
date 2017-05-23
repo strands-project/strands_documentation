@@ -39,3 +39,6 @@ main problem of this implementation of the FrOctoMap is that it requires
 the environment measurements to be performed on a regular basis. This
 issue can be solved by using non-uniform Fourier transform, that does
 not have this requirement, but is more computationally expensive.
+
+
+Original page: https://github.com/strands-project/fremen/blob/master/froctomap/README.md

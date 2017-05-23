@@ -85,3 +85,6 @@ The **debug** action
 
 The debug action prints detailed info about the edge given in
 -**mapName** with the topological map name that you want to process,
+
+
+Original page: https://github.com/strands-project/fremen/blob/master/frenap/README.md

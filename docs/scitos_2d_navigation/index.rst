@@ -19,3 +19,6 @@ Usage
    depth camera publishing on the topic ``chest_xtion``, for more
    details see https://github.com/strands-project/scitos\_common.
 
+
+
+Original page: https://github.com/strands-project/scitos_2d_navigation/blob/hydro-devel/README.md

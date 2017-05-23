@@ -317,3 +317,6 @@ orientation, publish:
 
     rostopic pub /socialCardReader/commands std_msgs/String "data: 'PAUSE_WALK'"
 
+
+
+Original page: https://github.com/strands-project/aaf_deployment/blob/indigo-devel/aaf_walking_group/README.md

@@ -41,3 +41,6 @@ Sorted by priority of incoming commands (high to low): \*
 arbitration
 
 To add input topics or change priorities modify: param/mux.yaml
+
+
+Original page: https://github.com/strands-project/scitos_apps/wiki/Scitos-cmd_vel_mux

@@ -55,3 +55,6 @@ implementations within libForest:
 
     J. Han, M. Kamber, J.Pei. Data Mining: Concepts and Techniques.
     Morgan Kaufmann Publishers Inc. San Francisco, CA, 2005.
+
+
+Original page: https://github.com/strands-project/semantic_segmentation/blob/master/src/backend/third-party/libforest/docs/references.md

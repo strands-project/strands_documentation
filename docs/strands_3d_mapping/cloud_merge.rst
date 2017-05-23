@@ -167,3 +167,6 @@ parameters ``-160 40 160 -30 30 -30`` -> 9 positions If sweep type is
 ``shortest``, the sweep is started with parameters
 ``-160 60 140 -30 30 -30`` -> 6 positions (there might be blank areas
 with this sweep type, depending on the environment).
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/cloud_merge/README.md

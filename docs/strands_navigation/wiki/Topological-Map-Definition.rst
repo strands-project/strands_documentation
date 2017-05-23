@@ -176,3 +176,6 @@ YAML format for example:
         pointset: mb_test2
         example: 'this is an example field'
 
+
+
+Original page: https://github.com/strands-project/strands_navigation/wiki/Topological-Map-Definition

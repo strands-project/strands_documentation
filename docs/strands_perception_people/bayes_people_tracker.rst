@@ -140,3 +140,6 @@ as intended.
 [1] N. Bellotto and H. Hu, “Computationally efficient solutions for
 tracking people with a mobile robot: an experimental evaluation of
 bayesian filters,” Autonomous Robots, vol. 28, no. 4, pp. 425–438, 2010.
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/bayes_people_tracker/README.md

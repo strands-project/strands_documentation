@@ -171,3 +171,6 @@ Limitations
    actually being in view. Make sure objects to learn are at chest
    height.
 
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/learn_objects_action/README.md

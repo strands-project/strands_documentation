@@ -71,3 +71,6 @@ examples/anno1.ppm output1.ppm
 Please note that this implementation is slightly slower than the one
 used to in our NIPS 2011 paper. Mainly because I tried to keep the code
 clean and easy to understand.
+
+
+Original page: https://github.com/strands-project/semantic_segmentation/blob/master/src/backend/third-party/densecrf/README.txt

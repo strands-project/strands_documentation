@@ -67,3 +67,6 @@ in your python code:
 
 The server is reentrant, meaning that you can run several roslaunch
 processes in parallel (*not* a ``SimpleActionServer``)
+
+
+Original page: https://github.com/strands-project/strands_apps/blob/indigo-devel/roslaunch_axserver/README.md

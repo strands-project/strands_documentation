@@ -127,3 +127,6 @@ Same as ``ObservationInstanceService``, but returns the observation
 instance as an ``Octomap``.
 
 Service name: ``SemanticMapPublisher/ObservationOctomapInstanceService``
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/semantic_map_publisher/README.md

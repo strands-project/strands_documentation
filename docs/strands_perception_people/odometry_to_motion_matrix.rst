@@ -23,3 +23,6 @@ Parameters: \* ``odom``: *Default: /odom* The topic on which the robots
 odometry is published \* ``motion_parameters``: *Default:
 /visual*\ odometry/motion\_matrix\_ The topic on which the resulting
 motion matrix is published
+
+
+Original page: https://github.com/strands-project/strands_perception_people/blob/indigo-devel/odometry_to_motion_matrix/README.md

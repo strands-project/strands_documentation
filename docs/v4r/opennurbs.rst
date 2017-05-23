@@ -90,3 +90,6 @@ Rhinoceros is a registered trademark of Robert McNeel & Associates.
 THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
 MERCHANTABILITY ARE HEREBY DISCLAIMED.
+
+
+Original page: https://github.com/strands-project/v4r/blob/master/3rdparty/opennurbs/readme.txt

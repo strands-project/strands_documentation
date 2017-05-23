@@ -21,3 +21,6 @@ While the node is running the mileage parameter is constantly set to the
 current value and saved to the datacentre. The default save interval is
 every 500 odometry messages, which is every ~10 seconds. This can be
 change via the ``save_interval`` parametre.
+
+
+Original page: https://github.com/strands-project/strands_apps/blob/indigo-devel/odometry_mileage/README.md

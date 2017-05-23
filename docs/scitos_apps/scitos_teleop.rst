@@ -59,3 +59,6 @@ you can export the joystick device, e.g.:
 again. If you installed the udev rule as mentioned above this should not
 happen. Try to follow the instruction for installing the udev rule
 again.
+
+
+Original page: https://github.com/strands-project/scitos_apps/blob/hydro-devel/scitos_teleop/README.md

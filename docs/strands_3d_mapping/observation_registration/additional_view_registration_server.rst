@@ -49,3 +49,6 @@ Similary, ``observation_transform`` stores the transform which aligns
 the additional views to the observation, and
 ``observation_correspondences`` denotes the number of correspondences
 used to compute it.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/observation_registration/additional_view_registration_server/README.md

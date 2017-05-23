@@ -341,3 +341,6 @@ To hide it again, simply publish
     show: false"
 
 Both, title and content can contain valid HTML.
+
+
+Original page: https://github.com/strands-project/strands_ui/blob/hydro-devel/README.md

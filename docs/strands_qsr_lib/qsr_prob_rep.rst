@@ -189,3 +189,6 @@ Adding a new functionality
 [1] Dondrup, C.; Bellotto, N.; Hanheide, M.; Eder, K.; Leonards, U. A
 Computational Model of Human-Robot Spatial Interactions Based on a
 Qualitative Trajectory Calculus. In: Robotics 2015, 4, 63-102.
+
+
+Original page: https://github.com/strands-project/strands_qsr_lib/blob/master/qsr_prob_rep/README.md

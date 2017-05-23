@@ -33,3 +33,6 @@ Example
 ``rosrun static_transform_manager rviz_click_to_tf.py`` will listen to
 points clicked in rviz and turn them into a transformation in the TF
 tree.
+
+
+Original page: https://github.com/strands-project/strands_apps/blob/indigo-devel/static_transform_manager/README.md

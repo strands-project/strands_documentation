@@ -63,3 +63,6 @@ Known Issues
 The service fails if there is no map topic available or no message has
 been published on this topic after the service has been started. As a
 workaround, the map server could be started after this service.
+
+
+Original page: https://github.com/strands-project/strands_navigation/blob/indigo-devel/nav_goals_generator/README.md

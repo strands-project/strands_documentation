@@ -82,3 +82,6 @@ If there is no more solution the predicate will return an empty list and
 clear the visualization in RVIZ.
 
 The list of *cached* QSRs can be cleared using the predicate *new\_vis*.
+
+
+Original page: https://github.com/strands-project/strands_tabletop_perception/blob/hydro-devel/qsr_kb/README.md

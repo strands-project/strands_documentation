@@ -11,3 +11,6 @@ Evaluation
 -  `Evaluation
    Client <https://github.com/strands-project/strands_qsr/wiki/Evaluation-Client>`__
 
+
+
+Original page: https://github.com/strands-project/strands_qsr/wiki

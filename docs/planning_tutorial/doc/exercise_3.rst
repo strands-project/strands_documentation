@@ -145,3 +145,6 @@ it to build a 3D map of each room for reasoning about supporting
 surfaces and views.
 
 We connect the
+
+
+Original page: https://github.com/strands-project/planning_tutorial/blob/indigo-devel/doc/exercise_3.md

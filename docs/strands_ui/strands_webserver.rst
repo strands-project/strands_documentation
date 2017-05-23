@@ -48,3 +48,6 @@ action server returns "feedback" once the dialog has been rendered on
 the user's screen. The feedback is the full generated HTML definition of
 the dialog displayed (not very useful, but hey, at least you know when
 it is displayed).
+
+
+Original page: https://github.com/strands-project/strands_ui/blob/hydro-devel/strands_webserver/README.md

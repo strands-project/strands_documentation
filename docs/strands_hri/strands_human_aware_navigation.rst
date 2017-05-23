@@ -83,3 +83,6 @@ Running
 
     rosrun strands_human_aware_velocity human_aware_cmd_vel [_parameter:=value]
 
+
+
+Original page: https://github.com/strands-project/strands_hri/blob/hydro-devel/strands_human_aware_navigation/README.md

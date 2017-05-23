@@ -41,3 +41,6 @@ where \*\_visualize\* can be set to visualize the filtered point clouds
 and **force*\ refilter* to do a new filtering process for already
 filtered .pcd files (i.e. pcd files where corresponding
 *object\_indices\_* already exist).
+
+
+Original page: https://github.com/strands-project/strands_tabletop_perception/blob/hydro-devel/pcd_filter/README.md

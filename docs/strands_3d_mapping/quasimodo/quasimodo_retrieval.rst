@@ -50,3 +50,6 @@ server. It offers the following service:
 Run the node by simply typing
 
 ``rosrun quasimodo_retrieval quasimodo_visualization_server``.
+
+
+Original page: https://github.com/strands-project/strands_3d_mapping/blob/hydro-devel/quasimodo/quasimodo_retrieval/README.md

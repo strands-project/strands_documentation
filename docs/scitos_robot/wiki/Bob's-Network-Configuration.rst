@@ -110,3 +110,6 @@ Configuration files
 -  ``ping-hosts`` script:
    https://gist.github.com/cburbridge/b185c60efc5efbc83bc5
 
+
+
+Original page: https://github.com/strands-project/scitos_robot/wiki/Bob's-Network-Configuration

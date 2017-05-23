@@ -437,3 +437,6 @@ Contributor License Agreement, or we won't be able to accept the patch.
 [3] http://code.google.com/p/googletest/wiki/GoogleTestDevGuide
 
 Happy testing!
+
+
+Original page: https://github.com/strands-project/semantic_segmentation/blob/master/src/backend/third-party/libforest/lib/gtest-1.7.0/README

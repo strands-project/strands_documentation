@@ -28,3 +28,6 @@ as create a new folder where the new frames will be put, once the lens
 has been uncovered.
 
 rgbd\_grabber
+
+
+Original page: https://github.com/strands-project/annotation_tool_kth/blob/master/rgbd_grabber/README.md

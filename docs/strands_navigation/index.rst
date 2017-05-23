@@ -8,3 +8,6 @@ Here is a diagram of the interactions between the components
 |components|
 
 .. |components| image:: http://interactive.blockdiag.com/image?compression=deflate&encoding=base64&src=eJx9kt1KxDAQhe_3KUKvs09Q1osVwQuVRcQbkTJNxzaYZEJ-qovsu5s0dbvqshBIhvnOnHCSVpF47yT07GvFWLDsRUGLalM9kSVFvRSg2A6CI6XQVa91psxZ6gFG2UOQZAqG9oe6-UQRA7IdKSn2pauXIfdkZCCH3b8RThyhR9CWXSup21nfnuhH3ILH0hjgpHUbNZg1fIBD9hsbF_9n6eOZ-yv5Fo7MXS62OCSGoqu4D3uFbMM68AN2E59W7yjaKcmc5bTNeoiBDGmKvrElTWn6KhGHP7KZ98GB6XxjlkuVqYan6HgKt74gFilP34C1vqic4KO5JJjdBieLIIdY-PIr1lfJubx99s61NvMz5nPLk0UWJR-eg6tXh2-Var3n
+
+
+Original page: https://github.com/strands-project/strands_navigation/blob/indigo-devel/README.md

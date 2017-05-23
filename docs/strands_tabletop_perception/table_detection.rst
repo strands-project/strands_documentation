@@ -37,3 +37,6 @@ determining what is a table:
    longest side.
 -  ``min_area`` - Minimum area of table plane.
 
+
+
+Original page: https://github.com/strands-project/strands_tabletop_perception/blob/hydro-devel/table_detection/README.md

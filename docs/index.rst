@@ -130,8 +130,6 @@ Documentation contents
 
    Aaf simulation <aaf_deployment/aaf_simulation>
    Aaf walking group <aaf_deployment/aaf_walking_group>
-   Index <aaf_deployment/index>
-   Infremen <aaf_deployment/infremen>
 
 
 .. toctree::
@@ -146,7 +144,6 @@ Documentation contents
    :maxdepth: 1
    :caption: aaf deployment wiki:
 
-   Aaf deployment feedback <aaf_deployment/wiki/AAF-Deployment-Feedback>
    Home <aaf_deployment/wiki/Home>
    Topics to log during deployments <aaf_deployment/wiki/Topics-to-log-during-deployments>
 
@@ -185,42 +182,11 @@ Documentation contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: fremen:
-
-   Fremen2dgrid <fremen/Fremen2DGrid>
-   Fremenarray <fremen/FremenArray>
-   Fremenserver <fremen/FremenServer>
-   Fremengrid <fremen/fremengrid>
-   Frenap <fremen/frenap>
-   Froctomap <fremen/froctomap>
-   Frongo <fremen/frongo>
-   Index <fremen/index>
-
-
-.. toctree::
-   :maxdepth: 1
    :caption: g4s deployment:
 
    Index <g4s_deployment/index>
    Tsc control ui <g4s_deployment/tsc_control_ui>
    Tsc temperature logger <g4s_deployment/tsc_temperature_logger>
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: g4s deployment docs:
-
-   End user instructions <g4s_deployment/docs/end-user-instructions>
-   Network <g4s_deployment/docs/network>
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: g4s deployment expert interventions:
-
-   Expert interventions <g4s_deployment/expert_interventions/expert_interventions>
-   Y3 <g4s_deployment/expert_interventions/y3>
-   Y4 <g4s_deployment/expert_interventions/y4>
 
 
 .. toctree::
@@ -240,18 +206,26 @@ Documentation contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: mongodb store:
+   :caption: lamor15:
 
-   Index <mongodb_store/index>
-   Mongodb log <mongodb_store/mongodb_log>
-   Mongodb store <mongodb_store/mongodb_store>
+   Index <lamor15/index>
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: planning tutorial:
+   :caption: lamor15 wiki:
 
-   Index <planning_tutorial/index>
+   Home <lamor15/wiki/Home>
+   Icrai workshop <lamor15/wiki/ICRAI-workshop>
+   Individual computer setup <lamor15/wiki/Individual-Computer-Setup>
+   Robot vpn to connect from desktop pcs and laptops <lamor15/wiki/Robot-VPN-to-connect-from-Desktop-PCs-and-Laptops>
+   Robot configuration <lamor15/wiki/Robot-configuration>
+   Tutorial materials 1 <lamor15/wiki/Tutorial-materials-1>
+   Tutorial materials 3 <lamor15/wiki/Tutorial-materials-3>
+   Tutorial materials 4 <lamor15/wiki/Tutorial-materials-4>
+   Vpn to the robot <lamor15/wiki/VPN-to-the-robot>
+   Working with the strands robots <lamor15/wiki/Working-with-the-STRANDS-robots>
+   Possible tasks <lamor15/wiki/possible-tasks>
 
 
 .. toctree::
@@ -275,16 +249,7 @@ Documentation contents
    :maxdepth: 1
    :caption: robblog:
 
-   Data <robblog/data>
    Index <robblog/index>
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: robblog data:
-
-   2014 05 05 strands test post <robblog/data/2014-05-05-strands-test-post>
-   Example <robblog/data/example>
 
 
 .. toctree::
@@ -296,16 +261,8 @@ Documentation contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: scitos 2d navigation wiki:
-
-   Home <scitos_2d_navigation/wiki/Home>
-
-
-.. toctree::
-   :maxdepth: 1
    :caption: scitos apps:
 
-   Index <scitos_apps/index>
    Ptu follow frame <scitos_apps/ptu_follow_frame>
    Scitos cmd vel mux <scitos_apps/scitos_cmd_vel_mux>
    Scitos dashboard <scitos_apps/scitos_dashboard>
@@ -334,7 +291,6 @@ Documentation contents
    :maxdepth: 1
    :caption: scitos drivers:
 
-   Flir pantilt d46 <scitos_drivers/flir_pantilt_d46>
    Scitos bringup <scitos_drivers/scitos_bringup>
    Scitos mira <scitos_drivers/scitos_mira>
    Scitos pc monitor <scitos_drivers/scitos_pc_monitor>
@@ -345,24 +301,13 @@ Documentation contents
    :caption: scitos robot wiki:
 
    Bob's network configuration <scitos_robot/wiki/Bob's-Network-Configuration>
-   Home <scitos_robot/wiki/Home>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: semantic segmentation:
 
-   Index <semantic_segmentation/index>
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: semantic segmentation src:
-
-   Densecrf <semantic_segmentation/src/densecrf>
-   Docs <semantic_segmentation/src/docs>
-   Gtest 1.7.0 <semantic_segmentation/src/gtest-1.7.0>
-   Liblbfgs <semantic_segmentation/src/liblbfgs>
+   Docs <semantic_segmentation/docs>
 
 
 .. toctree::
@@ -414,16 +359,13 @@ Documentation contents
    Semantic map launcher <strands_3d_mapping/semantic_map_launcher>
    Semantic map publisher <strands_3d_mapping/semantic_map_publisher>
    Semantic map to 2d <strands_3d_mapping/semantic_map_to_2d>
-   Strands sweep registration <strands_3d_mapping/strands_sweep_registration>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands 3d mapping dynamic object retrieval:
 
-   Cereal <strands_3d_mapping/dynamic_object_retrieval/cereal>
    Index <strands_3d_mapping/dynamic_object_retrieval/index>
-   K means tree <strands_3d_mapping/dynamic_object_retrieval/k_means_tree>
    Stopwatch <strands_3d_mapping/dynamic_object_retrieval/stopwatch>
 
 
@@ -433,7 +375,6 @@ Documentation contents
 
    Additional view registration server <strands_3d_mapping/observation_registration/additional_view_registration_server>
    Index <strands_3d_mapping/observation_registration/index>
-   Observation registration launcher <strands_3d_mapping/observation_registration/observation_registration_launcher>
    Observation registration server <strands_3d_mapping/observation_registration/observation_registration_server>
    Observation registration services <strands_3d_mapping/observation_registration/observation_registration_services>
    Siftgpu <strands_3d_mapping/observation_registration/siftgpu>
@@ -452,22 +393,16 @@ Documentation contents
    :caption: strands 3d mapping wiki:
 
    Get up and running <strands_3d_mapping/wiki/Get-up-and-running>
-   Home <strands_3d_mapping/wiki/Home>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands apps:
 
-   Door pass <strands_apps/door_pass>
-   Index <strands_apps/index>
    Marathon reporter <strands_apps/marathon_reporter>
    Odometry mileage <strands_apps/odometry_mileage>
-   Pose extractor <strands_apps/pose_extractor>
-   Ramp climb <strands_apps/ramp_climb>
    Roslaunch axserver <strands_apps/roslaunch_axserver>
    Static transform manager <strands_apps/static_transform_manager>
-   Topological roslaunch <strands_apps/topological_roslaunch>
    Watchdog node <strands_apps/watchdog_node>
 
 
@@ -495,7 +430,6 @@ Documentation contents
    :maxdepth: 1
    :caption: strands executive behaviours:
 
-   Automated routine <strands_executive_behaviours/automated_routine>
    Routine behaviours <strands_executive_behaviours/routine_behaviours>
 
 
@@ -503,7 +437,6 @@ Documentation contents
    :maxdepth: 1
    :caption: strands exploration:
 
-   Index <strands_exploration/index>
    Spatiotemporal exploration <strands_exploration/spatiotemporal_exploration>
 
 
@@ -511,36 +444,18 @@ Documentation contents
    :maxdepth: 1
    :caption: strands hri:
 
-   Index <strands_hri/index>
    Strands gazing <strands_hri/strands_gazing>
-   Strands hri launch <strands_hri/strands_hri_launch>
    Strands human aware navigation <strands_hri/strands_human_aware_navigation>
    Strands human following <strands_hri/strands_human_following>
-   Strands simple follow me <strands_hri/strands_simple_follow_me>
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: strands hri strands visualise speech:
-
-   Index <strands_hri/strands_visualise_speech/index>
-   Pulse <strands_hri/strands_visualise_speech/pulse>
+   Strands visualise speech <strands_hri/strands_visualise_speech>
 
 
 .. toctree::
    :maxdepth: 1
    :caption: strands morse:
 
+   Bham <strands_morse/bham>
    Index <strands_morse/index>
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: strands morse bham:
-
-   Architecture <strands_morse/bham/architecture>
-   Index <strands_morse/bham/index>
-   Real to be moved <strands_morse/bham/real_TO-BE-MOVED>
 
 
 .. toctree::
@@ -548,8 +463,6 @@ Documentation contents
    :caption: strands morse wiki:
 
    Bham morse <strands_morse/wiki/BHAM-Morse>
-   Home <strands_morse/wiki/Home>
-   Morse on osx using homebrew <strands_morse/wiki/MORSE-on-OSX-using-Homebrew>
    Morse on ubuntu <strands_morse/wiki/MORSE-on-Ubuntu>
 
 
@@ -565,8 +478,6 @@ Documentation contents
    :maxdepth: 1
    :caption: strands navigation:
 
-   Index <strands_navigation/index>
-   Joy map saver <strands_navigation/joy_map_saver>
    Message store map switcher <strands_navigation/message_store_map_switcher>
    Monitored navigation <strands_navigation/monitored_navigation>
    Nav goals generator <strands_navigation/nav_goals_generator>
@@ -586,7 +497,6 @@ Documentation contents
    :maxdepth: 1
    :caption: strands navigation wiki:
 
-   Home <strands_navigation/wiki/Home>
    Topological map definition <strands_navigation/wiki/Topological-Map-Definition>
    Useful mongodb queries and updates <strands_navigation/wiki/Useful-Mongodb-Queries-and-Updates>
 
@@ -638,18 +548,10 @@ Documentation contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: strands qsr:
-
-   Index <strands_qsr/index>
-
-
-.. toctree::
-   :maxdepth: 1
    :caption: strands qsr wiki:
 
    Data sets <strands_qsr/wiki/Data-sets>
    Evaluation client <strands_qsr/wiki/Evaluation-Client>
-   Home <strands_qsr/wiki/Home>
    Perception <strands_qsr/wiki/perception>
 
 
@@ -658,7 +560,6 @@ Documentation contents
    :caption: strands qsr lib:
 
    Docs <strands_qsr_lib/docs>
-   Index <strands_qsr_lib/index>
    Qsr prob rep <strands_qsr_lib/qsr_prob_rep>
 
 
@@ -672,18 +573,8 @@ Documentation contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: strands recovery behaviours:
-
-   Backoff behaviour <strands_recovery_behaviours/backoff_behaviour>
-   Index <strands_recovery_behaviours/index>
-
-
-.. toctree::
-   :maxdepth: 1
    :caption: strands social:
 
-   Fake camera effects <strands_social/fake_camera_effects>
-   Index <strands_social/index>
    Social card reader <strands_social/social_card_reader>
    Strands tweets <strands_social/strands_tweets>
 
@@ -724,14 +615,7 @@ Documentation contents
    :caption: trajectory behaviours:
 
    Human trajectory classifier <trajectory_behaviours/human_trajectory_classifier>
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: trajectory behaviours relational learner:
-
-   Docs <trajectory_behaviours/relational_learner/docs>
-   Index <trajectory_behaviours/relational_learner/index>
+   Relational learner <trajectory_behaviours/relational_learner>
 
 
 .. toctree::

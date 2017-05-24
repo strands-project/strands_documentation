@@ -7,6 +7,7 @@ ignore_repos:
   - aaf_deployment:
     - expert_interventions # files containing this string will be ignored
     - AAF-Deployment-Feedback
+    - aaf_deployment/README
   - strands-project.github.io
   - MIRASimpleClient
   - autonomous_patrolling
@@ -28,22 +29,84 @@ ignore_repos:
   - g4s_deployment:
     - end-user-instructions
     - expert_interventions
+    - docs/network
+    - tsc_bringup/checklist
   - openni_wrapper
+  - mongodb_store:
+      - README
+  - planning_tutorial:
+      - planning_tutorial/README
   - rosdistro
   - buildfarm
   - jenkins_tools
   - jenkins_scripts
+  - strands_3d_mapping:
+    - stopwatch
   - dh_bin_wizard
   - github_manager
   - sicks300
+  - fremen:
+      fremengrid
   - metapackages
   - strands_interfaces
   - strands_analysis
   - edge_leg_detector
   - robomongo
   - robblog:
-      - test-post
-      - example
+    - test-post
+    - example
+    - data
+  - scitos_apps:
+    - scitos_apps/README
+  - scitos_2d_navigation:
+    - Home
+  - scitos_drivers:
+    - flir_pantilt
+  - scitos_robot:
+    - Home
+  - semantic_segmentation:
+    - README
+  - strands_3d_mapping:
+    - sweep_registration
+    - k_means_tree
+    - observation_registration_launcher/README
+    - Home
+  - strands_apps:
+    - door_pass/README
+    - strands_apps/README
+    - pose_extractor/README
+    - ramp_climb/README
+    - topological_roslaunch/README
+  - strands_executive_behaviours:
+    - automated_routine/README
+  - strands_exploration:
+    - strands_exploration/README
+  - strands_hri:
+    - strands_hri/README
+    - strands_hri_launch/README
+    - strands_simple_follow_me/README
+    - pulse/README
+  - strands_morse:
+    - architecture/readme
+    - real_TO-BE-MOVED/readme
+    - Home
+  - strands_navigation:
+    - strands_navigation/README
+    - joy_map_saver/README
+    - Home
+  - strands_qsr:
+    - strands_qsr/README
+    - Home
+  - strands_qsr_lib:
+    - strands_qsr_lib/README
+  - strands_recovery_behaviours:
+    - backoff_behaviour/README
+    - strands_recovery_behaviours/README
+  - strands_social:
+    - fake_camera_effects/README
+    - strands_social/README
+  - trajectory_behaviours:
+    - relational_learner/docs/README
   - elan_analyser
   - plugin_local_planner
   - navigation_layers

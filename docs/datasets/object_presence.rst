@@ -48,18 +48,18 @@ The **KTH** data containe presence of objects observed by a mobile robot at diff
 Download
 ~~~~~~~~
 
-All of these datasets are available for download in a single archive `file <presence/strands.zip>`__. After you unzip the file, you get three folders which correspond to the individual datasets.
+All of these datasets are available for download in a single archive `file <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/presence/strands.zip>`__. After you unzip the file, you get three folders which correspond to the individual datasets.
 
 --------------
 
 Condition of use
 ~~~~~~~~~~~~~~~~
 
-If you use the dataset for your research, please cite our `paper <presence/paper.pdf>`__ that describes it. We attached a `bibtex <presence/paper.bib>`__ record for your convenience. If you use the **Aruba** subset, you must also acknowledge the original `CASAS <presence/aruba.bib>`__ paper.
+If you use the dataset for your research, please cite our `paper <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/presence/paper.pdf>`__ that describes it. We attached a `bibtex <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/presence/paper.bib>`__ record for your convenience. If you use the **Aruba** subset, you must also acknowledge the original `CASAS <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/presence/aruba.bib>`__ paper.
 
 --------------
 
-This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <index.html>`__.
+This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/index.html>`__.
 
 .. |image0| image:: images/object_presence/aruba-flat.png
 .. |image1| image:: images/object_presence/aruba-scheme.jpg

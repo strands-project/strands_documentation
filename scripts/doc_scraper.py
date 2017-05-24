@@ -245,12 +245,14 @@ def get_repo_files(org_name, repo_name, match_ext=[], match_filename=[], match_f
     # in a nicer way. Gather them in a dict which will group multiple readmes in
     # the same subdirectory, which we want to handle differently.
     matching = {}
+
     for item in repo_tree["tree"]:
         lower_fname, lower_ext = os.path.splitext(os.path.basename(item["path"].lower()))
         fname_matches = map(lambda x: lower_fname == x.lower(), match_filename)
         ext_matches = map(lambda x: lower_ext == x.lower(), match_ext)
         full_matches = map(lambda x: lower_fname + lower_ext == x.lower(), match_full)
-        ignore_matches = map(lambda x: x in item["path"], ignore)
+        # join repo name to the path so that we can exclude top level readme files more easily
+        ignore_matches = map(lambda x: x in os.path.join(repo_name, item["path"]), ignore)
         if (any(fname_matches) or any(ext_matches) or any(full_matches)) and not any(ignore_matches):
             matching[item["path"]] = item
         elif (any(fname_matches) or any(ext_matches) or any(full_matches)) and any(ignore_matches):
@@ -319,7 +321,7 @@ def html_to_file(dataset_name, url, pandoc_extra_args=None, dataset_conf=None, f
     def image_replace(match):
         image_link = match.group(1)
         # This is a relative link, so need to construct the full url
-        if not match.group(1).startswith("http") and not match.group(1).startswith("www"):
+        if not match.group(1).startswith("http") and not match.group(1).startswith("www") and not match.group(1).startswith("mailto"):
             image_link = base_url + "/" + image_link
         
         image_name = os.path.basename(urlparse.urlparse(image_link).path)
@@ -343,22 +345,38 @@ def html_to_file(dataset_name, url, pandoc_extra_args=None, dataset_conf=None, f
         if ex.errno == errno.ENOTEMPTY:
             pass # this means there were images downloaded
 
-    pandoc_args = ["--no-wrap"]
-    if pandoc_extra_args:
-        pandoc_args.extend(pandoc_extra_args)
+    # Ensure that relative links on webpages point to the full webpage
+    def link_replace(match):
+        link = match.group(1)
+        if not match.group(1).startswith("http") and not match.group(1).startswith("www"):
+            return match.group(0).replace(match.group(1), "{}/{}".format(base_url, link))
 
-    file_text = pypandoc.convert_text(html_text, filetype, format="html", extra_args=pandoc_args).encode('utf-8')
+        return match.group(0)
     
+    html_text = link_re.sub(link_replace, html_text)
+
+
+    url_dict = {dataset_conf[key]["url"]: key for key in dataset_conf.keys()}
+    def dataset_link_replace(match):
+        if match.group(1) in url_dict.keys():
+            return match.group(0).replace(match.group(1), "{}.html".format(url_dict[match.group(1)]))
+        
+        return match.group(0)
+
     # Also want to make sure that if there is a direct link to a dataset on the
     # page that it is converted to link to the markdown file we will generate
     # here rather than going to somewhere else on the web. This mostly applies
     # to the index page. Flatten the dictionary so that the key-value pairs are
     # now the base url for the dataset page, and the dataset key (which
     # corresponds to the markdown filename)
-    url_dict = {dataset_conf[key]["url"]: key for key in dataset_conf.keys()}
-    for url in url_dict.keys():
-        file_text = file_text.replace(url, "{}.html".format(url_dict[url]))
+    html_text = link_re.sub(dataset_link_replace, html_text)
 
+    pandoc_args = ["--no-wrap"]
+    if pandoc_extra_args:
+        pandoc_args.extend(pandoc_extra_args)
+
+    file_text = pypandoc.convert_text(html_text, filetype, format="html", extra_args=pandoc_args).encode('utf-8')
+    
     return file_text
 
 def create_dataset_docs(dataset_conf, filetype="rst"):
@@ -458,23 +476,32 @@ def write_rst_toc_to_index(config):
     with open("docs/index.rst", 'w') as f:
         f.write(index)
 
-def clean_doc_dir():
+def clean_doc_dir(target=None):
     exclude_dirs = ["datasets", "images"]
     exclude_prefixes = ["_"]
 
-    toremove = []
-    for item in os.listdir("docs"):
-        path = os.path.join("docs", item)
-        excluded = item in exclude_dirs
-        excluded = excluded and any(map(lambda ep: item.startswith(ep), exclude_prefixes))
-        isdir = os.path.isdir(path)
 
-        if not excluded and isdir:
-            toremove.append(path)        
-            
+    if target:
+        toremove = [target]
+    else:
+        toremove = []
+        for item in os.listdir("docs"):
+            path = os.path.join("docs", item)
+
+            excluded = item in exclude_dirs
+            excluded = excluded or any(map(lambda ep: item.startswith(ep), exclude_prefixes))
+            isdir = os.path.isdir(path)
+
+            if not excluded and isdir:
+                toremove.append(path)        
+
     do_delete = ""
     positive = ["y", "yes"]
     negative = ["n", "no"]
+
+    if len(toremove) == 0:
+        print("No directories to delete.")
+        return
 
     while do_delete.lower() not in negative + positive:
         do_delete = raw_input("Are you sure you want to delete {} directories? (y/n)".format(len(toremove)))

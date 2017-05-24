@@ -71,7 +71,7 @@ This dataset is available for download in a single archive `file <https://strand
 Condition of use
 ~~~~~~~~~~~~~~~~
 
-If you use the dataset for your research, please cite our `paper <ambrus2014metaroom.pdf>`__ that describes it:
+If you use the dataset for your research, please cite our `paper <https://strands.pdc.kth.se/public/metric_sweeps_201312/ambrus2014metaroom.pdf>`__ that describes it:
 
 ::
 
@@ -82,7 +82,7 @@ If you use the dataset for your research, please cite our `paper <ambrus2014meta
         
         
 
-We attached a `bibtex <ambrus2014metaroom.bib>`__ record for your convenience.
+We attached a `bibtex <https://strands.pdc.kth.se/public/metric_sweeps_201312/ambrus2014metaroom.bib>`__ record for your convenience.
 
 .. |image0| image:: images/meta_rooms/Robot_s.png
 .. |image1| image:: images/meta_rooms/Map.png

@@ -21,18 +21,18 @@ This dataset contains laser scans, odometry, and AMCL results of a SCITOS-G5 rob
 Dataset structure and download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The data, which are organised in archive files of one-day length are available `here <AAF_Y4/>`__. Moreover, the events, when the robot got mislocalised, are `here <AAF_Y4/y4_glitches/>`__. The overall report on the robot navigation activity at the AAF is available in as a google doc `spreadsheet <https://docs.google.com/spreadsheets/d/1SeyMyPDr4WoCeIf0-GxYsnGRLkYnFpTZcfQGw0nYSns/edit?usp=sharing>`__
+The data, which are organised in archive files of one-day length are available `here <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/AAF_Y4/>`__. Moreover, the events, when the robot got mislocalised, are `here <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/AAF_Y4/y4_glitches/>`__. The overall report on the robot navigation activity at the AAF is available in as a google doc `spreadsheet <https://docs.google.com/spreadsheets/d/1SeyMyPDr4WoCeIf0-GxYsnGRLkYnFpTZcfQGw0nYSns/edit?usp=sharing>`__
 
 --------------
 
 Condition of use
 ~~~~~~~~~~~~~~~~
 
-If you use the dataset for your research, please cite our `paper <AAF_Y4/paper.pdf>`__, for which we originally collected the data. We attached a `bibtex <AAF_Y4/paper.bib>`__ record for your convenience.
+If you use the dataset for your research, please cite our `paper <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/AAF_Y4/paper.pdf>`__, for which we originally collected the data. We attached a `bibtex <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/AAF_Y4/paper.bib>`__ record for your convenience.
 
 --------------
 
-This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <index.html>`__.
+This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/index.html>`__.
 
 .. |image0| image:: images/care_home/aaf.png
 .. |image1| image:: images/care_home/aaf.png

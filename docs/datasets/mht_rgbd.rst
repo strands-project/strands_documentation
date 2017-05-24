@@ -71,7 +71,7 @@ Download
 
    <td align="center">
 
-`2D data Aug <MHT/2D_2013-08.zip>`__
+`2D data Aug <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08.zip>`__
 
 .. raw:: html
 
@@ -81,7 +81,7 @@ Download
 
    <td align="center">
 
-`3D data Aug <MHT/3D_2013-08.zip>`__
+`3D data Aug <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08.zip>`__
 
 .. raw:: html
 
@@ -99,7 +99,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-08-24 <MHT/2D_2013-08-24.zip>`__
+`2D\_2013-08-24 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-24.zip>`__
 
 .. raw:: html
 
@@ -109,7 +109,7 @@ Download
 
    <td>
 
-`3D\_2013-08-24 <MHT/3D_2013-08-24.zip>`__
+`3D\_2013-08-24 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-24.zip>`__
 
 .. raw:: html
 
@@ -127,7 +127,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-08-25 <MHT/2D_2013-08-25.zip>`__
+`2D\_2013-08-25 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-25.zip>`__
 
 .. raw:: html
 
@@ -137,7 +137,7 @@ Download
 
    <td>
 
-`3D\_2013-08-25 <MHT/3D_2013-08-25.zip>`__
+`3D\_2013-08-25 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-25.zip>`__
 
 .. raw:: html
 
@@ -155,7 +155,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-08-26 <MHT/2D_2013-08-26.zip>`__
+`2D\_2013-08-26 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-26.zip>`__
 
 .. raw:: html
 
@@ -165,7 +165,7 @@ Download
 
    <td>
 
-`3D\_2013-08-26 <MHT/3D_2013-08-26.zip>`__
+`3D\_2013-08-26 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-26.zip>`__
 
 .. raw:: html
 
@@ -183,7 +183,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-08-27 <MHT/2D_2013-08-27.zip>`__
+`2D\_2013-08-27 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-27.zip>`__
 
 .. raw:: html
 
@@ -193,7 +193,7 @@ Download
 
    <td>
 
-`3D\_2013-08-27 <MHT/3D_2013-08-27.zip>`__
+`3D\_2013-08-27 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-27.zip>`__
 
 .. raw:: html
 
@@ -211,7 +211,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-08-28 <MHT/2D_2013-08-28.zip>`__
+`2D\_2013-08-28 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-28.zip>`__
 
 .. raw:: html
 
@@ -221,7 +221,7 @@ Download
 
    <td>
 
-`3D\_2013-08-28 <MHT/3D_2013-08-28.zip>`__
+`3D\_2013-08-28 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-28.zip>`__
 
 .. raw:: html
 
@@ -239,7 +239,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-08-29 <MHT/2D_2013-08-29.zip>`__
+`2D\_2013-08-29 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-29.zip>`__
 
 .. raw:: html
 
@@ -249,7 +249,7 @@ Download
 
    <td>
 
-`3D\_2013-08-29 <MHT/3D_2013-08-29.zip>`__
+`3D\_2013-08-29 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-29.zip>`__
 
 .. raw:: html
 
@@ -267,7 +267,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-08-30 <MHT/2D_2013-08-30.zip>`__
+`2D\_2013-08-30 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/2D_2013-08-30.zip>`__
 
 .. raw:: html
 
@@ -277,7 +277,7 @@ Download
 
    <td>
 
-`3D\_2013-08-30 <MHT/3D_2013-08-30.zip>`__
+`3D\_2013-08-30 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-08-30.zip>`__
 
 .. raw:: html
 
@@ -337,7 +337,7 @@ Download
 
    <td align="center">
 
-`2D data Sep <MHT/3D_2013-09.zip>`__
+`2D data Sep <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09.zip>`__
 
 .. raw:: html
 
@@ -347,7 +347,7 @@ Download
 
    <td align="center">
 
-`3D data Sep <MHT/3D_2013-09.zip>`__
+`3D data Sep <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09.zip>`__
 
 .. raw:: html
 
@@ -365,7 +365,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-09-01 <MHT/3D_2013-09-01.zip>`__
+`2D\_2013-09-01 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip>`__
 
 .. raw:: html
 
@@ -375,7 +375,7 @@ Download
 
    <td>
 
-`3D\_2013-09-01 <MHT/3D_2013-09-01.zip>`__
+`3D\_2013-09-01 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip>`__
 
 .. raw:: html
 
@@ -393,7 +393,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-09-02 <MHT/3D_2013-09-01.zip>`__
+`2D\_2013-09-02 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip>`__
 
 .. raw:: html
 
@@ -403,7 +403,7 @@ Download
 
    <td>
 
-`3D\_2013-09-02 <MHT/3D_2013-09-02.zip>`__
+`3D\_2013-09-02 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-02.zip>`__
 
 .. raw:: html
 
@@ -421,7 +421,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-09-03 <MHT/3D_2013-09-01.zip>`__
+`2D\_2013-09-03 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip>`__
 
 .. raw:: html
 
@@ -431,7 +431,7 @@ Download
 
    <td>
 
-`3D\_2013-09-03 <MHT/3D_2013-09-03.zip>`__
+`3D\_2013-09-03 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-03.zip>`__
 
 .. raw:: html
 
@@ -449,7 +449,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-09-04 <MHT/3D_2013-09-01.zip>`__
+`2D\_2013-09-04 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip>`__
 
 .. raw:: html
 
@@ -459,7 +459,7 @@ Download
 
    <td>
 
-`3D\_2013-09-04 <MHT/3D_2013-09-04.zip>`__
+`3D\_2013-09-04 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-04.zip>`__
 
 .. raw:: html
 
@@ -477,7 +477,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-09-05 <MHT/3D_2013-09-01.zip>`__
+`2D\_2013-09-05 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip>`__
 
 .. raw:: html
 
@@ -487,7 +487,7 @@ Download
 
    <td>
 
-`3D\_2013-09-05 <MHT/3D_2013-09-05.zip>`__
+`3D\_2013-09-05 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-05.zip>`__
 
 .. raw:: html
 
@@ -505,7 +505,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-09-06 <MHT/3D_2013-09-01.zip>`__
+`2D\_2013-09-06 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip>`__
 
 .. raw:: html
 
@@ -515,7 +515,7 @@ Download
 
    <td>
 
-`3D\_2013-09-06 <MHT/3D_2013-09-06.zip>`__
+`3D\_2013-09-06 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-06.zip>`__
 
 .. raw:: html
 
@@ -533,7 +533,7 @@ Download
 
    <td align="right">
 
-`2D\_2013-09-07 <MHT/3D_2013-09-01.zip>`__
+`2D\_2013-09-07 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-01.zip>`__
 
 .. raw:: html
 
@@ -543,7 +543,7 @@ Download
 
    <td>
 
-`3D\_2013-09-07 <MHT/3D_2013-09-07.zip>`__
+`3D\_2013-09-07 <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/3D_2013-09-07.zip>`__
 
 .. raw:: html
 
@@ -574,11 +574,11 @@ Download
 Conditions of use
 ~~~~~~~~~~~~~~~~~
 
-If you use the dataset for your research, please cite our `paper <MHT/paper.pdf>`__ that describes the data collection in detail. We attached a `bibtex <MHT/paper.bib>`__ record for your convenience.
+If you use the dataset for your research, please cite our `paper <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/paper.pdf>`__ that describes the data collection in detail. We attached a `bibtex <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/MHT/paper.bib>`__ record for your convenience.
 
 --------------
 
-This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <index.html>`__.
+This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/index.html>`__.
 
 .. raw:: html
 

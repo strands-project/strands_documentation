@@ -42,18 +42,18 @@ These contain the student's activity and location on a minute-by-minute basis.
 Download
 ~~~~~~~~
 
-All of these datasets are available for download in a single archive `file <activity/activity.zip>`__. After you unzip the file, you get two folders which correspond to the individual datasets.
+All of these datasets are available for download in a single archive `file <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/activity/activity.zip>`__. After you unzip the file, you get two folders which correspond to the individual datasets.
 
 --------------
 
 Condition of use
 ~~~~~~~~~~~~~~~~
 
-If you use the dataset for your research, please cite our `paper <activity/paper.pdf>`__ that describes it. We attached a `bibtex <activity/paper.bib>`__ record for your convenience. If you use the **Aruba** subset, you must also acknowledge the original `CASAS <presence/aruba.bib>`__ paper.
+If you use the dataset for your research, please cite our `paper <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/activity/paper.pdf>`__ that describes it. We attached a `bibtex <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/activity/paper.bib>`__ record for your convenience. If you use the **Aruba** subset, you must also acknowledge the original `CASAS <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/presence/aruba.bib>`__ paper.
 
 --------------
 
-This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <index.html>`__.
+This dataset is part of the larger `LCAS-STRANDS long-term dataset collection <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/index.html>`__.
 
 .. |image0| image:: images/person_activity/aruba-flat.png
 .. |image1| image:: images/person_activity/aruba-scheme.jpg

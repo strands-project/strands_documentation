@@ -72,7 +72,7 @@ People Data Sets:
 |  KTH Royal Institute of Technolgy
 |  SE-10044 Stockholm
 |  Sweden
-|  `johnf@kth.se <mailto:johnf@kth.se>`__
+|  `johnf@kth.se <http://strands.acin.tuwien.ac.at//mailto:johnf@kth.se>`__
 |  `http://www.csc.kth.se/~johnf/ <http://www.csc.kth.se/~johnf/>`__
 
 --------------

@@ -19,7 +19,7 @@ This dataset is available for download in a single archive `file <https://strand
 Condition of use
 ~~~~~~~~~~~~~~~~
 
-If you use the dataset for your research, please cite our `paper <thippur2014.pdf>`__ that describes it:
+If you use the dataset for your research, please cite our `paper <https://strands.pdc.kth.se/public/kth-3d-total/thippur2014.pdf>`__ that describes it:
 
 ::
 
@@ -32,7 +32,7 @@ If you use the dataset for your research, please cite our `paper <thippur2014.pd
         
         
 
-We attached a `bibtex <thippur2014.bib>`__ record for your convenience.
+We attached a `bibtex <https://strands.pdc.kth.se/public/kth-3d-total/thippur2014.bib>`__ record for your convenience.
 
 .. |image0| image:: images/kth_3d/t1.jpg
 .. |image1| image:: images/kth_3d/t2.jpg

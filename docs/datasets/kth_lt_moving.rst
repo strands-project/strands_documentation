@@ -67,7 +67,7 @@ This dataset is available for download in a single archive `file <https://strand
 Contact
 ~~~~~~~
 
-| `Nils Bore <mailto:nbore@kth.se>`__
+| `Nils Bore <https://strands.pdc.kth.se/public/KTH_labelled_moving_objects/mailto:nbore@kth.se>`__
 |  `http://www.csc.kth.se/~nbore/ <http://www.csc.kth.se/~nbore/>`__
 |  CSC/CVAP
 |  KTH

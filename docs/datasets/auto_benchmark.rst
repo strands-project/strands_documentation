@@ -18,11 +18,11 @@ Some of the datasets provide an easy way of use through our automated benchmarki
 
 --------------
 
-Read more in our `paper <automated/paper.pdf>`__. We attached a `bibtex <automated/paper.bib>`__ record for your convenience.
+Read more in our `paper <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/automated/paper.pdf>`__. We attached a `bibtex <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/automated/paper.bib>`__ record for your convenience.
 
 --------------
 
-In the future, the system will extend to all datasets in the `LCAS-STRANDS long-term dataset collection <index.html>`__.
+In the future, the system will extend to all datasets in the `LCAS-STRANDS long-term dataset collection <https://lcas.lincoln.ac.uk/owncloud/shared/datasets/index.html>`__.
 
 .. |image0| image:: images/auto_benchmark/workflow.png
 .. |image1| image:: images/auto_benchmark/workflow.png

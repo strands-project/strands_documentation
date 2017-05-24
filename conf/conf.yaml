@@ -6,6 +6,7 @@
 ignore_repos:
   - aaf_deployment:
     - expert_interventions # files containing this string will be ignored
+    - AAF-Deployment-Feedback
   - strands-project.github.io
   - MIRASimpleClient
   - autonomous_patrolling
@@ -24,6 +25,9 @@ ignore_repos:
   - mjpeg_server
   - strands_msgs
   - strands_deployment
+  - g4s_deployment:
+    - end-user-instructions
+    - expert_interventions
   - openni_wrapper
   - rosdistro
   - buildfarm
@@ -39,10 +43,10 @@ ignore_repos:
   - robomongo
   - robblog:
       - test-post
+      - example
   - elan_analyser
   - plugin_local_planner
   - navigation_layers
-  - lamor15
   - laser_filtering
   - ros_mbt
   - navigation

@@ -239,7 +239,7 @@ which defines what the simulation environment actually looks like:
     echo "Running morse on $path with PYTHONPATH=$PYTHONPATH and MORSE_RESOURCE_PATH=$MORSE_RESOURCE_PATH"
     PATH=/opt/strands-morse-simulator/bin:$PATH
 
-    morse run thermo `rospack find basic_example`/example_sim.py
+    morse run basic_example `rospack find basic_example`/example_sim.py
 
 Don't forget to run ``chmod +x scripts/simulator.sh`` to make it
 executable.
@@ -258,8 +258,9 @@ In the top level directory, create the simulation definition
 
     from morse.builder import *
     from strands_sim.builder.robots import Scitosa5
-
-    robot = Scitosa5(with_cameras = Scitosa5.WITHOUT_DEPTHCAMS)
+    
+    # Other options for cameras are WITH_CAMERAS or WITHOUT_DEPTHCAMS. For those set fastmode=False below
+    robot = Scitosa5(with_cameras = Scitosa5.WITHOUT_CAMERAS)
     # Specify the initial position and rotation of the robot
     robot.translate(x=2,y=2, z=0)
     robot.rotate(z=-1.57)
@@ -268,7 +269,7 @@ In the top level directory, create the simulation definition
     model_file=os.path.join(os.path.dirname(os.path.abspath( __file__)),'maps/basic_map.blend')
     # Create the environment with the model file, and use fast mode - you can do
     # this to speed things up a little when you're using the scitos A5 without
-    # depthcams.
+    # cameras.
     env = Environment(model_file,fastmode=True)
     # Place the camera in the environment
     env.set_camera_location([0, 0, 10])

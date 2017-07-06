@@ -122,6 +122,7 @@ Documentation contents
    quick_setup
    setup
    packages
+   setup_from_scratch
 
 
 .. toctree::

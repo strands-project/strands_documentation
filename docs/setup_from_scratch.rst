@@ -27,12 +27,17 @@ You have several options how to obtain STRANDS system:
 Basic STRANDS system running on ROS INDIGO with Ubuntu Trusty
 -------------------------------------------------------------
 For this, you need:
+
 - https://github.com/strands-project/strands_systems.git branch:indigo_devel 
+
   * This repository contains the most important launch files which you will need to get the basic system running
+  
 - https://github.com/strands-project/mongodb_store.git **branch:hydro_devel** (need to change)
+
   * The robot stores a huge variety of its data into MongoDb
 
 If you are using SCITOS robot, you can also use:
+
 - https://github.com/strands-project/scitos_drivers  branch:indigo_devel
 - https://github.com/strands-project/scitos_common.git branch:indigo_devel
 - https://github.com/strands-project/scitos_apps.git branch:hydro_devel

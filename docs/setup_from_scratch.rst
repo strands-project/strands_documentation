@@ -24,23 +24,35 @@ You have several options how to obtain STRANDS system:
 - you can obtain all source code
 - you can clone only the repositories which you are interested in 
 
-Basic STRANDS system running on ROS INDIGO with Ubuntu Trusty
+I. Basic STRANDS system running on ROS Indigo and Ubuntu Trusty
 -------------------------------------------------------------
-For this, you need:
+For this step, you need:
 
 - https://github.com/strands-project/strands_systems.git branch:indigo_devel 
 
   * This repository contains the most important launch files which you will need to get the basic system running
   
-- https://github.com/strands-project/mongodb_store.git **branch:hydro_devel** (need to change)
+- https://github.com/strands-project/mongodb_store.git **branch:hydro_devel** (you need to change)
 
-  * The robot stores a huge variety of its data into MongoDb
+  * The robot stores a huge variety of its data into MongoDB
 
 If you are using SCITOS robot, you can also use:
 
 - https://github.com/strands-project/scitos_drivers  branch:indigo_devel
+
+  * This repository contains Scitos G5 drivers that interface ROS to MIRA 
+  
 - https://github.com/strands-project/scitos_common.git branch:indigo_devel
+
+  * This package contains robot-specific definitions of the SCITOS robot such as the URDF description of the robot's kinematics and dynamics and 3D models of robot components.
+  
 - https://github.com/strands-project/scitos_apps.git branch:hydro_devel
+
+  * This repository contains docking, teleoperation and other useful applications which are dependent on the used robot
+  
+If you are using another robot, you will need to provide functionality covered by the three aforementioned repositories. 
+
+
 
 
 

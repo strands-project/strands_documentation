@@ -26,6 +26,10 @@ You have several options how to obtain STRANDS system:
 
 I. Basic STRANDS system running on ROS Indigo and Ubuntu Trusty
 -------------------------------------------------------------
+
+a) Code:
+~~~~~~~~
+
 For this step, you need:
 
 - https://github.com/strands-project/strands_systems.git branch:indigo_devel 
@@ -51,6 +55,13 @@ If you are using SCITOS robot, you can also use:
   * This repository contains docking, teleoperation and other useful applications which are dependent on the used robot
   
 If you are using another robot, you will need to provide functionality covered by the three aforementioned repositories. 
+
+b) Changes:
+~~~~~~~~~~~
+
+Even if you use SCITOS robot, your exact configuration will differ. Therefore, you must change
+
+scitos_common/scitos_description/urdf/
 
 
 

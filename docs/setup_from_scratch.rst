@@ -27,7 +27,7 @@ You have several options how to obtain STRANDS system:
 I. Basic STRANDS system running on ROS Indigo and Ubuntu Trusty
 -------------------------------------------------------------
 
-a) Code:
+a) Code
 ~~~~~~~~
 
 For this step, you need:
@@ -56,12 +56,14 @@ If you are using SCITOS robot, you can also use:
   
 If you are using another robot, you will need to provide functionality covered by the three aforementioned repositories. 
 
-b) Changes:
+b) Changes
 ~~~~~~~~~~~
 
-Even if you use SCITOS robot, your exact configuration will differ. Therefore, you must change
+Even if you use SCITOS robot, your exact configuration of the robot will differ. Therefore, you must change ``scitos.xacro`` and ``scitos_calibration.xacro`` in ``scitos_common/scitos_description/urdf/`` to fit your robot. 
 
-scitos_common/scitos_description/urdf/
+**Chest camera for improved navigation**
+
+Our robot is equipped with a depth camera on its chest in order to detect objects in front of the robot and improve its navigation. Its position and angle are important for the correct functioning of the navigation. Therefore, we use automatic calibration. Therefore, we **do not** have the chest camera specified in the ``scitos_common/scitos_description`` but in ``strands_movebase/strands_description`` in order to load its calibration from database.
 
 
 

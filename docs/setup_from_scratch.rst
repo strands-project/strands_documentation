@@ -63,7 +63,31 @@ Even if you use SCITOS robot, your exact configuration of the robot will differ.
 
 **Chest camera for improved navigation**
 
-Our robot is equipped with a depth camera on its chest in order to detect objects in front of the robot and improve its navigation. Its position and angle are important for the correct functioning of the navigation. Therefore, we use automatic calibration. Therefore, we **do not** have the chest camera specified in the ``scitos_common/scitos_description`` but in ``strands_movebase/strands_description`` in order to load its calibration from database.
+Our robot is equipped with a depth camera on its chest in order to detect objects in front of the robot and improve its navigation. Its position and angle are important for the correct functioning of the navigation. You could put the chest camera calibration into the scitos.xacro. However, we experienced that the chest camera is the first thing to be "attacked" by kids during demos or by people during transfering the robot.  Therefore, we **do not** have the chest camera specified in the ``scitos_common/scitos_description`` but in ``strands_movebase/strands_description`` in order to load its position from calibration data database. Details about this calibration are provided later in this tutorial. 
+
+c) Compiling
+~~~~~~~~~~~~
+
+If you are using SCITOS robot, your ```~/.bashrc``` file should look something like: 
+
+.. code:: sh
+
+ source /opt/ros/indigo/setup.bash
+ source /localhome/strands/strands_ws/devel/setup.bash
+ export MIRA_PATH="/opt/MIRA:/opt/SCITOS:/opt/MIRA-commercial:/localhome/strands/strands_ws/src"
+ 
+When you compile aforementioned code, it can complain about version of MIRA. In that case, you can change the version version from 0.23.1 to 0.29 (or your version) in scitos_drivers/scitos_mira/CMakeLists.txt line 88
+
+If you have SCITOS robot very similar to STRANDS robots, this should compile without issues. 
+
+d) Running
+~~~~~~~~~~
+
+
+
+
+
+
 
 
 

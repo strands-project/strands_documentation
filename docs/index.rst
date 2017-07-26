@@ -13,8 +13,8 @@ STRANDS Project website <http://strands-project.eu>`__.
 The project created autonomous mobile robots which were successfully
 deployed for long periods in real user environments. In the process of
 this we created a great deal of open source software for AI and robotics
-applications. This software is all available via [the STRANDS GitHub
-organisation][https://github.com/strands-project]. This site provides a
+applications. This software is all available via `the STRANDS GitHub
+organisation <https://github.com/strands-project>`__. This site provides a
 single location where the documentation from across that organisation
 can be viewed. It is also the main location for software tutorials and
 guides for creating systems, and provides an entry point into using our
@@ -31,7 +31,7 @@ Getting Started
 
 If you wish to understand or reuse the full STRANDS system, you should follow
 `the STRANDS system tutorial <setup.html>`__. If you want to set things up as
-fast as possible, see the `quick start instructions <quick_setup.html`__. Both
+fast as possible, see the `quick start instructions <quick_setup.html>`__. Both
 of these will leave you with a system which has ROS and STRANDS packages
 installed, and can run a simulation which uses some of the core STRANDS
 subsystems.

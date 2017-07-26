@@ -97,7 +97,7 @@ Then, run:
   roslaunch strands_bringup strands_cameras.launch head_camera:=true head_ip:=(specify)
   rosrun rviz rviz
   
-If you display the robot model in rviz, it will not look correct. This is due to the fact that is mising ``/map`` frame. Hence, run `for example `rosrun gmapping slam_gmapping`` to get the frame. 
+If you display the robot model in rviz, it will not look correct. This is due to the fact that is mising ``/map`` frame. Hence, run, for example, ``rosrun gmapping slam_gmapping`` to get the frame. 
 
 To check: 
 

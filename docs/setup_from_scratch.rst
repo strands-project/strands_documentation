@@ -76,12 +76,37 @@ If you are using SCITOS robot, your ```~/.bashrc``` file should look something l
  source /localhome/strands/strands_ws/devel/setup.bash
  export MIRA_PATH="/opt/MIRA:/opt/SCITOS:/opt/MIRA-commercial:/localhome/strands/strands_ws/src"
  
-When you compile aforementioned code, it can complain about version of MIRA. In that case, you can change the version version from 0.23.1 to 0.29 (or your version) in scitos_drivers/scitos_mira/CMakeLists.txt line 88
+When you compile aforementioned code, it will probably complain about version of MIRA. In that case, you can change the version version from 0.23.1 to 0.29 (or your version) in scitos_drivers/scitos_mira/CMakeLists.txt line 88
 
-If you have SCITOS robot very similar to STRANDS robots, this should compile without issues. 
+If you have SCITOS robot very similar to STRANDS robots, the rest should compile without issues. 
 
 d) Running
 ~~~~~~~~~~
+
+To test, if everything works fine, you need to modify two launch files in ``strands_system/strands_bringup``:
+
+* ``strands_robot.launch`` (especially if you are using a different robot or sensors) See different parameters of the launch file. 
+* ``strands_cameras.launch`` (in order to launch cameras on the robot, we use separate launch file). We use two Asus Xtion cameras, one on a pan-tilt unit on top of the robot, one as a chest camera as explained above. In our setting, the chest camera is plugged into a main control pc, where navigation should run. In contrast, head camera is plugged into additional pc with a good graphic card with GPUs. If your setting is similar, you need provide this launch file with head_ip and chest_ip paramaters and with head_camera and chest_camera boolean flags to enable/diable them.
+
+Then, run:
+
+.. code:: sh
+
+  roscore
+  roslaunch --wait strands_bringup strands_robot.launch
+  roslaunch strands_bringup strands_cameras.launch head_camera:=true head_ip:=(specify)
+  rosrun rviz rviz
+  
+If you display the robot model in rviz, it will not look correct. This is due to the fact that is mising ``/map`` frame. Hence, run `for example `rosrun gmapping slam_gmapping`` to get the frame. 
+
+To check: 
+
+* your robot model and TF, if all transformation look correct. 
+* the data publish by laser scanner (if you have any), cameras rgb pictures and registred point clouds
+* move the robot by joystick if you have any. If you use Logitech gamepad as we do and you are using our code, you need to keep pressed button LB while moving the robot. 
+
+If everything looks good, you are ready for the next step!
+  
 
 
 

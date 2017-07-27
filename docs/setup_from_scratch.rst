@@ -107,7 +107,7 @@ To check:
 
 If everything looks good, you are ready for the next step!
   
-
+.. include:: mapping.rst
 
 
 

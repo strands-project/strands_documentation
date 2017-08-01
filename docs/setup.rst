@@ -552,6 +552,15 @@ Once you have added a new node to the map, you should delete the
 editor, see the readme
 `here <https://github.com/strands-project/strands_navigation/tree/indigo-devel/topological_rviz_tools>`__.
 
+If you intend to use the ``mdp-executor`` for planning (as we will in this tutorial), with a node where the robot can charge (such as the Scitos docking stations), you should ensure that the charging node ``localise_by_topic`` looks like this:
+
+.. code:: yaml
+
+localise_by_topic: '{"topic": "/battery_state", "field": "charging", "val": true,
+      "localise_anywhere": false}'
+      
+This will ensure that the robot does not dock and undock repeatedly due to inaccurate localisation. The system will assume that it is at the charging station node as long as the ``charging`` field of the ``battery_state`` episode is ``true``.
+
 Launching the core nodes
 ~~~~~~~~~~~~~~~~~~~~~~~~
 

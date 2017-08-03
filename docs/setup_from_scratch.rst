@@ -83,6 +83,12 @@ If you have SCITOS robot very similar to STRANDS robots, the rest should compile
 d) Running
 ~~~~~~~~~~
 
+First, create a folder `mongodb_store` when mongo database will be saving data. This folder can be anywhere, but you must guarantee that the user running the system has writing access to this folder. 
+
+
+
+
+
 To test, if everything works fine, you need to modify two launch files in ``strands_system/strands_bringup``:
 
 * ``strands_robot.launch`` (especially if you are using a different robot or sensors) See different parameters of the launch file. 

@@ -12,6 +12,11 @@ pip install requests pypandoc
 
 ## Usage
 
+The `doc_scraper.py` script is used to scrape documentation from specified github
+repositories and dataset webpages. It is only necessary to run this if the documentation
+in one of those locations has changed. You don't need to run it if you're just
+making changes in this repository.
+
 ```sh
 python scripts/doc_scraper.py
 ```
@@ -51,4 +56,5 @@ With the `--datasets` flag, the scraper will go through dataset urls given in
 them to markdown. Images on the pages will also be downloaded to the
 `datasets/images` directory.
 
-Once the scraping has finished you can run `mkdocs serve` and got to http://localhost:8000 to see the generated documentation. Or `mkdocs gh-deploy` to deploy to GitHub pages.
+The documentation is monitored by readthedocs, and any changes in the master branch
+should be visible on the website after a short time.

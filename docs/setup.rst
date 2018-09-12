@@ -548,7 +548,7 @@ You can launch the rviz tool as follows:
     roslaunch topological_rviz_tools strands_rviz_topmap.launch map:=/path/to/map.yaml topmap:=topmap_pointset db_path:=/path/to/db
 
 For the basic_example, if you've already created the metric map and added an empty topological map to the database:
-*``/path/to/map.yaml``  will be the path to your metric map yaml, ``topmap_pointset`` will be the name you used for my_pointset_name in ``rosrun topological_utils insert_empty_map.py my_pointset_name`` and ``/path/to/db`` is the path to your mongo db*
+``/path/to/map.yaml``  will be the path to your metric map yaml, ``topmap_pointset`` will be the name you used for my_pointset_name in ``rosrun topological_utils insert_empty_map.py my_pointset_name`` and ``/path/to/db`` is the path to your mongo db.
 
 Once you have added a new node to the map, you should delete the
 ``temp_node``. For instructions on using the rviz topological map
